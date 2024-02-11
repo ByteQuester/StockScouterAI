@@ -1,0 +1,362 @@
+[
+    {
+        "Date": "2014-03",
+        "ASSETS_CURRENTValue": 19327.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 18357.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 10328.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2014-06",
+        "ASSETS_CURRENTValue": 18755.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 18751.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 10602.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2014-09",
+        "ASSETS_CURRENTValue": 18572.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 20842.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 10336.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2014-12",
+        "ASSETS_CURRENTValue": 31327.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 28089.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 10741.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2015-03",
+        "ASSETS_CURRENTValue": 25922.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 23177.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 10873.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2015-06",
+        "ASSETS_CURRENTValue": 26391.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 23912.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 11768.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2015-09",
+        "ASSETS_CURRENTValue": 28849.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 26657.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 12430.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2015-12",
+        "ASSETS_CURRENTValue": 35705.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 33887.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 13384.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2016-03",
+        "ASSETS_CURRENTValue": 30513.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 28187.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 14756.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2016-06",
+        "ASSETS_CURRENTValue": 32220.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 29587.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 16538.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2016-09",
+        "ASSETS_CURRENTValue": 35609.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 33498.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 17782.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2016-12",
+        "ASSETS_CURRENTValue": 45781.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 43816.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 19285.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2017-03",
+        "ASSETS_CURRENTValue": 39460.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 37399.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 21674.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2017-06",
+        "ASSETS_CURRENTValue": 41007.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 40520.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 23214.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2017-09",
+        "ASSETS_CURRENTValue": 48578.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 47072.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 24658.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2017-12",
+        "ASSETS_CURRENTValue": 60197.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 57883.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 27709.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2018-03",
+        "ASSETS_CURRENTValue": 50829.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 48045.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 31463.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2018-06",
+        "ASSETS_CURRENTValue": 54481.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 50801.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 34995.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2018-09",
+        "ASSETS_CURRENTValue": 59885.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 55324.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 39125.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2018-12",
+        "ASSETS_CURRENTValue": 75101.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 68391.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 43549.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2019-03",
+        "ASSETS_CURRENTValue": 69431.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 63695.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 48410.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2019-06",
+        "ASSETS_CURRENTValue": 76790.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 69678.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 53061.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2019-09",
+        "ASSETS_CURRENTValue": 79054.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 72136.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 56508.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2019-12",
+        "ASSETS_CURRENTValue": 96334.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 87812.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 62060.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2020-03",
+        "ASSETS_CURRENTValue": 85985.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 79711.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 65272.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2020-06",
+        "ASSETS_CURRENTValue": 110908.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 93896.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 73728.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2020-09",
+        "ASSETS_CURRENTValue": 112969.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 101912.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 82775.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2020-12",
+        "ASSETS_CURRENTValue": 132733.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 126385.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 93404.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2021-03",
+        "ASSETS_CURRENTValue": 121408.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 115404.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 103320.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2021-06",
+        "ASSETS_CURRENTValue": 140848.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 117792.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 114803.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2021-09",
+        "ASSETS_CURRENTValue": 138531.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 123994.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 120564.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2021-12",
+        "ASSETS_CURRENTValue": 161580.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 142266.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 138245.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2022-03",
+        "ASSETS_CURRENTValue": 133876.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 139508.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 134001.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2022-06",
+        "ASSETS_CURRENTValue": 133667.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 140291.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 131402.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2022-09",
+        "ASSETS_CURRENTValue": 131463.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 140363.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 137489.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2022-12",
+        "ASSETS_CURRENTValue": 146791.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 155393.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 146043.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2023-03",
+        "ASSETS_CURRENTValue": 136221.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 147570.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 154526.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2023-06",
+        "ASSETS_CURRENTValue": 140482.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 148238.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 168602.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2023-09",
+        "ASSETS_CURRENTValue": 142995.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 145214.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 182973.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    },
+    {
+        "Date": "2023-12",
+        "ASSETS_CURRENTValue": 172351.0,
+        "ASSETS_CURRENTColor": "hsl(280, 70%, 50%)",
+        "LIABILITIES_CURRENTValue": 164917.0,
+        "LIABILITIES_CURRENTColor": "hsl(61, 70%, 50%)",
+        "STOCKHOLDERS_EQUITYValue": 201875.0,
+        "STOCKHOLDERS_EQUITYColor": "hsl(176, 70%, 50%)"
+    }
+]

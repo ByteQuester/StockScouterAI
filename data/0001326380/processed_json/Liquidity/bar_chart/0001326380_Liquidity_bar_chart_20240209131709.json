@@ -1,0 +1,282 @@
+[
+    {
+        "Date": "2014-02",
+        "CURRENT_ASSETSValue": 1949.6,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1726.0,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2014-05",
+        "CURRENT_ASSETSValue": 1642.4,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1424.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2014-08",
+        "CURRENT_ASSETSValue": 1586.3,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1447.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2014-11",
+        "CURRENT_ASSETSValue": 2443.7,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2151.4,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2015-01",
+        "CURRENT_ASSETSValue": 2062.5,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1639.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2015-05",
+        "CURRENT_ASSETSValue": 1755.5,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1345.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2015-08",
+        "CURRENT_ASSETSValue": 1500.3,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1344.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2015-10",
+        "CURRENT_ASSETSValue": 2493.1,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2371.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2016-01",
+        "CURRENT_ASSETSValue": 1937.5,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1794.4,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2016-04",
+        "CURRENT_ASSETSValue": 2037.1,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1366.0,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2016-07",
+        "CURRENT_ASSETSValue": 1684.4,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1056.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2016-10",
+        "CURRENT_ASSETSValue": 2358.8,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2151.1,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2017-01",
+        "CURRENT_ASSETSValue": 2140.7,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1761.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2017-04",
+        "CURRENT_ASSETSValue": 1847.0,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1465.6,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2017-07",
+        "CURRENT_ASSETSValue": 1790.6,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1337.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2017-10",
+        "CURRENT_ASSETSValue": 2671.0,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2217.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2018-02",
+        "CURRENT_ASSETSValue": 3018.4,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1930.8,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2018-05",
+        "CURRENT_ASSETSValue": 2327.3,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1229.6,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2018-08",
+        "CURRENT_ASSETSValue": 2324.8,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1290.8,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2018-11",
+        "CURRENT_ASSETSValue": 3263.0,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2556.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2019-02",
+        "CURRENT_ASSETSValue": 3127.7,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 2181.1,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2019-05",
+        "CURRENT_ASSETSValue": 1920.1,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1297.3,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2019-08",
+        "CURRENT_ASSETSValue": 1667.6,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1216.8,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2019-11",
+        "CURRENT_ASSETSValue": 1863.1,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1573.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2020-02",
+        "CURRENT_ASSETSValue": 1633.7,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1237.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2020-05",
+        "CURRENT_ASSETSValue": 1419.9,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1519.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2020-08",
+        "CURRENT_ASSETSValue": 1379.9,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1312.2,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2020-10",
+        "CURRENT_ASSETSValue": 1651.9,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1576.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2021-01",
+        "CURRENT_ASSETSValue": 1551.2,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1342.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2021-05",
+        "CURRENT_ASSETSValue": 1657.2,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1217.9,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2021-07",
+        "CURRENT_ASSETSValue": 2657.0,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1194.3,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2021-10",
+        "CURRENT_ASSETSValue": 2913.1,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1533.3,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2022-01",
+        "CURRENT_ASSETSValue": 2598.8,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1354.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2022-04",
+        "CURRENT_ASSETSValue": 2329.6,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1126.9,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2022-07",
+        "CURRENT_ASSETSValue": 2019.2,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 932.4,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2022-10",
+        "CURRENT_ASSETSValue": 2581.8,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1588.7,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2023-01",
+        "CURRENT_ASSETSValue": 2323.7,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1339.1,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2023-04",
+        "CURRENT_ASSETSValue": 2254.6,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1319.5,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2023-07",
+        "CURRENT_ASSETSValue": 2005.2,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1071.4,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    },
+    {
+        "Date": "2023-10",
+        "CURRENT_ASSETSValue": 2376.8,
+        "CURRENT_ASSETSColor": "hsl(257, 70%, 50%)",
+        "CURRENT_LIABILITIESValue": 1437.8,
+        "CURRENT_LIABILITIESColor": "hsl(300, 70%, 50%)"
+    }
+]

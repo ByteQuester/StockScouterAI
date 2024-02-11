@@ -1,0 +1,298 @@
+[
+    {
+        "id": 1,
+        "year": "2014-03",
+        "NET_INCOME_LOSS": 933.0,
+        "OPS_INCOME_LOSS": 1432.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 2,
+        "year": "2014-06",
+        "NET_INCOME_LOSS": 889.0,
+        "OPS_INCOME_LOSS": 1426.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 3,
+        "year": "2014-09",
+        "NET_INCOME_LOSS": 888.0,
+        "OPS_INCOME_LOSS": 1392.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 4,
+        "year": "2014-12",
+        "NET_INCOME_LOSS": 904.0,
+        "OPS_INCOME_LOSS": 1342.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 5,
+        "year": "2015-03",
+        "NET_INCOME_LOSS": 878.0,
+        "OPS_INCOME_LOSS": 1147.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 6,
+        "year": "2015-06",
+        "NET_INCOME_LOSS": 929.0,
+        "OPS_INCOME_LOSS": 1273.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 7,
+        "year": "2015-09",
+        "NET_INCOME_LOSS": 865.0,
+        "OPS_INCOME_LOSS": 1192.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 8,
+        "year": "2015-12",
+        "NET_INCOME_LOSS": 933.0,
+        "OPS_INCOME_LOSS": 1100.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 9,
+        "year": "2016-03",
+        "NET_INCOME_LOSS": 898.0,
+        "OPS_INCOME_LOSS": 1158.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 10,
+        "year": "2016-06",
+        "NET_INCOME_LOSS": 1021.0,
+        "OPS_INCOME_LOSS": 1375.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 11,
+        "year": "2016-09",
+        "NET_INCOME_LOSS": 2395.0,
+        "OPS_INCOME_LOSS": 1588.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 12,
+        "year": "2016-12",
+        "NET_INCOME_LOSS": 988.0,
+        "OPS_INCOME_LOSS": 1428.0,
+        "REVENUES": null,
+        "PROFIT_MARGIN": null
+    },
+    {
+        "id": 13,
+        "year": "2017-03",
+        "NET_INCOME_LOSS": 789.0,
+        "OPS_INCOME_LOSS": 1402.0,
+        "REVENUES": 11212.0,
+        "PROFIT_MARGIN": 7.04
+    },
+    {
+        "id": 14,
+        "year": "2017-06",
+        "NET_INCOME_LOSS": 955.0,
+        "OPS_INCOME_LOSS": 1716.0,
+        "REVENUES": 12563.0,
+        "PROFIT_MARGIN": 7.6
+    },
+    {
+        "id": 15,
+        "year": "2017-09",
+        "NET_INCOME_LOSS": 963.0,
+        "OPS_INCOME_LOSS": 1677.0,
+        "REVENUES": 12341.0,
+        "PROFIT_MARGIN": 7.8
+    },
+    {
+        "id": 16,
+        "year": "2017-12",
+        "NET_INCOME_LOSS": -744.0,
+        "OPS_INCOME_LOSS": 1949.0,
+        "REVENUES": 13844.0,
+        "PROFIT_MARGIN": -5.37
+    },
+    {
+        "id": 17,
+        "year": "2018-03",
+        "NET_INCOME_LOSS": 1157.0,
+        "OPS_INCOME_LOSS": 1725.0,
+        "REVENUES": 11635.0,
+        "PROFIT_MARGIN": 9.94
+    },
+    {
+        "id": 18,
+        "year": "2018-06",
+        "NET_INCOME_LOSS": 1163.0,
+        "OPS_INCOME_LOSS": 1795.0,
+        "REVENUES": 13398.0,
+        "PROFIT_MARGIN": 8.68
+    },
+    {
+        "id": 19,
+        "year": "2018-09",
+        "NET_INCOME_LOSS": 1473.0,
+        "OPS_INCOME_LOSS": 1963.0,
+        "REVENUES": 14318.0,
+        "PROFIT_MARGIN": 10.29
+    },
+    {
+        "id": 20,
+        "year": "2018-12",
+        "NET_INCOME_LOSS": 1253.0,
+        "OPS_INCOME_LOSS": 1851.0,
+        "REVENUES": 14411.0,
+        "PROFIT_MARGIN": 8.69
+    },
+    {
+        "id": 21,
+        "year": "2019-03",
+        "NET_INCOME_LOSS": 1704.0,
+        "OPS_INCOME_LOSS": 2283.0,
+        "REVENUES": 14336.0,
+        "PROFIT_MARGIN": 11.89
+    },
+    {
+        "id": 22,
+        "year": "2019-06",
+        "NET_INCOME_LOSS": 1420.0,
+        "OPS_INCOME_LOSS": 2008.0,
+        "REVENUES": 14427.0,
+        "PROFIT_MARGIN": 9.84
+    },
+    {
+        "id": 23,
+        "year": "2019-09",
+        "NET_INCOME_LOSS": 1608.0,
+        "OPS_INCOME_LOSS": 2105.0,
+        "REVENUES": 15171.0,
+        "PROFIT_MARGIN": 10.6
+    },
+    {
+        "id": 24,
+        "year": "2019-12",
+        "NET_INCOME_LOSS": 1498.0,
+        "OPS_INCOME_LOSS": 2149.0,
+        "REVENUES": 15878.0,
+        "PROFIT_MARGIN": 9.43
+    },
+    {
+        "id": 25,
+        "year": "2020-03",
+        "NET_INCOME_LOSS": 1717.0,
+        "OPS_INCOME_LOSS": 2122.0,
+        "REVENUES": 15651.0,
+        "PROFIT_MARGIN": 10.97
+    },
+    {
+        "id": 26,
+        "year": "2020-06",
+        "NET_INCOME_LOSS": 1626.0,
+        "OPS_INCOME_LOSS": 2086.0,
+        "REVENUES": 16220.0,
+        "PROFIT_MARGIN": 10.02
+    },
+    {
+        "id": 27,
+        "year": "2020-09",
+        "NET_INCOME_LOSS": 1698.0,
+        "OPS_INCOME_LOSS": 2147.0,
+        "REVENUES": 16495.0,
+        "PROFIT_MARGIN": 10.29
+    },
+    {
+        "id": 28,
+        "year": "2020-12",
+        "NET_INCOME_LOSS": 1792.0,
+        "OPS_INCOME_LOSS": 2289.0,
+        "REVENUES": 17032.0,
+        "PROFIT_MARGIN": 10.52
+    },
+    {
+        "id": 29,
+        "year": "2021-03",
+        "NET_INCOME_LOSS": 1837.0,
+        "OPS_INCOME_LOSS": 2182.0,
+        "REVENUES": 16258.0,
+        "PROFIT_MARGIN": 11.3
+    },
+    {
+        "id": 30,
+        "year": "2021-06",
+        "NET_INCOME_LOSS": 1815.0,
+        "OPS_INCOME_LOSS": 2192.0,
+        "REVENUES": 17029.0,
+        "PROFIT_MARGIN": 10.66
+    },
+    {
+        "id": 31,
+        "year": "2021-09",
+        "NET_INCOME_LOSS": 614.0,
+        "OPS_INCOME_LOSS": 2294.0,
+        "REVENUES": 16028.0,
+        "PROFIT_MARGIN": 3.83
+    },
+    {
+        "id": 32,
+        "year": "2022-03",
+        "NET_INCOME_LOSS": 1733.0,
+        "OPS_INCOME_LOSS": 1933.0,
+        "REVENUES": 14964.0,
+        "PROFIT_MARGIN": 11.58
+    },
+    {
+        "id": 33,
+        "year": "2022-06",
+        "NET_INCOME_LOSS": 309.0,
+        "OPS_INCOME_LOSS": 1963.0,
+        "REVENUES": 15446.0,
+        "PROFIT_MARGIN": 2.0
+    },
+    {
+        "id": 34,
+        "year": "2022-09",
+        "NET_INCOME_LOSS": 1778.0,
+        "OPS_INCOME_LOSS": 2159.0,
+        "REVENUES": 16583.0,
+        "PROFIT_MARGIN": 10.72
+    },
+    {
+        "id": 35,
+        "year": "2023-03",
+        "NET_INCOME_LOSS": 1689.0,
+        "OPS_INCOME_LOSS": 2037.0,
+        "REVENUES": 15126.0,
+        "PROFIT_MARGIN": 11.17
+    },
+    {
+        "id": 36,
+        "year": "2023-06",
+        "NET_INCOME_LOSS": 1681.0,
+        "OPS_INCOME_LOSS": 2135.0,
+        "REVENUES": 16693.0,
+        "PROFIT_MARGIN": 10.07
+    },
+    {
+        "id": 37,
+        "year": "2023-09",
+        "NET_INCOME_LOSS": 1684.0,
+        "OPS_INCOME_LOSS": 2042.0,
+        "REVENUES": 16878.0,
+        "PROFIT_MARGIN": 9.98
+    }
+]

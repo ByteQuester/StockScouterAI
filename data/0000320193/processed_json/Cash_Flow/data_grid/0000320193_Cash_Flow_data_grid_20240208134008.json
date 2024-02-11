@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "year": "2015-09",
+        "CASH_FLOW_FINANCING": -17716.0,
+        "CASH_FLOW_INVESTING": -56274.0,
+        "CASH_FLOW_OPERATING": 81266.0
+    },
+    {
+        "id": 2,
+        "year": "2016-09",
+        "CASH_FLOW_FINANCING": -20890.0,
+        "CASH_FLOW_INVESTING": -45977.0,
+        "CASH_FLOW_OPERATING": 66231.0
+    },
+    {
+        "id": 3,
+        "year": "2017-09",
+        "CASH_FLOW_FINANCING": -17974.0,
+        "CASH_FLOW_INVESTING": -46446.0,
+        "CASH_FLOW_OPERATING": 64225.0
+    },
+    {
+        "id": 4,
+        "year": "2018-09",
+        "CASH_FLOW_FINANCING": -87876.0,
+        "CASH_FLOW_INVESTING": 16066.0,
+        "CASH_FLOW_OPERATING": 77434.0
+    },
+    {
+        "id": 5,
+        "year": "2019-09",
+        "CASH_FLOW_FINANCING": -90976.0,
+        "CASH_FLOW_INVESTING": 45896.0,
+        "CASH_FLOW_OPERATING": 69391.0
+    },
+    {
+        "id": 6,
+        "year": "2020-09",
+        "CASH_FLOW_FINANCING": -86820.0,
+        "CASH_FLOW_INVESTING": -4289.0,
+        "CASH_FLOW_OPERATING": 80674.0
+    },
+    {
+        "id": 7,
+        "year": "2021-09",
+        "CASH_FLOW_FINANCING": -93353.0,
+        "CASH_FLOW_INVESTING": -14545.0,
+        "CASH_FLOW_OPERATING": 104038.0
+    },
+    {
+        "id": 8,
+        "year": "2022-09",
+        "CASH_FLOW_FINANCING": -110749.0,
+        "CASH_FLOW_INVESTING": -22354.0,
+        "CASH_FLOW_OPERATING": 122151.0
+    },
+    {
+        "id": 9,
+        "year": "2023-09",
+        "CASH_FLOW_FINANCING": -108488.0,
+        "CASH_FLOW_INVESTING": 3705.0,
+        "CASH_FLOW_OPERATING": 110543.0
+    }
+]
