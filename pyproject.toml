@@ -45,6 +45,7 @@ sphinx = ">=7.2.6"
 sphinx-book-theme = ">=1.1.0"
 recommonmark = "*"
 regex = "^2023.12.25"
+plotly = "^5.18.0"
 
 [tool.poetry.group.dev.dependencies]
 sphinx = ">=7.2.6"

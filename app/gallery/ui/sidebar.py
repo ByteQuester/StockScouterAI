@@ -20,7 +20,7 @@ def update_sidebar_chat():
     st.sidebar.title("Stock Scouter AI")
 
     # Handling new CIK input and data generation
-    new_cik = st.sidebar.text_input("Enter new CIK Number", key="experiment")
+    new_cik = st.sidebar.text_input("Enter new CIK Number", key="user_handle")
     if st.sidebar.button("Generate Data for CIK", key="generate_cik_button"):
         generate_data_for_cik(new_cik)
         st.sidebar.success(f"Data generated for CIK: {new_cik}")
@@ -44,7 +44,7 @@ def update_sidebar_chat():
         # Store the selections in session state to use after rerun
         st.session_state.selected_cik = selected_cik
         st.session_state.selected_query = formatted_query_type
-        st.experimental_rerun()
+        st.rerun()
 
     return selected_cik, formatted_query_type
 

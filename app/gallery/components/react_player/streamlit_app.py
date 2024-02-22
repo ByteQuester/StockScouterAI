@@ -29,21 +29,6 @@ def main():
                 st.checkbox("Muted", False),
             }
 
-            with st.expander("SUPPORTED PLAYERS", expanded=True):
-                st.write("""
-                - Dailymotion
-                - Facebook
-                - Mixcloud
-                - SoundCloud
-                - Streamable
-                - Twitch
-                - Vimeo
-                - Wistia
-                - YouTube
-                <br/><br/>
-                """,
-                         unsafe_allow_html=True)
-
         with c1:
             url = st.text_input("First URL", "https://youtu.be/c9k8K1eII4g")
             event = st_player(url, **options, key="youtube_player")

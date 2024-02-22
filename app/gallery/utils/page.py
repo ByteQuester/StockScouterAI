@@ -27,7 +27,6 @@ class PageGroup:
         params = st.query_params
         return params.get(self._param, [self._default])[0]
 
-
     def item(self, label: str, callback: Callable, default=False) -> None:
         self._backup = None
 
@@ -54,7 +53,6 @@ class PageGroup:
             self._selected()
         else:
             st.title("🤷 404 Not Found")
-
 
     def _on_change(self, page: str):
         params = dict(st.query_params)  # Make a mutable copy of query params

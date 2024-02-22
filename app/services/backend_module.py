@@ -1,7 +1,6 @@
 from .service_manager import DataPipelineIntegration
 
 
-#class BackendModule(DataPipelineIntegration):
 def generate_data_for_cik(cik_number):
     use_snowflake = False
     data_pipeline = DataPipelineIntegration(cik_number, use_snowflake)

@@ -24,6 +24,19 @@ class DataLoader:
         ]
         return cik_numbers
 
+    def get_entity_name(self, cik):
+        """
+        Returns the entity name for a given CIK number by examining the data.
+        """
+        # Example: Using the 'Assets_Liabilities' dataset to get the entity name.
+        # Adjust the logic if you're using a different dataset or structure.
+        file_path = self.construct_csv_file_path(cik, 'Assets_Liabilities')
+        if file_path:
+            df = pd.read_csv(file_path)
+            if not df.empty and 'ENTITY' in df.columns:
+                return df['ENTITY'].iloc[0]
+        return "Unknown Entity"
+
     def get_available_query_types(self, cik):
         """
         Returns a list of available query types for a given CIK number.
@@ -38,40 +51,6 @@ class DataLoader:
                 return self._extract_query_types_from_markdown(html_content)
         return []
 
-    def construct_directory_path(self, cik, query_type):
-        directory_path = os.path.join(self.base_dir, str(cik),
-                                      'processed_data', query_type)
-        if os.path.isdir(directory_path):
-            return directory_path
-        else:
-            print(f"Directory not found: {directory_path}")
-            return None
-
-    @st.cache_resource(show_spinner=False)
-    def load_data(_self, directory_path):
-        """'_self' is used to unhash the argument"""
-        with st.spinner(
-                text=
-                "Loading and indexing the docs – hang tight! This should take 1-2 minutes."
-        ):
-            reader = SimpleDirectoryReader(input_dir=directory_path,
-                                           recursive=True)
-            docs = reader.load_data()
-            service_context = ServiceContext.from_defaults(llm=OpenAI(
-                model="gpt-3.5-turbo",
-                temperature=0.5,
-                system_prompt=
-                "You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating"
-            ))
-            index = VectorStoreIndex.from_documents(
-                docs, service_context=service_context)
-            query_engine = index.as_query_engine()
-            return query_engine
-
-    def push_query_engine(self, cik, query_type):
-        directory_path = self.construct_directory_path(cik, query_type)
-        return self.load_data(directory_path) if directory_path else None
-
     @staticmethod
     def _extract_query_types_from_markdown(html_content):
         """
@@ -80,6 +59,15 @@ class DataLoader:
         soup = BeautifulSoup(html_content, 'html.parser')
         query_types = [h3.get_text() for h3 in soup.find_all('h3')]
         return query_types
+
+    def construct_directory_path(self, cik, query_type):
+        directory_path = os.path.join(self.base_dir, str(cik),
+                                      'processed_data', query_type)
+        if os.path.isdir(directory_path):
+            return directory_path
+        else:
+            print(f"Directory not found: {directory_path}")
+            return None
 
     def construct_json_file_path(self, cik, query_type, chart_type):
         """
@@ -104,6 +92,63 @@ class DataLoader:
                 return json.load(json_file)
         else:
             return None
+
+    def construct_csv_file_path(self, cik, query_type):
+        """
+        Construct path to the latest CSV file for a specific query type.
+        """
+        folder_path = os.path.join(self.base_dir, str(cik), 'processed_data',
+                                   query_type)
+        if os.path.isdir(folder_path):
+            csv_files = [
+                file for file in os.listdir(folder_path)
+                if file.endswith('.csv')
+            ]
+            if csv_files:
+                # Assuming you want the latest CSV file based on creation time
+                latest_file = max(csv_files,
+                                  key=lambda x: os.path.getctime(
+                                      os.path.join(folder_path, x)))
+                return os.path.join(folder_path, latest_file)
+        return None
+
+    def load_csv_data(self, cik, query_type):
+        """
+        Load CSV data for a specific query type and CIK.
+        """
+        csv_file_path = self.construct_csv_file_path(cik, query_type)
+        if csv_file_path and os.path.exists(csv_file_path):
+            return pd.read_csv(csv_file_path)
+        else:
+            st.error(
+                f"No CSV data found for CIK {cik} and query type {query_type}."
+            )
+            return pd.DataFrame()  # Return an empty DataFrame as a fallback
+
+    def push_query_engine(self, cik, query_type):
+        directory_path = self.construct_directory_path(cik, query_type)
+        return self.load_data(directory_path) if directory_path else None
+
+    @st.cache_resource(show_spinner=False)
+    def load_data(_self, directory_path):
+        """'_self' is used to unhash the argument"""
+        with st.spinner(
+                text=
+                "Loading and indexing the docs – hang tight! This should take 1-2 minutes."
+        ):
+            reader = SimpleDirectoryReader(input_dir=directory_path,
+                                           recursive=True)
+            docs = reader.load_data()
+            service_context = ServiceContext.from_defaults(llm=OpenAI(
+                model="gpt-3.5-turbo",
+                temperature=0.5,
+                system_prompt=
+                "You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table."
+            ))
+            index = VectorStoreIndex.from_documents(
+                docs, service_context=service_context)
+            query_engine = index.as_query_engine()
+            return query_engine
 
     def load_and_filter_data(self, cik, query_type, chart_type, start_date,
                              end_date):
