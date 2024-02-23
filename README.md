@@ -6,7 +6,7 @@ ______________________________________________________________________
 <p align="center">
   <a href="#overview">Overview</a> |
   <a href="#installation">Installation</a> |
-  <a href="#[documentation](https://bytequester.github.io/StockScouterAI/)">Documentation</a> |
+  <a href="https://bytequester.github.io/StockScouterAI/">Documentation</a> |
   <a href="#features">Features</a> |
   <a href="#Demo">Demo</a> |
 </p>
