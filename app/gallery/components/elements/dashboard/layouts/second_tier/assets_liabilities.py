@@ -1,7 +1,7 @@
 import streamlit as st
 
 from app.gallery.components.elements.dashboard.setup import FinancialChart
-from app.services.queries.dev import AssetsLiabilitiesEquityAnalysis
+from app.services.queries.dev_tables import AssetsLiabilitiesEquityAnalysis
 
 from .base import SecondTierViewBase
 

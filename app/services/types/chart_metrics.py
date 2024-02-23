@@ -4,7 +4,7 @@ from enum import Enum
 class ChartMetrics(Enum):
     """
     The `ChartMetrics` enum guides the selection of financial metrics for transformation in
-    `.functions.transformers.transformers.py`, such as "NET_INCOME_LOSS", "REVENUES", and "OPS_INCOME_LOSS".
+    `.functions.transformers.transformers_base.py`, such as "NET_INCOME_LOSS", "REVENUES", and "OPS_INCOME_LOSS".
     To ensure accurate data sets for analysis and visualization:
 
     1. Review processed data in `.data/{cik}/processed_data` to identify available metrics.

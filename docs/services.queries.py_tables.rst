@@ -1,39 +1,39 @@
-app.services.queries.py_tables package
+app.services.queries.base_tables package
 ============================
 
 Submodules
 ----------
 
-app.services.queries.py_tables.assets_liabilities_
+app.services.queries.base_tables.assets_liabilities
 --------------------------------------------
 
-.. automodule:: app.services.queries.py_tables.assets_liabilities_
+.. automodule:: app.services.queries.base_tables.assets_liabilities
    :members:
    :undoc-members:
    :show-inheritance:
 
-app.services.queries.py_tables.cash_flow_
+app.services.queries.base_tables.cash_flow
 --------------------------------------------
 
-.. automodule:: app.services.queries.py_tables.cash_flow_
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-
-app.services.queries.py_tables.liquidity_
---------------------------------------------
-
-.. automodule:: app.services.queries.py_tables.liquidity_
+.. automodule:: app.services.queries.base_tables.cash_flow
    :members:
    :undoc-members:
    :show-inheritance:
 
 
-app.services.queries.py_tables.profitability_
+app.services.queries.base_tables.liquidity
+--------------------------------------------
+
+.. automodule:: app.services.queries.base_tables.liquidity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+app.services.queries.base_tables.profitability
 ---------------------------------------------
 
-.. automodule:: app.services.queries.py_tables.profitability_
+.. automodule:: app.services.queries.base_tables.profitability
    :members:
    :undoc-members:
    :show-inheritance:
@@ -41,7 +41,7 @@ app.services.queries.py_tables.profitability_
 Module contents
 ---------------
 
-.. automodule:: app.services.queries.py_tables
+.. automodule:: app.services.queries.base_tables
    :members:
    :undoc-members:
    :show-inheritance:

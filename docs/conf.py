@@ -27,7 +27,7 @@ extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
-    'recommonmark',
+    'myst_parser',
 ]
 
 templates_path = ['_templates']

@@ -28,12 +28,8 @@ def general_main():
 
     st.sidebar.header("Resources ✨")
     st.sidebar.info(
-        """The raw data is taken from [Kaggle](https://www.kaggle.com/datasets/hasibalmuzdadid/global-air-pollution-dataset) and 
-        originally scraped from [here](https://www.elichens.com/)!""")
+        """The raw data is taken from [SEC](https://sec.gov).""")
 
-    st.sidebar.info("""
-        Image icon is from [here](https://icons8.com/icon/BIlYIKuOI6sm/air-pollution)
-        """)
 
     # ========================= Load Content =========================
     # Quick guide

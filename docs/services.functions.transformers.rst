@@ -16,15 +16,15 @@ app.services.functions.transformers.transformer_manager
 
 Responsible for managing the transformation processes, the `transformer_manager` ensures the efficient and correct processing of data through transformation pipelines.
 
-app.services.functions.transformers.transformers
+app.services.functions.transformers.transformers_base
 -----------------------------------------------
 
-.. automodule:: app.services.functions.transformers.transformers
+.. automodule:: app.services.functions.transformers.transformers_base
    :members:
    :undoc-members:
    :show-inheritance:
 
-The `transforms.py` module houses specific functions and classes for data transformation, catering to various needs such as feature extraction, normalization, and scaling.
+The `transformers_base.py` module houses specific functions and classes for data transformation, catering to various needs such as feature extraction, normalization, and scaling.
 
 Module contents
 ---------------

@@ -2,7 +2,7 @@ from typing import Dict, Union
 
 import pandas as pd
 
-from .transformers import (AssetsLiabilitiesTransformer, CashFlowTransformer,
+from .transformers_base import (AssetsLiabilitiesTransformer, CashFlowTransformer,
                            LiquidityTransformer, ProfitabilityTransformer)
 
 

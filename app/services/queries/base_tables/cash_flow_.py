@@ -1,4 +1,4 @@
-from ..query_base import FinancialQueryBase
+from ..base_tables.query_base import FinancialQueryBase
 
 
 class CashFlowQuery(FinancialQueryBase):

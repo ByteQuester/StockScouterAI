@@ -1,6 +1,6 @@
 import numpy as np
 
-from ..query_base import FinancialQueryBase
+from ..base_tables.query_base import FinancialQueryBase
 
 
 class AssetsLiabilityQuery(FinancialQueryBase):

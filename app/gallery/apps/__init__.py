@@ -1,2 +1,2 @@
-from .chat.streamlit_app import main as chat
-from .read.streamlit_app import main as gallery
+from .chat.main import main as chat
+from .read.main import main as gallery

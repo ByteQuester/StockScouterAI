@@ -20,7 +20,7 @@ app.gallery.components.elements.dashboard.layouts.cash_flow
    :show-inheritance:
 
 app.gallery.components.elements.dashboard.layouts.liquidity
-------------------
+-----------------------------------------------------------------
 
 .. automodule:: app.gallery.components.elements.dashboard.layouts.liquidity
    :members:
@@ -29,7 +29,7 @@ app.gallery.components.elements.dashboard.layouts.liquidity
 
 
 app.gallery.components.elements.dashboard.layouts.profitability
---------------------
+-----------------------------------------------------------------
 
 .. automodule:: app.gallery.components.elements.dashboard.layouts.profitability
    :members:
@@ -38,7 +38,7 @@ app.gallery.components.elements.dashboard.layouts.profitability
 
 
 app.gallery.components.elements.dashboard.layouts.base
--------------------
+--------------------------------------------------------
 
 .. automodule:: app.gallery.components.elements.layouts.base
    :members:

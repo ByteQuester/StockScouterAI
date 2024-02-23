@@ -2,7 +2,7 @@ import pandas as pd
 
 from app.services.functions.managers import LoggingManager
 
-from .py_tables import ASSET_LIABILITIES, CASH_FLOW, LIQUIDITY, PROFITABILITY
+from .base_tables import ASSET_LIABILITIES, CASH_FLOW, LIQUIDITY, PROFITABILITY
 from .sql_tables import SQL_QUERY_FILES
 
 

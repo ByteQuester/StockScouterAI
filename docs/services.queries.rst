@@ -7,18 +7,10 @@ Subpackages
 .. toctree::
    :maxdepth: 2
 
-   services.queries.py_tables
+   services.queries.base_tables
 
 Submodules
 ----------
-
-app.services.queries.query_base
----------------------------------------------
-
-.. automodule:: app.services.queries.query_base
-   :members:
-   :undoc-members:
-   :show-inheritance:
 
 app.services.queries.query_manager
 --------------------------------------------

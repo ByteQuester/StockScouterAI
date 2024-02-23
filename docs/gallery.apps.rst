@@ -2,7 +2,7 @@ app.gallery.apps package
 =======================
 
 app.gallery.apps
-----------
+----------------
 
 .. automodule:: app.gallery.apps.chat
    :members:

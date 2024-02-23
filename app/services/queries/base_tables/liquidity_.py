@@ -1,30 +1,25 @@
 import numpy as np
 
-from ..query_base import FinancialQueryBase
+from ..base_tables.query_base import FinancialQueryBase
 
 
-class ProfitabilityQuery(FinancialQueryBase):
+class LiquidityQuery(FinancialQueryBase):
 
     def __init__(self):
-        # Initialize with a list of metrics essential for profitability calculations
-        super().__init__(
-            metrics=['NetIncomeLoss', 'OperatingIncomeLoss', 'Revenues'])
+        # Initialize with metrics essential for liquidity analysis
+        super().__init__(metrics=['AssetsCurrent', 'LiabilitiesCurrent'])
 
     def add_calculations(self, df):
         """
-        Add profitability-specific calculations to the DataFrame.
+        Add liquidity-specific calculations to the DataFrame.
         """
-        # Calculate Profit Margin Percent if 'NetIncomeLoss' and 'Revenues' are present and not NaN
-        if 'NetIncomeLoss' in df.columns and 'Revenues' in df.columns:
-            df['ProfitMarginPercent'] = np.where(
-                (df['NetIncomeLoss'].notna()) & (df['Revenues'].notna()) &
-                (df['Revenues'] != 0),
-                round((df['NetIncomeLoss'] / df['Revenues']) * 100, 2),
-                np.nan  # Set to NaN if conditions are not met
+        # Calculate Current Ratio if 'AssetsCurrent' and 'LiabilitiesCurrent' are present
+        if 'AssetsCurrent' in df.columns and 'LiabilitiesCurrent' in df.columns:
+            df['CurrentRatio'] = np.where(
+                df['LiabilitiesCurrent'] > 0,
+                round((df['AssetsCurrent'] / df['LiabilitiesCurrent']), 2),
+                np.nan  # Use NaN where LiabilitiesCurrent is zero or missing
             )
-
-        # Example: Implement additional profitability calculations here if needed
-
         return df
 
     def run_query(self,
@@ -33,7 +28,7 @@ class ProfitabilityQuery(FinancialQueryBase):
                   date_columns=None,
                   rename_map=None):
         """
-        Execute the profitability query process and return the final DataFrame.
+        Execute the liquidity query process and return the final DataFrame.
 
         Args:
             df (pd.DataFrame): The input DataFrame containing financial data.
@@ -54,13 +49,13 @@ class ProfitabilityQuery(FinancialQueryBase):
                 'end': 'DATE',
                 'year': 'Year',
                 'quarter': 'Quarter',
-                'NetIncomeLoss': 'NET_INCOME_LOSS',
-                'OperatingIncomeLoss': 'OPS_INCOME_LOSS',
-                'Revenues': 'REVENUES',
-                'ProfitMarginPercent': 'PROFIT_MARGIN'
+                'AssetsCurrent': 'CURRENT_ASSETS',
+                'LiabilitiesCurrent': 'CURRENT_LIABILITIES',
+                'CurrentRatio': 'CURRENT_RATIO'
             }
 
-        # Run the base query process
+        # Run the base query process, including preparation, calculations, and renaming
         df_final = super().run_query(df, index_cols, date_columns, rename_map)
 
+        # Scaling and renaming for specific liquidity metrics are handled by the base class and here
         return df_final

@@ -2,7 +2,7 @@ import streamlit as st
 
 from app.gallery.components.elements.dashboard.setup.second_tier import \
     FinancialChart
-from app.services.queries.dev import LiquidityAnalysis
+from app.services.queries.dev_tables import LiquidityAnalysis
 
 from .base import SecondTierViewBase
 
