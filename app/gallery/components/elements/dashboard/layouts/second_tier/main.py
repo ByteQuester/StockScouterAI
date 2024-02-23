@@ -20,6 +20,9 @@ def second_tier_main():
         Detailed financial analysis across various metrics. 
         Explore in-depth insights into profitability, cash flow, assets & liabilities, and liquidity.
     """)
+    st.sidebar.header("Resources ✨")
+    st.sidebar.info(
+        """The raw data is taken from [SEC](https://www.sec.gov/)""")
 
     # ========================= Main Content =========================
     # Quick guide
