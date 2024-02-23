@@ -16,15 +16,14 @@ def general_main():
                 unsafe_allow_html=True)
 
     # ========================= Sidebar =========================
-    # Initialize and update sidebar
-    update_sidebar()
     # Markdowns
     st.sidebar.header("About the Dashboard")
     st.sidebar.markdown("""
         Explore financial data of publicly traded companies in the US. 
         Analyze assets, liabilities, cash flow, and more through interactive visualizations.
     """)
-    #st.sidebar.markdown("**Made by** [Mehrdad Touraji](https://www.linkedin.com/in/mehrdad-touraji/)") to be put in first page
+    # Initialize and update sidebar
+    update_sidebar()
 
     st.sidebar.header("Resources ✨")
     st.sidebar.info(
