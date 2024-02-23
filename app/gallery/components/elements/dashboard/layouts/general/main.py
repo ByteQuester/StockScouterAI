@@ -22,14 +22,12 @@ def general_main():
         Explore financial data of publicly traded companies in the US. 
         Analyze assets, liabilities, cash flow, and more through interactive visualizations.
     """)
-    # Initialize and update sidebar
-    update_sidebar()
-
     st.sidebar.header("Resources ✨")
     st.sidebar.info(
         """The raw data is taken from [SEC](https://sec.gov).""")
-
-
+    # Initialize and update sidebar
+    update_sidebar()
+  
     # ========================= Load Content =========================
     # Quick guide
     with st.expander("Quick Info"):
