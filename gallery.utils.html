@@ -1,0 +1,753 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.gallery.utils package &#8212; stockscouterai 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'gallery.utils';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.services package" href="services.html" />
+    <link rel="prev" title="app.gallery.components.elements.dashboard.layout package" href="gallery.components.elements.dashboard.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">stockscouterai 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_base_tables.html">Base Production Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_dev_tables.html">Development Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_preprocessing.html">Financial Data (Pre)Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_processing.html">Preprocessing and Processing Stages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_transformers.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_second_tier_dashboard.html">Front-End Modules 2/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_setup_dashboards.html">Front-End Dashboard Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_third_tier_dashboard.html">Front-End Modules 3/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/chat.html">Chatbot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">app</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="app.html">The App Module</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="gallery.html">app.gallery package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="gallery.apps.html">app.gallery.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gallery.components.html">app.gallery.components package</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">app.gallery.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="services.html">app.services package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="services.functions.html">app.services.functions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.queries.html">app.services.queries package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.utils.html">app.services.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.types.html">app.services.types package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/gallery.utils.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>app.gallery.utils package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-api-key-manager">app.gallery.utils.api_key_manager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.get_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.get_api_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.prompt_for_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.prompt_for_api_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.validate_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.validate_api_key()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-chat-interface">app.gallery.utils.chat_interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.display_chat_messages"><code class="docutils literal notranslate"><span class="pre">display_chat_messages()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.generate_response"><code class="docutils literal notranslate"><span class="pre">generate_response()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.handle_user_input"><code class="docutils literal notranslate"><span class="pre">handle_user_input()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.initialize_session_state"><code class="docutils literal notranslate"><span class="pre">initialize_session_state()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-dashboard-setup">app.gallery.utils.dashboard_setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-data-loader">app.gallery.utils.data_loader</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader"><code class="docutils literal notranslate"><span class="pre">DataLoader</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_csv_file_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_csv_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_directory_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_directory_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_json_file_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_json_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.extract_unique_metrics_from_bar_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.extract_unique_metrics_from_bar_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_bar_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_bar_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_grid_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_grid_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_line_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_line_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_available_cik_numbers"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_available_cik_numbers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_available_query_types"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_available_query_types()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_entity_name"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_entity_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_metric_by_selection"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_metric_by_selection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_and_filter_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_and_filter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_csv_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_csv_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_json_data_for_chart"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_json_data_for_chart()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.push_query_engine"><code class="docutils literal notranslate"><span class="pre">DataLoader.push_query_engine()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils.page">app.gallery.utils.page</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup"><code class="docutils literal notranslate"><span class="pre">PageGroup</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.item"><code class="docutils literal notranslate"><span class="pre">PageGroup.item()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.selected"><code class="docutils literal notranslate"><span class="pre">PageGroup.selected</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.show"><code class="docutils literal notranslate"><span class="pre">PageGroup.show()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.page_group"><code class="docutils literal notranslate"><span class="pre">page_group()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils.readme">app.gallery.utils.readme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.readme.readme"><code class="docutils literal notranslate"><span class="pre">readme()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils">Module contents</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="app-gallery-utils-package">
+<h1>app.gallery.utils package<a class="headerlink" href="#app-gallery-utils-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="app-gallery-utils-api-key-manager">
+<h2>app.gallery.utils.api_key_manager<a class="headerlink" href="#app-gallery-utils-api-key-manager" title="Link to this heading">#</a></h2>
+<dl class="py class" id="module-app.gallery.utils.api_key_manager">
+<dt class="sig sig-object py" id="app.gallery.utils.api_key_manager.ApiKeyManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.gallery.utils.api_key_manager.</span></span><span class="sig-name descname"><span class="pre">ApiKeyManager</span></span><a class="reference internal" href="_modules/app/gallery/utils/api_key_manager.html#ApiKeyManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.api_key_manager.ApiKeyManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.api_key_manager.ApiKeyManager.get_api_key">
+<span class="sig-name descname"><span class="pre">get_api_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/api_key_manager.html#ApiKeyManager.get_api_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.api_key_manager.ApiKeyManager.get_api_key" title="Link to this definition">#</a></dt>
+<dd><p>Return the API key.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.api_key_manager.ApiKeyManager.prompt_for_api_key">
+<span class="sig-name descname"><span class="pre">prompt_for_api_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/api_key_manager.html#ApiKeyManager.prompt_for_api_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.api_key_manager.ApiKeyManager.prompt_for_api_key" title="Link to this definition">#</a></dt>
+<dd><p>Prompt the user for the API key if not already set and store it in the session state.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.api_key_manager.ApiKeyManager.validate_api_key">
+<span class="sig-name descname"><span class="pre">validate_api_key</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/api_key_manager.html#ApiKeyManager.validate_api_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.api_key_manager.ApiKeyManager.validate_api_key" title="Link to this definition">#</a></dt>
+<dd><p>Validate the API key without making a redundant call if it’s not set.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="app-gallery-utils-chat-interface">
+<h2>app.gallery.utils.chat_interface<a class="headerlink" href="#app-gallery-utils-chat-interface" title="Link to this heading">#</a></h2>
+<dl class="py function" id="module-app.gallery.utils.chat_interface">
+<dt class="sig sig-object py" id="app.gallery.utils.chat_interface.display_chat_messages">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.chat_interface.</span></span><span class="sig-name descname"><span class="pre">display_chat_messages</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/chat_interface.html#display_chat_messages"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.chat_interface.display_chat_messages" title="Link to this definition">#</a></dt>
+<dd><p>Display gallery messages.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.gallery.utils.chat_interface.generate_response">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.chat_interface.</span></span><span class="sig-name descname"><span class="pre">generate_response</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_engine</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prompt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/chat_interface.html#generate_response"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.chat_interface.generate_response" title="Link to this definition">#</a></dt>
+<dd><p>Generate response from the query engine.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.gallery.utils.chat_interface.handle_user_input">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.chat_interface.</span></span><span class="sig-name descname"><span class="pre">handle_user_input</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/chat_interface.html#handle_user_input"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.chat_interface.handle_user_input" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.gallery.utils.chat_interface.initialize_session_state">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.chat_interface.</span></span><span class="sig-name descname"><span class="pre">initialize_session_state</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/chat_interface.html#initialize_session_state"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.chat_interface.initialize_session_state" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="app-gallery-utils-dashboard-setup">
+<h2>app.gallery.utils.dashboard_setup<a class="headerlink" href="#app-gallery-utils-dashboard-setup" title="Link to this heading">#</a></h2>
+</section>
+<section id="app-gallery-utils-data-loader">
+<h2>app.gallery.utils.data_loader<a class="headerlink" href="#app-gallery-utils-data-loader" title="Link to this heading">#</a></h2>
+<dl class="py class" id="module-app.gallery.utils.data_loader">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.gallery.utils.data_loader.</span></span><span class="sig-name descname"><span class="pre">DataLoader</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'data'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.construct_csv_file_path">
+<span class="sig-name descname"><span class="pre">construct_csv_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.construct_csv_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.construct_csv_file_path" title="Link to this definition">#</a></dt>
+<dd><p>Construct path to the latest CSV file for a specific query type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.construct_directory_path">
+<span class="sig-name descname"><span class="pre">construct_directory_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.construct_directory_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.construct_directory_path" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.construct_json_file_path">
+<span class="sig-name descname"><span class="pre">construct_json_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.construct_json_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.construct_json_file_path" title="Link to this definition">#</a></dt>
+<dd><p>Construct path to the JSON file for a specific chart type.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.extract_unique_metrics_from_bar_data">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">extract_unique_metrics_from_bar_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.extract_unique_metrics_from_bar_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.extract_unique_metrics_from_bar_data" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.filter_bar_by_date">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter_bar_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.filter_bar_by_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.filter_bar_by_date" title="Link to this definition">#</a></dt>
+<dd><p>Filters the bar chart dataset by a date range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.filter_grid_by_date">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter_grid_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.filter_grid_by_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.filter_grid_by_date" title="Link to this definition">#</a></dt>
+<dd><p>Filters the data grid dataset by a date range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.filter_line_by_date">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">filter_line_by_date</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.filter_line_by_date"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.filter_line_by_date" title="Link to this definition">#</a></dt>
+<dd><p>Filters the data by a date range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.get_available_cik_numbers">
+<span class="sig-name descname"><span class="pre">get_available_cik_numbers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.get_available_cik_numbers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.get_available_cik_numbers" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of available CIK numbers based on the directory structure.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.get_available_query_types">
+<span class="sig-name descname"><span class="pre">get_available_query_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.get_available_query_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.get_available_query_types" title="Link to this definition">#</a></dt>
+<dd><p>Returns a list of available query types for a given CIK number.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.get_entity_name">
+<span class="sig-name descname"><span class="pre">get_entity_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.get_entity_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.get_entity_name" title="Link to this definition">#</a></dt>
+<dd><p>Returns the entity name for a given CIK number by examining the data.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.get_metric_by_selection">
+<span class="sig-name descname"><span class="pre">get_metric_by_selection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">selected_metrics</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.get_metric_by_selection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.get_metric_by_selection" title="Link to this definition">#</a></dt>
+<dd><p>Filters chart data based on user-selected metrics. Acts as a manager for filtering functionalities.
+For now, it’s tailored for line charts, but it can be extended for other chart types.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.load_and_filter_data">
+<span class="sig-name descname"><span class="pre">load_and_filter_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start_date</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">end_date</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.load_and_filter_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.load_and_filter_data" title="Link to this definition">#</a></dt>
+<dd><p>Loads JSON data for a chart and filters it by the given date range.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.load_csv_data">
+<span class="sig-name descname"><span class="pre">load_csv_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.load_csv_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.load_csv_data" title="Link to this definition">#</a></dt>
+<dd><p>Load CSV data for a specific query type and CIK.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.load_data">
+<span class="sig-name descname"><span class="pre">load_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">directory_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.load_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.load_data" title="Link to this definition">#</a></dt>
+<dd><p>‘_self’ is used to unhash the argument</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.load_json_data_for_chart">
+<span class="sig-name descname"><span class="pre">load_json_data_for_chart</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.load_json_data_for_chart"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.load_json_data_for_chart" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.data_loader.DataLoader.push_query_engine">
+<span class="sig-name descname"><span class="pre">push_query_engine</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/data_loader.html#DataLoader.push_query_engine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.data_loader.DataLoader.push_query_engine" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.gallery.utils.page">
+<span id="app-gallery-utils-page"></span><h2>app.gallery.utils.page<a class="headerlink" href="#module-app.gallery.utils.page" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.gallery.utils.page.PageGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.gallery.utils.page.</span></span><span class="sig-name descname"><span class="pre">PageGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/page.html#PageGroup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.page.PageGroup" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.page.PageGroup.item">
+<span class="sig-name descname"><span class="pre">item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/gallery/utils/page.html#PageGroup.item"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.page.PageGroup.item" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="app.gallery.utils.page.PageGroup.selected">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">selected</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">bool</span></em><a class="headerlink" href="#app.gallery.utils.page.PageGroup.selected" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.gallery.utils.page.PageGroup.show">
+<span class="sig-name descname"><span class="pre">show</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/gallery/utils/page.html#PageGroup.show"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.page.PageGroup.show" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.gallery.utils.page.page_group">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.page.</span></span><span class="sig-name descname"><span class="pre">page_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">param</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/page.html#page_group"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.page.page_group" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.gallery.utils.readme">
+<span id="app-gallery-utils-readme"></span><h2>app.gallery.utils.readme<a class="headerlink" href="#module-app.gallery.utils.readme" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.gallery.utils.readme.readme">
+<span class="sig-prename descclassname"><span class="pre">app.gallery.utils.readme.</span></span><span class="sig-name descname"><span class="pre">readme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">project</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">usage</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/gallery/utils/readme.html#readme"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.gallery.utils.readme.readme" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.gallery.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.gallery.utils" title="Link to this heading">#</a></h2>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="gallery.components.elements.dashboard.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">app.gallery.components.elements.dashboard.layout package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="services.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">app.services package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-api-key-manager">app.gallery.utils.api_key_manager</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.get_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.get_api_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.prompt_for_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.prompt_for_api_key()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.api_key_manager.ApiKeyManager.validate_api_key"><code class="docutils literal notranslate"><span class="pre">ApiKeyManager.validate_api_key()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-chat-interface">app.gallery.utils.chat_interface</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.display_chat_messages"><code class="docutils literal notranslate"><span class="pre">display_chat_messages()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.generate_response"><code class="docutils literal notranslate"><span class="pre">generate_response()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.handle_user_input"><code class="docutils literal notranslate"><span class="pre">handle_user_input()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.chat_interface.initialize_session_state"><code class="docutils literal notranslate"><span class="pre">initialize_session_state()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-dashboard-setup">app.gallery.utils.dashboard_setup</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#app-gallery-utils-data-loader">app.gallery.utils.data_loader</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader"><code class="docutils literal notranslate"><span class="pre">DataLoader</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_csv_file_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_csv_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_directory_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_directory_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.construct_json_file_path"><code class="docutils literal notranslate"><span class="pre">DataLoader.construct_json_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.extract_unique_metrics_from_bar_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.extract_unique_metrics_from_bar_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_bar_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_bar_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_grid_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_grid_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.filter_line_by_date"><code class="docutils literal notranslate"><span class="pre">DataLoader.filter_line_by_date()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_available_cik_numbers"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_available_cik_numbers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_available_query_types"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_available_query_types()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_entity_name"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_entity_name()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.get_metric_by_selection"><code class="docutils literal notranslate"><span class="pre">DataLoader.get_metric_by_selection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_and_filter_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_and_filter_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_csv_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_csv_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_data"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.load_json_data_for_chart"><code class="docutils literal notranslate"><span class="pre">DataLoader.load_json_data_for_chart()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.data_loader.DataLoader.push_query_engine"><code class="docutils literal notranslate"><span class="pre">DataLoader.push_query_engine()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils.page">app.gallery.utils.page</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup"><code class="docutils literal notranslate"><span class="pre">PageGroup</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.item"><code class="docutils literal notranslate"><span class="pre">PageGroup.item()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.selected"><code class="docutils literal notranslate"><span class="pre">PageGroup.selected</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.PageGroup.show"><code class="docutils literal notranslate"><span class="pre">PageGroup.show()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.page.page_group"><code class="docutils literal notranslate"><span class="pre">page_group()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils.readme">app.gallery.utils.readme</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.gallery.utils.readme.readme"><code class="docutils literal notranslate"><span class="pre">readme()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.gallery.utils">Module contents</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mehrdad Touraji
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrdad Touraji.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

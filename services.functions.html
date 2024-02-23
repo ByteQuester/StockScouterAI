@@ -1,0 +1,1317 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.services.functions package &#8212; stockscouterai 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'services.functions';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.services.functions.data package" href="services.functions.data.html" />
+    <link rel="prev" title="app.services package" href="services.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">stockscouterai 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_base_tables.html">Base Production Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_dev_tables.html">Development Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_preprocessing.html">Financial Data (Pre)Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_processing.html">Preprocessing and Processing Stages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_transformers.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_second_tier_dashboard.html">Front-End Modules 2/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_setup_dashboards.html">Front-End Dashboard Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_third_tier_dashboard.html">Front-End Modules 3/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/chat.html">Chatbot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">app</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="app.html">The App Module</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="gallery.html">app.gallery package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="gallery.apps.html">app.gallery.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gallery.components.html">app.gallery.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gallery.utils.html">app.gallery.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="services.html">app.services package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">app.services.functions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.queries.html">app.services.queries package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.utils.html">app.services.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.types.html">app.services.types package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/services.functions.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>app.services.functions package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.functions">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.AnnualDataProcessor"><code class="docutils literal notranslate"><span class="pre">AnnualDataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.AnnualDataProcessor.process_data"><code class="docutils literal notranslate"><span class="pre">AnnualDataProcessor.process_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.file_version_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.file_version_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.error_handler"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.snowflake_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.snowflake_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.preprocess_data"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.preprocess_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor"><code class="docutils literal notranslate"><span class="pre">DataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">DataProcessor.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.file_version_manager"><code class="docutils literal notranslate"><span class="pre">DataProcessor.file_version_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.query_executor"><code class="docutils literal notranslate"><span class="pre">DataProcessor.query_executor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.error_handler"><code class="docutils literal notranslate"><span class="pre">DataProcessor.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.process_and_store_data"><code class="docutils literal notranslate"><span class="pre">DataProcessor.process_and_store_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager"><code class="docutils literal notranslate"><span class="pre">DataStorageManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.get_latest_file_path"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.get_latest_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.store_data"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.store_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.store_json_data"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.store_json_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.transformer_manager"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.transformer_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.error_handler"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.transform_and_store"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.transform_and_store()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager"><code class="docutils literal notranslate"><span class="pre">LoggingManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.format_log_message"><code class="docutils literal notranslate"><span class="pre">LoggingManager.format_log_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.get_error_location"><code class="docutils literal notranslate"><span class="pre">LoggingManager.get_error_location()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.get_error_severity"><code class="docutils literal notranslate"><span class="pre">LoggingManager.get_error_severity()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.is_critical"><code class="docutils literal notranslate"><span class="pre">LoggingManager.is_critical()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.log"><code class="docutils literal notranslate"><span class="pre">LoggingManager.log()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.log_error"><code class="docutils literal notranslate"><span class="pre">LoggingManager.log_error()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_file_path"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_format"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_format()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_level"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_level()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager"><code class="docutils literal notranslate"><span class="pre">NotificationManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager.handle_error"><code class="docutils literal notranslate"><span class="pre">NotificationManager.handle_error()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager.send_notification"><code class="docutils literal notranslate"><span class="pre">NotificationManager.send_notification()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.QuarterlyDataProcessor"><code class="docutils literal notranslate"><span class="pre">QuarterlyDataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.QuarterlyDataProcessor.process_data"><code class="docutils literal notranslate"><span class="pre">QuarterlyDataProcessor.process_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient"><code class="docutils literal notranslate"><span class="pre">SECAPIClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_company_facts"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_company_facts()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_company_tickers"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_company_tickers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_submissions"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_submissions()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.close_connection"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.close_connection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.connect_to_snowflake"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.connect_to_snowflake()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.copy_data_from_stage_to_table"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.copy_data_from_stage_to_table()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.create_table"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.create_table()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.execute_query_from_file"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.execute_query_from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.get_data"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.get_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.put_file_to_stage"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.put_file_to_stage()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.upload_data"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.upload_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.TransformerManager"><code class="docutils literal notranslate"><span class="pre">TransformerManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.TransformerManager.transform_data"><code class="docutils literal notranslate"><span class="pre">TransformerManager.transform_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="app-services-functions-package">
+<h1>app.services.functions package<a class="headerlink" href="#app-services-functions-package" title="Link to this heading">#</a></h1>
+<section id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="services.functions.data.html">app.services.functions.data package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.data.html#app-services-functions-data-pre-processing">app.services.functions.data.pre_processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.data.html#module-app.services.functions.data.processing.preprocessor">app.services.functions.data.processing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.data.html#module-app.services.functions.data">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.functions.managers.html">app.services.functions.managers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.managers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.managers.html#module-app.services.functions.managers.logging_manager">app.services.functions.managers.logging_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.managers.html#module-app.services.functions.managers.notification_manager">app.services.functions.managers.notification_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.managers.html#module-app.services.functions.managers">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.functions.responses.html">app.services.functions.responses package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.responses.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.responses.html#module-app.services.functions.responses.cache">app.services.functions.responses.cache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.responses.html#module-app.services.functions.responses.sec_api_client">app.services.functions.responses.sec_api_client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.responses.html#module-app.services.functions.responses">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.functions.storages.html">app.services.functions.storage package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.storages.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.storages.html#module-app.services.functions.storages.local_data_storage">app.services.functions.storages.local_data_storage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.storages.html#module-app.services.functions.storages.sw_flake">app.services.functions.storages.sw_flake</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.storages.html#module-app.services.functions.storages">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="services.functions.transformers.html">app.services.functions.transformers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.transformers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.transformers.html#module-app.services.functions.transformers.transformer_manager">app.services.functions.transformers.transformer_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.transformers.html#app-services-functions-transformers-transformers-base">app.services.functions.transformers.transformers_base</a></li>
+<li class="toctree-l2"><a class="reference internal" href="services.functions.transformers.html#module-app.services.functions.transformers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="module-app.services.functions">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.services.functions" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.AnnualDataProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">AnnualDataProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/data/pre_processing/annual_processor.html#AnnualDataProcessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.AnnualDataProcessor" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FinancialDataProcessor</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.AnnualDataProcessor.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/app/services/functions/data/pre_processing/annual_processor.html#AnnualDataProcessor.process_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.AnnualDataProcessor.process_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes annually financial data based on specified metrics.</p>
+<p>This method filters, cleans, and sorts the financial data for annual processing based on the given metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>metrics</strong> (<em>list</em><em>[</em><em>str</em><em>] or </em><em>str</em>) – Financial metrics to process.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Processed annually data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">DataPreprocessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_storage_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_version_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_handler</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">snowflake_manager</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/data/processing/preprocessor.html#DataPreprocessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataPreprocessor" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Handles preprocessing of raw data fetched from the SEC API.</p>
+<p>This class manages the preprocessing of data based on defined metrics and
+stores or uploads the processed data using the appropriate storage manager.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor.data_storage_manager">
+<span class="sig-name descname"><span class="pre">data_storage_manager</span></span><a class="headerlink" href="#app.services.functions.DataPreprocessor.data_storage_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages local data storage operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.DataStorageManager" title="app.services.functions.DataStorageManager">DataStorageManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor.file_version_manager">
+<span class="sig-name descname"><span class="pre">file_version_manager</span></span><a class="headerlink" href="#app.services.functions.DataPreprocessor.file_version_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages file versioning and indexing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="services.utils.html#app.services.utils.file_version_control.FileVersionManager" title="app.services.utils.file_version_control.FileVersionManager">FileVersionManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor.error_handler">
+<span class="sig-name descname"><span class="pre">error_handler</span></span><a class="headerlink" href="#app.services.functions.DataPreprocessor.error_handler" title="Link to this definition">#</a></dt>
+<dd><p>Handles logging of errors and informational messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.LoggingManager" title="app.services.functions.LoggingManager">LoggingManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor.snowflake_manager">
+<span class="sig-name descname"><span class="pre">snowflake_manager</span></span><a class="headerlink" href="#app.services.functions.DataPreprocessor.snowflake_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages data upload to Snowflake. Default is None.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.SnowflakeDataManager" title="app.services.functions.SnowflakeDataManager">SnowflakeDataManager</a>, optional</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.DataPreprocessor.preprocess_data">
+<span class="sig-name descname"><span class="pre">preprocess_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_metric_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_snowflake</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/app/services/functions/data/processing/preprocessor.html#DataPreprocessor.preprocess_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataPreprocessor.preprocess_data" title="Link to this definition">#</a></dt>
+<dd><p>Preprocesses the raw data using annual and quarterly data processors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>raw_data</strong> (<em>dict</em>) – The raw data fetched from the SEC API.</p></li>
+<li><p><strong>category_metric_map</strong> (<em>dict</em>) – A mapping of data categories to their respective metrics.</p></li>
+<li><p><strong>use_snowflake</strong> (<em>bool</em>) – Flag to indicate whether to upload data to Snowflake.</p></li>
+<li><p><strong>cik_number</strong> (<em>str</em>) – Central Index Key number for data categorization.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Processed data or an error message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">DataProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_storage_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_version_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">query_executor</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/data/processing/processor.html#DataProcessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataProcessor" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages the processing and storage of preprocessed data.</p>
+<p>This class takes care of running specific queries on preprocessed data, handling the results,
+and ensuring that they are appropriately stored or logged.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor.data_storage_manager">
+<span class="sig-name descname"><span class="pre">data_storage_manager</span></span><a class="headerlink" href="#app.services.functions.DataProcessor.data_storage_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages local data storage operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.DataStorageManager" title="app.services.functions.DataStorageManager">DataStorageManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor.file_version_manager">
+<span class="sig-name descname"><span class="pre">file_version_manager</span></span><a class="headerlink" href="#app.services.functions.DataProcessor.file_version_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages file versioning and indexing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="services.utils.html#app.services.utils.file_version_control.FileVersionManager" title="app.services.utils.file_version_control.FileVersionManager">FileVersionManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor.query_executor">
+<span class="sig-name descname"><span class="pre">query_executor</span></span><a class="headerlink" href="#app.services.functions.DataProcessor.query_executor" title="Link to this definition">#</a></dt>
+<dd><p>Executes data processing queries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="services.queries.html#app.services.queries.query_manager.QueryExecutor" title="app.services.queries.query_manager.QueryExecutor">QueryExecutor</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor.error_handler">
+<span class="sig-name descname"><span class="pre">error_handler</span></span><a class="headerlink" href="#app.services.functions.DataProcessor.error_handler" title="Link to this definition">#</a></dt>
+<dd><p>Handles logging of errors and informational messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.LoggingManager" title="app.services.functions.LoggingManager">LoggingManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.DataProcessor.process_and_store_data">
+<span class="sig-name descname"><span class="pre">process_and_store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category_metric_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_snowflake</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specific_queries</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/app/services/functions/data/processing/processor.html#DataProcessor.process_and_store_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataProcessor.process_and_store_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes and stores data based on specific queries or all available categories.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category_metric_map</strong> (<em>dict</em>) – A mapping of data categories to their respective metrics.</p></li>
+<li><p><strong>use_snowflake</strong> (<em>bool</em>) – Flag to indicate whether to upload data to Snowflake.</p></li>
+<li><p><strong>cik_number</strong> (<em>str</em>) – Central Index Key number for data categorization.</p></li>
+<li><p><strong>specific_queries</strong> (<em>list</em><em> of </em><em>str</em><em>, </em><em>optional</em>) – Specific queries to execute. Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Processed data or an error message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.DataStorageManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">DataStorageManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_storage_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/local_data_storage.html#DataStorageManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataStorageManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.DataStorageManager.get_latest_file_path">
+<span class="sig-name descname"><span class="pre">get_latest_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/services/functions/storages/local_data_storage.html#DataStorageManager.get_latest_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataStorageManager.get_latest_file_path" title="Link to this definition">#</a></dt>
+<dd><p>Get the path of the latest file for a specific query in a specified data type directory.
+:param query_name: The name of the query.
+:type query_name: str
+:param data_type: Type of data (‘preprocessed_data’ or ‘processed_data’).
+:type data_type: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The path of the latest file, or None if no file is found.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>Union[str, None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.DataStorageManager.store_data">
+<span class="sig-name descname"><span class="pre">store_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/services/functions/storages/local_data_storage.html#DataStorageManager.store_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataStorageManager.store_data" title="Link to this definition">#</a></dt>
+<dd><p>Store data in CSV format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – The data to be stored as a DataFrame.</p></li>
+<li><p><strong>storage_type</strong> (<em>str</em>) – The storage type (‘preprocessed_data’ or ‘processed_data’).</p></li>
+<li><p><strong>category_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The category name. Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The file name of the stored data or None if an error occurs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[str, None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.DataStorageManager.store_json_data">
+<span class="sig-name descname"><span class="pre">store_json_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">json_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sub_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/services/functions/storages/local_data_storage.html#DataStorageManager.store_json_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.DataStorageManager.store_json_data" title="Link to this definition">#</a></dt>
+<dd><p>Store JSON data in the designated directory for specific chart types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>json_data</strong> (<em>dict</em>) – The JSON data to be stored.</p></li>
+<li><p><strong>storage_type</strong> (<em>str</em>) – The storage type (‘preprocessed_data’ or ‘processed_data’).</p></li>
+<li><p><strong>category_name</strong> (<em>str</em><em>, </em><em>optional</em>) – The category name. Default is None.</p></li>
+<li><p><strong>sub_category</strong> (<em>str</em><em>, </em><em>optional</em>) – The sub-category name. Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The file name of the stored JSON data or None if an error occurs.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[str, None]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.JSONDataTransformer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">JSONDataTransformer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data_storage_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transformer_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_handler</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/data/processing/transformer.html#JSONDataTransformer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.JSONDataTransformer" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages the transformation of processed data into JSON format and its storage.</p>
+<p>This class handles the conversion of data into a JSON format suitable for charts or other visualizations,
+and ensures that this transformed data is stored correctly.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.JSONDataTransformer.data_storage_manager">
+<span class="sig-name descname"><span class="pre">data_storage_manager</span></span><a class="headerlink" href="#app.services.functions.JSONDataTransformer.data_storage_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages local data storage operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.DataStorageManager" title="app.services.functions.DataStorageManager">DataStorageManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.JSONDataTransformer.transformer_manager">
+<span class="sig-name descname"><span class="pre">transformer_manager</span></span><a class="headerlink" href="#app.services.functions.JSONDataTransformer.transformer_manager" title="Link to this definition">#</a></dt>
+<dd><p>Manages data transformation operations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.TransformerManager" title="app.services.functions.TransformerManager">TransformerManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.functions.JSONDataTransformer.error_handler">
+<span class="sig-name descname"><span class="pre">error_handler</span></span><a class="headerlink" href="#app.services.functions.JSONDataTransformer.error_handler" title="Link to this definition">#</a></dt>
+<dd><p>Handles logging of errors and informational messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#app.services.functions.LoggingManager" title="app.services.functions.LoggingManager">LoggingManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.JSONDataTransformer.transform_and_store">
+<span class="sig-name descname"><span class="pre">transform_and_store</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">category_metric_map</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">specific_category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_types</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="_modules/app/services/functions/data/processing/transformer.html#JSONDataTransformer.transform_and_store"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.JSONDataTransformer.transform_and_store" title="Link to this definition">#</a></dt>
+<dd><p>Transforms and stores data in JSON format based on the specified categories and chart types.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>category_metric_map</strong> (<em>Dict</em><em>[</em><em>str</em><em>, </em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – A mapping of data categories to their respective metrics.</p></li>
+<li><p><strong>specific_category</strong> (<em>Optional</em><em>[</em><em>str</em><em>]</em>) – Specific category to process. Default is None.</p></li>
+<li><p><strong>chart_types</strong> (<em>Optional</em><em>[</em><em>List</em><em>[</em><em>str</em><em>]</em><em>]</em>) – Specific chart types to transform data into. Default is None.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">LoggingManager</span></span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages logging for the application.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.format_log_message">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">format_log_message</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.format_log_message"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.format_log_message" title="Link to this definition">#</a></dt>
+<dd><p>Format a log message with a timestamp and type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – Message to format.</p></li>
+<li><p><strong>message_type</strong> (<em>str</em>) – Type of the message (e.g., ‘ERROR’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Formatted log message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.get_error_location">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_error_location</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.get_error_location"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.get_error_location" title="Link to this definition">#</a></dt>
+<dd><p>Retrieve the code location of an error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Location in the code where the error occurred.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.get_error_severity">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_error_severity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.get_error_severity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.get_error_severity" title="Link to this definition">#</a></dt>
+<dd><p>Get the severity level for a given error.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>error</strong> (<em>Exception</em>) – Error to evaluate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Severity level of the error.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.is_critical">
+<span class="sig-name descname"><span class="pre">is_critical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.is_critical"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.is_critical" title="Link to this definition">#</a></dt>
+<dd><p>Check if an error is critical.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>error</strong> (<em>Exception</em>) – Error to evaluate.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>True if error is critical, False otherwise.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.log">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">log</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.log"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.log" title="Link to this definition">#</a></dt>
+<dd><p>Log a message with a specified severity level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>message</strong> (<em>str</em>) – Message to log.</p></li>
+<li><p><strong>severity</strong> (<em>str</em>) – Severity level (e.g., ‘INFO’).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.log_error">
+<span class="sig-name descname"><span class="pre">log_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">severity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'INFO'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.log_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.log_error" title="Link to this definition">#</a></dt>
+<dd><p>Log an error with detailed information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>error</strong> (<em>Exception</em>) – Error to log.</p></li>
+<li><p><strong>severity</strong> (<em>str</em>) – Severity level of the error.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.set_log_file_path">
+<span class="sig-name descname"><span class="pre">set_log_file_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.set_log_file_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.set_log_file_path" title="Link to this definition">#</a></dt>
+<dd><p>Set the file path for logging output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>path</strong> (<em>str</em>) – Path to the log file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.set_log_format">
+<span class="sig-name descname"><span class="pre">set_log_format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">format</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.set_log_format"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.set_log_format" title="Link to this definition">#</a></dt>
+<dd><p>Set the format for log messages.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>format</strong> (<em>str</em>) – Format string for log messages.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.LoggingManager.set_log_level">
+<span class="sig-name descname"><span class="pre">set_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">level</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/logging_manager.html#LoggingManager.set_log_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.LoggingManager.set_log_level" title="Link to this definition">#</a></dt>
+<dd><p>Set the logging level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>level</strong> (<em>str</em>) – Logging level (e.g., ‘INFO’, ‘DEBUG’).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.NotificationManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">NotificationManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">logging_manager</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/notification_manager.html#NotificationManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.NotificationManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.NotificationManager.handle_error">
+<span class="sig-name descname"><span class="pre">handle_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/notification_manager.html#NotificationManager.handle_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.NotificationManager.handle_error" title="Link to this definition">#</a></dt>
+<dd><p>Handle and log errors that occur during notification sending.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>error_message</strong> (<em>str</em>) – The error message to handle.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.NotificationManager.send_notification">
+<span class="sig-name descname"><span class="pre">send_notification</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/managers/notification_manager.html#NotificationManager.send_notification"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.NotificationManager.send_notification" title="Link to this definition">#</a></dt>
+<dd><p>Send a notification and log the action.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>message</strong> (<em>str</em>) – The notification message to send.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.QuarterlyDataProcessor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">QuarterlyDataProcessor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/data/pre_processing/quarterly_processor.html#QuarterlyDataProcessor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.QuarterlyDataProcessor" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">FinancialDataProcessor</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.QuarterlyDataProcessor.process_data">
+<span class="sig-name descname"><span class="pre">process_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metrics</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/app/services/functions/data/pre_processing/quarterly_processor.html#QuarterlyDataProcessor.process_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.QuarterlyDataProcessor.process_data" title="Link to this definition">#</a></dt>
+<dd><p>Processes quarterly financial data based on specified metrics.</p>
+<p>This method filters, cleans, and sorts the quarterly financial data based on the given metrics.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>metrics</strong> (<em>list</em><em>[</em><em>str</em><em>] or </em><em>str</em>) – Financial metrics to process.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Processed quarterly data.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.SECAPIClient">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">SECAPIClient</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/responses/sec_api_client.html#SECAPIClient"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SECAPIClient" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SECAPIClient.fetch_company_facts">
+<span class="sig-name descname"><span class="pre">fetch_company_facts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/app/services/functions/responses/sec_api_client.html#SECAPIClient.fetch_company_facts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SECAPIClient.fetch_company_facts" title="Link to this definition">#</a></dt>
+<dd><p>Fetch facts about a company using its CIK number. Uses cache if available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cik_number</strong> (<em>str</em>) – CIK number of the company.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Parsed company facts data or error information.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame or dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SECAPIClient.fetch_company_tickers">
+<span class="sig-name descname"><span class="pre">fetch_company_tickers</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/app/services/functions/responses/sec_api_client.html#SECAPIClient.fetch_company_tickers"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SECAPIClient.fetch_company_tickers" title="Link to this definition">#</a></dt>
+<dd><p>Fetch and return company tickers from the SEC API. Uses cache if available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Parsed tickers data or error information.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame or dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SECAPIClient.fetch_submissions">
+<span class="sig-name descname"><span class="pre">fetch_submissions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">DataFrame</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="_modules/app/services/functions/responses/sec_api_client.html#SECAPIClient.fetch_submissions"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SECAPIClient.fetch_submissions" title="Link to this definition">#</a></dt>
+<dd><p>Fetch submissions for a given CIK number. Uses cache if available.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>cik_number</strong> (<em>str</em>) – CIK number of the company.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Parsed submissions data or error information.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pd.DataFrame or dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">SnowflakeDataManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">SnowflakeConfig</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_stage_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.close_connection">
+<span class="sig-name descname"><span class="pre">close_connection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.close_connection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.close_connection" title="Link to this definition">#</a></dt>
+<dd><p>Closes the connection to Snowflake.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.connect_to_snowflake">
+<span class="sig-name descname"><span class="pre">connect_to_snowflake</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.connect_to_snowflake"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.connect_to_snowflake" title="Link to this definition">#</a></dt>
+<dd><p>Establishes a connection to Snowflake using environment variables for credentials.
+:raises Exception: If there is an error in connecting to Snowflake.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.copy_data_from_stage_to_table">
+<span class="sig-name descname"><span class="pre">copy_data_from_stage_to_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">stage_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.copy_data_from_stage_to_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.copy_data_from_stage_to_table" title="Link to this definition">#</a></dt>
+<dd><p>Copies data from a specified Snowflake stage to a Snowflake table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>stage_name</strong> (<em>str</em>) – The name of the Snowflake stage. If None, a stage name is generated.</p></li>
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the Snowflake table. If None, uses the default table name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.create_table">
+<span class="sig-name descname"><span class="pre">create_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.create_table"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.create_table" title="Link to this definition">#</a></dt>
+<dd><p>Creates a table in Snowflake with specific columns.
+:param table_name: The name of the table to create.
+:type table_name: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.execute_query_from_file">
+<span class="sig-name descname"><span class="pre">execute_query_from_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query_filename</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.execute_query_from_file"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.execute_query_from_file" title="Link to this definition">#</a></dt>
+<dd><p>Executes a SQL query from a file.
+:param query_filename: The path to the SQL file containing the query.
+:type query_filename: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The results of the SQL query.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.get_data">
+<span class="sig-name descname"><span class="pre">get_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">query</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.get_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.get_data" title="Link to this definition">#</a></dt>
+<dd><p>Executes a SQL query in Snowflake and returns the results.
+:param query: The SQL query to execute.
+:type query: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The results of the query as a pandas DataFrame.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>pd.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.put_file_to_stage">
+<span class="sig-name descname"><span class="pre">put_file_to_stage</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stage_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.put_file_to_stage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.put_file_to_stage" title="Link to this definition">#</a></dt>
+<dd><p>Uploads a file from the local filesystem to the specified Snowflake stage.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>file_path</strong> (<em>str</em>) – The local path to the file to upload.</p></li>
+<li><p><strong>stage_name</strong> (<em>str</em>) – The name of the Snowflake stage to upload the file to.
+If None, a stage name is generated.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.SnowflakeDataManager.upload_data">
+<span class="sig-name descname"><span class="pre">upload_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/functions/storages/sw_flake.html#SnowflakeDataManager.upload_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.SnowflakeDataManager.upload_data" title="Link to this definition">#</a></dt>
+<dd><p>Converts a pandas DataFrame to CSV and uploads it to Snowflake.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> (<em>pd.DataFrame</em>) – The DataFrame to upload.</p></li>
+<li><p><strong>table_name</strong> (<em>str</em>) – The name of the Snowflake table. If None, uses the default table name.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.functions.TransformerManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.functions.</span></span><span class="sig-name descname"><span class="pre">TransformerManager</span></span><a class="reference internal" href="_modules/app/services/functions/transformers/transformer_manager.html#TransformerManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.TransformerManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.functions.TransformerManager.transform_data">
+<span class="sig-name descname"><span class="pre">transform_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">DataFrame</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">chart_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Dict</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">DataFrame</span></span></span><a class="reference internal" href="_modules/app/services/functions/transformers/transformer_manager.html#TransformerManager.transform_data"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.functions.TransformerManager.transform_data" title="Link to this definition">#</a></dt>
+<dd><p>Transform data based on category and chart type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>df</strong> (<em>pd.DataFrame</em>) – The DataFrame containing the data to be transformed.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – The data category (e.g., “Profitability”, “Liquidity”).</p></li>
+<li><p><strong>chart_type</strong> (<em>str</em>) – The desired chart type (“line_chart”, “bar_chart”, or other).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Transformed data in a format suitable for the specified chart type.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Union[Dict, pd.DataFrame]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="services.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">app.services package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="services.functions.data.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">app.services.functions.data package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.functions">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.AnnualDataProcessor"><code class="docutils literal notranslate"><span class="pre">AnnualDataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.AnnualDataProcessor.process_data"><code class="docutils literal notranslate"><span class="pre">AnnualDataProcessor.process_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.file_version_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.file_version_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.error_handler"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.snowflake_manager"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.snowflake_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataPreprocessor.preprocess_data"><code class="docutils literal notranslate"><span class="pre">DataPreprocessor.preprocess_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor"><code class="docutils literal notranslate"><span class="pre">DataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">DataProcessor.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.file_version_manager"><code class="docutils literal notranslate"><span class="pre">DataProcessor.file_version_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.query_executor"><code class="docutils literal notranslate"><span class="pre">DataProcessor.query_executor</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.error_handler"><code class="docutils literal notranslate"><span class="pre">DataProcessor.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataProcessor.process_and_store_data"><code class="docutils literal notranslate"><span class="pre">DataProcessor.process_and_store_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager"><code class="docutils literal notranslate"><span class="pre">DataStorageManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.get_latest_file_path"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.get_latest_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.store_data"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.store_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.DataStorageManager.store_json_data"><code class="docutils literal notranslate"><span class="pre">DataStorageManager.store_json_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.data_storage_manager"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.data_storage_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.transformer_manager"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.transformer_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.error_handler"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.error_handler</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.JSONDataTransformer.transform_and_store"><code class="docutils literal notranslate"><span class="pre">JSONDataTransformer.transform_and_store()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager"><code class="docutils literal notranslate"><span class="pre">LoggingManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.format_log_message"><code class="docutils literal notranslate"><span class="pre">LoggingManager.format_log_message()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.get_error_location"><code class="docutils literal notranslate"><span class="pre">LoggingManager.get_error_location()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.get_error_severity"><code class="docutils literal notranslate"><span class="pre">LoggingManager.get_error_severity()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.is_critical"><code class="docutils literal notranslate"><span class="pre">LoggingManager.is_critical()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.log"><code class="docutils literal notranslate"><span class="pre">LoggingManager.log()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.log_error"><code class="docutils literal notranslate"><span class="pre">LoggingManager.log_error()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_file_path"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_file_path()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_format"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_format()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.LoggingManager.set_log_level"><code class="docutils literal notranslate"><span class="pre">LoggingManager.set_log_level()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager"><code class="docutils literal notranslate"><span class="pre">NotificationManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager.handle_error"><code class="docutils literal notranslate"><span class="pre">NotificationManager.handle_error()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.NotificationManager.send_notification"><code class="docutils literal notranslate"><span class="pre">NotificationManager.send_notification()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.QuarterlyDataProcessor"><code class="docutils literal notranslate"><span class="pre">QuarterlyDataProcessor</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.QuarterlyDataProcessor.process_data"><code class="docutils literal notranslate"><span class="pre">QuarterlyDataProcessor.process_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient"><code class="docutils literal notranslate"><span class="pre">SECAPIClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_company_facts"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_company_facts()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_company_tickers"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_company_tickers()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SECAPIClient.fetch_submissions"><code class="docutils literal notranslate"><span class="pre">SECAPIClient.fetch_submissions()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.close_connection"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.close_connection()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.connect_to_snowflake"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.connect_to_snowflake()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.copy_data_from_stage_to_table"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.copy_data_from_stage_to_table()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.create_table"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.create_table()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.execute_query_from_file"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.execute_query_from_file()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.get_data"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.get_data()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.put_file_to_stage"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.put_file_to_stage()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.SnowflakeDataManager.upload_data"><code class="docutils literal notranslate"><span class="pre">SnowflakeDataManager.upload_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.TransformerManager"><code class="docutils literal notranslate"><span class="pre">TransformerManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.functions.TransformerManager.transform_data"><code class="docutils literal notranslate"><span class="pre">TransformerManager.transform_data()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mehrdad Touraji
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrdad Touraji.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

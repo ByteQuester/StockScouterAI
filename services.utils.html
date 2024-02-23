@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>app.services.utils package &#8212; stockscouterai 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'services.utils';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="app.services.types package" href="services.types.html" />
+    <link rel="prev" title="app.services.queries package" href="services.queries.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">stockscouterai 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_base_tables.html">Base Production Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_dev_tables.html">Development Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_preprocessing.html">Financial Data (Pre)Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_processing.html">Preprocessing and Processing Stages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/back_transformers.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_second_tier_dashboard.html">Front-End Modules 2/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_setup_dashboards.html">Front-End Dashboard Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/front_third_tier_dashboard.html">Front-End Modules 3/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="get_started/chat.html">Chatbot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">app</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="app.html">The App Module</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="gallery.html">app.gallery package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="gallery.apps.html">app.gallery.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gallery.components.html">app.gallery.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="gallery.utils.html">app.gallery.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current active has-children"><a class="reference internal" href="services.html">app.services package</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="services.functions.html">app.services.functions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.queries.html">app.services.queries package</a></li>
+<li class="toctree-l4 current active"><a class="current reference internal" href="#">app.services.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="services.types.html">app.services.types package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/services.utils.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>app.services.utils package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.file_version_control">app.services.utils.file_version_control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager"><code class="docutils literal notranslate"><span class="pre">FileVersionManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager.base_dir"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.base_dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager.update_index"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.roster">app.services.utils.roster</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster"><code class="docutils literal notranslate"><span class="pre">Roster</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.cik"><code class="docutils literal notranslate"><span class="pre">Roster.cik</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.user_agent"><code class="docutils literal notranslate"><span class="pre">Roster.user_agent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.api_endpoints"><code class="docutils literal notranslate"><span class="pre">Roster.api_endpoints</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.api_status"><code class="docutils literal notranslate"><span class="pre">Roster.api_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.logging_manager"><code class="docutils literal notranslate"><span class="pre">Roster.logging_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.get_api_status"><code class="docutils literal notranslate"><span class="pre">Roster.get_api_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.print_cik"><code class="docutils literal notranslate"><span class="pre">Roster.print_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.recruit_cik"><code class="docutils literal notranslate"><span class="pre">Roster.recruit_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.update_cik"><code class="docutils literal notranslate"><span class="pre">Roster.update_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.update_endpoint"><code class="docutils literal notranslate"><span class="pre">Roster.update_endpoint()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.utils">app.services.utils.utils</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.utils.dataframe_to_csv"><code class="docutils literal notranslate"><span class="pre">dataframe_to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.utils.now"><code class="docutils literal notranslate"><span class="pre">now()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager"><code class="docutils literal notranslate"><span class="pre">FileVersionManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager.base_dir"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.base_dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager.update_index"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster"><code class="docutils literal notranslate"><span class="pre">Roster</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.cik"><code class="docutils literal notranslate"><span class="pre">Roster.cik</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.user_agent"><code class="docutils literal notranslate"><span class="pre">Roster.user_agent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.api_endpoints"><code class="docutils literal notranslate"><span class="pre">Roster.api_endpoints</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.api_status"><code class="docutils literal notranslate"><span class="pre">Roster.api_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.logging_manager"><code class="docutils literal notranslate"><span class="pre">Roster.logging_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.get_api_status"><code class="docutils literal notranslate"><span class="pre">Roster.get_api_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.print_cik"><code class="docutils literal notranslate"><span class="pre">Roster.print_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.recruit_cik"><code class="docutils literal notranslate"><span class="pre">Roster.recruit_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.update_cik"><code class="docutils literal notranslate"><span class="pre">Roster.update_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.update_endpoint"><code class="docutils literal notranslate"><span class="pre">Roster.update_endpoint()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.dataframe_to_csv"><code class="docutils literal notranslate"><span class="pre">dataframe_to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.now"><code class="docutils literal notranslate"><span class="pre">now()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="app-services-utils-package">
+<h1>app.services.utils package<a class="headerlink" href="#app-services-utils-package" title="Link to this heading">#</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-app.services.utils.file_version_control">
+<span id="app-services-utils-file-version-control"></span><h2>app.services.utils.file_version_control<a class="headerlink" href="#module-app.services.utils.file_version_control" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.utils.file_version_control.FileVersionManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.utils.file_version_control.</span></span><span class="sig-name descname"><span class="pre">FileVersionManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.file_version_control.FileVersionManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages versioning and indexing of files in a directory structure.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.file_version_control.FileVersionManager.base_dir">
+<span class="sig-name descname"><span class="pre">base_dir</span></span><a class="headerlink" href="#app.services.utils.file_version_control.FileVersionManager.base_dir" title="Link to this definition">#</a></dt>
+<dd><p>The base directory path where files are stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.file_version_control.FileVersionManager.update_index">
+<span class="sig-name descname"><span class="pre">update_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager.update_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.file_version_control.FileVersionManager.update_index" title="Link to this definition">#</a></dt>
+<dd><p>Updates the index file with file details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id0">
+<span class="sig-name descname"><span class="pre">update_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager.update_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id0" title="Link to this definition">#</a></dt>
+<dd><p>Updates the index file with new file details for a specific CIK number and storage type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cik_number</strong> (<em>str</em>) – The Central Index Key (CIK) number of the company.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – The category of the data.</p></li>
+<li><p><strong>file_name</strong> (<em>str</em>) – The name of the file to be indexed.</p></li>
+<li><p><strong>storage_type</strong> (<em>str</em>) – The type of storage for the file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.services.utils.roster">
+<span id="app-services-utils-roster"></span><h2>app.services.utils.roster<a class="headerlink" href="#module-app.services.utils.roster" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.utils.roster.</span></span><span class="sig-name descname"><span class="pre">Roster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'your_email&#64;example.com'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages API endpoints and CIK numbers for SEC API interactions.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.cik">
+<span class="sig-name descname"><span class="pre">cik</span></span><a class="headerlink" href="#app.services.utils.roster.Roster.cik" title="Link to this definition">#</a></dt>
+<dd><p>The Central Index Key (CIK) number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.user_agent">
+<span class="sig-name descname"><span class="pre">user_agent</span></span><a class="headerlink" href="#app.services.utils.roster.Roster.user_agent" title="Link to this definition">#</a></dt>
+<dd><p>The user agent string for API requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.api_endpoints">
+<span class="sig-name descname"><span class="pre">api_endpoints</span></span><a class="headerlink" href="#app.services.utils.roster.Roster.api_endpoints" title="Link to this definition">#</a></dt>
+<dd><p>Dictionary of API endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.api_status">
+<span class="sig-name descname"><span class="pre">api_status</span></span><a class="headerlink" href="#app.services.utils.roster.Roster.api_status" title="Link to this definition">#</a></dt>
+<dd><p>Status of each API endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.logging_manager">
+<span class="sig-name descname"><span class="pre">logging_manager</span></span><a class="headerlink" href="#app.services.utils.roster.Roster.logging_manager" title="Link to this definition">#</a></dt>
+<dd><p>Instance for logging activities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="services.functions.html#app.services.functions.LoggingManager" title="app.services.functions.LoggingManager">LoggingManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.get_api_status">
+<span class="sig-name descname"><span class="pre">get_api_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.get_api_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster.get_api_status" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves the status of the API endpoints.
+:returns: The status of each API endpoint.
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.print_cik">
+<span class="sig-name descname"><span class="pre">print_cik</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.print_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster.print_cik" title="Link to this definition">#</a></dt>
+<dd><p>Prints the current CIK number.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.recruit_cik">
+<span class="sig-name descname"><span class="pre">recruit_cik</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#app.services.utils.roster.Roster" title="app.services.utils.roster.Roster"><span class="pre">Roster</span></a></span></span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.recruit_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster.recruit_cik" title="Link to this definition">#</a></dt>
+<dd><p>Assigns a CIK number and updates API endpoints accordingly.
+:param cik: The CIK number to be assigned.
+:type cik: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current Roster instance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#app.services.utils.roster.Roster" title="app.services.utils.roster.Roster">Roster</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.update_cik">
+<span class="sig-name descname"><span class="pre">update_cik</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.update_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster.update_cik" title="Link to this definition">#</a></dt>
+<dd><p>Updates the CIK number and associated endpoints.
+:param cik: The new CIK number to be updated.
+:type cik: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.roster.Roster.update_endpoint">
+<span class="sig-name descname"><span class="pre">update_endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.update_endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.roster.Roster.update_endpoint" title="Link to this definition">#</a></dt>
+<dd><p>Updates the URL for a specific API endpoint.
+:param endpoint_name: The name of the endpoint to be updated.
+:type endpoint_name: str
+:param url: The new URL for the endpoint.
+:type url: str</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-app.services.utils.utils">
+<span id="app-services-utils-utils"></span><h2>app.services.utils.utils<a class="headerlink" href="#module-app.services.utils.utils" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.utils.utils.dataframe_to_csv">
+<span class="sig-prename descclassname"><span class="pre">app.services.utils.utils.</span></span><span class="sig-name descname"><span class="pre">dataframe_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/utils.html#dataframe_to_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.utils.dataframe_to_csv" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.utils.utils.now">
+<span class="sig-prename descclassname"><span class="pre">app.services.utils.utils.</span></span><span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/utils.html#now"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.utils.now" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-app.services.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-app.services.utils" title="Link to this heading">#</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.utils.FileVersionManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.utils.</span></span><span class="sig-name descname"><span class="pre">FileVersionManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">base_dir</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.FileVersionManager" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages versioning and indexing of files in a directory structure.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.FileVersionManager.base_dir">
+<span class="sig-name descname"><span class="pre">base_dir</span></span><a class="headerlink" href="#app.services.utils.FileVersionManager.base_dir" title="Link to this definition">#</a></dt>
+<dd><p>The base directory path where files are stored.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.FileVersionManager.update_index">
+<span class="sig-name descname"><span class="pre">update_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager.update_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.FileVersionManager.update_index" title="Link to this definition">#</a></dt>
+<dd><p>Updates the index file with file details.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="id1">
+<span class="sig-name descname"><span class="pre">update_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik_number</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">category</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">storage_type</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/file_version_control.html#FileVersionManager.update_index"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#id1" title="Link to this definition">#</a></dt>
+<dd><p>Updates the index file with new file details for a specific CIK number and storage type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cik_number</strong> (<em>str</em>) – The Central Index Key (CIK) number of the company.</p></li>
+<li><p><strong>category</strong> (<em>str</em>) – The category of the data.</p></li>
+<li><p><strong>file_name</strong> (<em>str</em>) – The name of the file to be indexed.</p></li>
+<li><p><strong>storage_type</strong> (<em>str</em>) – The type of storage for the file.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="app.services.utils.Roster">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">app.services.utils.</span></span><span class="sig-name descname"><span class="pre">Roster</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_agent</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'your_email&#64;example.com'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Manages API endpoints and CIK numbers for SEC API interactions.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.Roster.cik">
+<span class="sig-name descname"><span class="pre">cik</span></span><a class="headerlink" href="#app.services.utils.Roster.cik" title="Link to this definition">#</a></dt>
+<dd><p>The Central Index Key (CIK) number.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.Roster.user_agent">
+<span class="sig-name descname"><span class="pre">user_agent</span></span><a class="headerlink" href="#app.services.utils.Roster.user_agent" title="Link to this definition">#</a></dt>
+<dd><p>The user agent string for API requests.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.Roster.api_endpoints">
+<span class="sig-name descname"><span class="pre">api_endpoints</span></span><a class="headerlink" href="#app.services.utils.Roster.api_endpoints" title="Link to this definition">#</a></dt>
+<dd><p>Dictionary of API endpoints.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.Roster.api_status">
+<span class="sig-name descname"><span class="pre">api_status</span></span><a class="headerlink" href="#app.services.utils.Roster.api_status" title="Link to this definition">#</a></dt>
+<dd><p>Status of each API endpoint.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>dict</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="app.services.utils.Roster.logging_manager">
+<span class="sig-name descname"><span class="pre">logging_manager</span></span><a class="headerlink" href="#app.services.utils.Roster.logging_manager" title="Link to this definition">#</a></dt>
+<dd><p>Instance for logging activities.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="services.functions.html#app.services.functions.LoggingManager" title="app.services.functions.LoggingManager">LoggingManager</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.Roster.get_api_status">
+<span class="sig-name descname"><span class="pre">get_api_status</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">dict</span></span></span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.get_api_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster.get_api_status" title="Link to this definition">#</a></dt>
+<dd><p>Retrieves the status of the API endpoints.
+:returns: The status of each API endpoint.
+:rtype: dict</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.Roster.print_cik">
+<span class="sig-name descname"><span class="pre">print_cik</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.print_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster.print_cik" title="Link to this definition">#</a></dt>
+<dd><p>Prints the current CIK number.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.Roster.recruit_cik">
+<span class="sig-name descname"><span class="pre">recruit_cik</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#app.services.utils.roster.Roster" title="app.services.utils.roster.Roster"><span class="pre">Roster</span></a></span></span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.recruit_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster.recruit_cik" title="Link to this definition">#</a></dt>
+<dd><p>Assigns a CIK number and updates API endpoints accordingly.
+:param cik: The CIK number to be assigned.
+:type cik: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The current Roster instance.</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#app.services.utils.Roster" title="app.services.utils.Roster">Roster</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.Roster.update_cik">
+<span class="sig-name descname"><span class="pre">update_cik</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cik</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.update_cik"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster.update_cik" title="Link to this definition">#</a></dt>
+<dd><p>Updates the CIK number and associated endpoints.
+:param cik: The new CIK number to be updated.
+:type cik: str</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="app.services.utils.Roster.update_endpoint">
+<span class="sig-name descname"><span class="pre">update_endpoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint_name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">url</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/roster.html#Roster.update_endpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.Roster.update_endpoint" title="Link to this definition">#</a></dt>
+<dd><p>Updates the URL for a specific API endpoint.
+:param endpoint_name: The name of the endpoint to be updated.
+:type endpoint_name: str
+:param url: The new URL for the endpoint.
+:type url: str</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.utils.dataframe_to_csv">
+<span class="sig-prename descclassname"><span class="pre">app.services.utils.</span></span><span class="sig-name descname"><span class="pre">dataframe_to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataframe</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/utils.html#dataframe_to_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.dataframe_to_csv" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="app.services.utils.now">
+<span class="sig-prename descclassname"><span class="pre">app.services.utils.</span></span><span class="sig-name descname"><span class="pre">now</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/app/services/utils/utils.html#now"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#app.services.utils.now" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="services.queries.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">app.services.queries package</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="services.types.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">app.services.types package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.file_version_control">app.services.utils.file_version_control</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager"><code class="docutils literal notranslate"><span class="pre">FileVersionManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager.base_dir"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.base_dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.file_version_control.FileVersionManager.update_index"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id0"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.roster">app.services.utils.roster</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster"><code class="docutils literal notranslate"><span class="pre">Roster</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.cik"><code class="docutils literal notranslate"><span class="pre">Roster.cik</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.user_agent"><code class="docutils literal notranslate"><span class="pre">Roster.user_agent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.api_endpoints"><code class="docutils literal notranslate"><span class="pre">Roster.api_endpoints</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.api_status"><code class="docutils literal notranslate"><span class="pre">Roster.api_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.logging_manager"><code class="docutils literal notranslate"><span class="pre">Roster.logging_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.get_api_status"><code class="docutils literal notranslate"><span class="pre">Roster.get_api_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.print_cik"><code class="docutils literal notranslate"><span class="pre">Roster.print_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.recruit_cik"><code class="docutils literal notranslate"><span class="pre">Roster.recruit_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.update_cik"><code class="docutils literal notranslate"><span class="pre">Roster.update_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.roster.Roster.update_endpoint"><code class="docutils literal notranslate"><span class="pre">Roster.update_endpoint()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils.utils">app.services.utils.utils</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.utils.dataframe_to_csv"><code class="docutils literal notranslate"><span class="pre">dataframe_to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.utils.now"><code class="docutils literal notranslate"><span class="pre">now()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-app.services.utils">Module contents</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager"><code class="docutils literal notranslate"><span class="pre">FileVersionManager</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager.base_dir"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.base_dir</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.FileVersionManager.update_index"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><code class="docutils literal notranslate"><span class="pre">FileVersionManager.update_index()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster"><code class="docutils literal notranslate"><span class="pre">Roster</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.cik"><code class="docutils literal notranslate"><span class="pre">Roster.cik</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.user_agent"><code class="docutils literal notranslate"><span class="pre">Roster.user_agent</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.api_endpoints"><code class="docutils literal notranslate"><span class="pre">Roster.api_endpoints</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.api_status"><code class="docutils literal notranslate"><span class="pre">Roster.api_status</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.logging_manager"><code class="docutils literal notranslate"><span class="pre">Roster.logging_manager</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.get_api_status"><code class="docutils literal notranslate"><span class="pre">Roster.get_api_status()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.print_cik"><code class="docutils literal notranslate"><span class="pre">Roster.print_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.recruit_cik"><code class="docutils literal notranslate"><span class="pre">Roster.recruit_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.update_cik"><code class="docutils literal notranslate"><span class="pre">Roster.update_cik()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.Roster.update_endpoint"><code class="docutils literal notranslate"><span class="pre">Roster.update_endpoint()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.dataframe_to_csv"><code class="docutils literal notranslate"><span class="pre">dataframe_to_csv()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#app.services.utils.now"><code class="docutils literal notranslate"><span class="pre">now()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mehrdad Touraji
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrdad Touraji.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

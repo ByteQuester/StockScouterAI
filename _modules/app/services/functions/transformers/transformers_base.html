@@ -1,0 +1,635 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app.services.functions.transformers.transformers_base &#8212; stockscouterai 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../../_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="../../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/app/services/functions/transformers/transformers_base';</script>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">stockscouterai 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/back_base_tables.html">Base Production Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/back_dev_tables.html">Development Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/back_preprocessing.html">Financial Data (Pre)Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/back_processing.html">Preprocessing and Processing Stages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/back_transformers.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/front_second_tier_dashboard.html">Front-End Modules 2/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/front_setup_dashboards.html">Front-End Dashboard Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/front_third_tier_dashboard.html">Front-End Modules 3/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../get_started/chat.html">Chatbot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../../modules.html">app</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../../app.html">The App Module</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../gallery.html">app.gallery package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../gallery.apps.html">app.gallery.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../gallery.components.html">app.gallery.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../gallery.utils.html">app.gallery.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../../services.html">app.services package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../services.functions.html">app.services.functions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../services.queries.html">app.services.queries package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../services.utils.html">app.services.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../../services.types.html">app.services.types package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for app.services.functions.transformers.transformers_base</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">abc</span> <span class="kn">import</span> <span class="n">ABC</span><span class="p">,</span> <span class="n">abstractmethod</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Union</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">app.services.types</span> <span class="kn">import</span> <span class="p">(</span><span class="n">ASSETS_LIABILITIES_BAR_METRICS</span><span class="p">,</span>
+                                <span class="n">ASSETS_LIABILITIES_LINE_METRICS</span><span class="p">,</span>
+                                <span class="n">CASH_FLOW_CHARTS_METRICS</span><span class="p">,</span>
+                                <span class="n">LIQUIDITY_BAR_METRICS</span><span class="p">,</span> <span class="n">LIQUIDITY_LINE_METRICS</span><span class="p">,</span>
+                                <span class="n">PROFITABILITY_LINE_METRICS</span><span class="p">,</span>
+                                <span class="n">PROFITABILITY_MARGIN_LINE_METRIC</span><span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">.interpolation</span> <span class="kn">import</span> <span class="n">InterpolationTransformer</span>
+
+
+<div class="viewcode-block" id="BaseTransformer">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer">[docs]</a>
+<span class="k">class</span> <span class="nc">BaseTransformer</span><span class="p">(</span><span class="n">ABC</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">df</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the base transformer with a DataFrame.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            df (pd.DataFrame): The DataFrame containing the data to be transformed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">df</span> <span class="o">=</span> <span class="n">df</span>
+
+<div class="viewcode-block" id="BaseTransformer.transform_for_bar_chart">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.transform_for_bar_chart">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_for_bar_chart</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform the data for a bar chart.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            metrics (List[str]): List of metric names to transform.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict[str, Union[str, float]]]: Transformed data suitable for a bar chart.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">transformed_data</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="n">date_formatted</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_date</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">date_formatted</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">transformed_data</span><span class="p">:</span>
+                <span class="n">transformed_data</span><span class="p">[</span><span class="n">date_formatted</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Date&quot;</span><span class="p">:</span> <span class="n">date_formatted</span><span class="p">}</span>
+
+            <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics</span><span class="p">:</span>
+                <span class="n">metric_key</span> <span class="o">=</span> <span class="n">metric</span> <span class="o">+</span> <span class="s2">&quot;Value&quot;</span>
+                <span class="n">color_key</span> <span class="o">=</span> <span class="n">metric</span> <span class="o">+</span> <span class="s2">&quot;Color&quot;</span>
+                <span class="n">transformed_data</span><span class="p">[</span><span class="n">date_formatted</span><span class="p">][</span><span class="n">metric_key</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span>
+                    <span class="n">row</span><span class="p">[</span><span class="n">metric</span><span class="p">])</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">metric</span><span class="p">])</span> <span class="k">else</span> <span class="kc">None</span>
+                <span class="n">transformed_data</span><span class="p">[</span><span class="n">date_formatted</span><span class="p">][</span>
+                    <span class="n">color_key</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;hsl(</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">360</span><span class="si">}</span><span class="s2">, 70%, 50%)&quot;</span>
+
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">transformed_data</span><span class="o">.</span><span class="n">values</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="BaseTransformer.transform_for_complex_chart">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.transform_for_complex_chart">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_for_complex_chart</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform the data for a complex chart with positive and negative series.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            metrics (List[str]): List of metric names to transform.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict[str, Union[str, float]]]: Transformed data suitable for a complex chart.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">transform</span> <span class="o">=</span> <span class="n">InterpolationTransformer</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="p">)</span>
+
+        <span class="c1"># If metrics is a list with one item, extract that item to pass as a string</span>
+        <span class="n">metric_to_pass</span> <span class="o">=</span> <span class="n">metrics</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">metrics</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">metrics</span>
+        <span class="c1"># Ensure metric_to_pass is treated correctly within InterpolationTransformer</span>
+
+        <span class="n">transformed_data</span> <span class="o">=</span> <span class="n">transform</span><span class="o">.</span><span class="n">stream</span><span class="p">(</span><span class="n">metric_to_pass</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">transformed_data</span></div>
+
+
+<div class="viewcode-block" id="BaseTransformer.transform_for_line_chart">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.transform_for_line_chart">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_for_line_chart</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">,</span> <span class="n">metrics</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform the data for a line chart.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            metrics (List[str]): List of metric names to transform.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict[str, Union[str, float]]]: Transformed data suitable for a line chart.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">transformed_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">metrics</span><span class="p">:</span>
+            <span class="n">line_data</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">metric</span><span class="p">,</span>
+                <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;hsl(</span><span class="si">{</span><span class="nb">hash</span><span class="p">(</span><span class="n">metric</span><span class="p">)</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">360</span><span class="si">}</span><span class="s2">, 70%, 50%)&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[]</span>
+            <span class="p">}</span>
+            <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+                <span class="n">date_formatted</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_date</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+                <span class="n">y_value</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">metric</span><span class="p">])</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">metric</span><span class="p">])</span> <span class="k">else</span> <span class="kc">None</span>
+                <span class="n">line_data</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s2">&quot;x&quot;</span><span class="p">:</span> <span class="n">date_formatted</span><span class="p">,</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span> <span class="n">y_value</span><span class="p">})</span>
+            <span class="n">transformed_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">line_data</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">transformed_data</span></div>
+
+
+<div class="viewcode-block" id="BaseTransformer.transform_data_for_datagrid">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.transform_data_for_datagrid">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_data_for_datagrid</span><span class="p">(</span>
+            <span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform the data for a datagrid.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            List[Dict[str, Union[int, str, float, None]]]: Transformed data suitable for a datagrid.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Common columns that are consistent across datasets</span>
+        <span class="n">common_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ENTITY&#39;</span><span class="p">,</span> <span class="s1">&#39;CIK&#39;</span><span class="p">,</span> <span class="s1">&#39;DATE&#39;</span><span class="p">,</span> <span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Quarter&#39;</span><span class="p">]</span>
+        <span class="n">middle_columns</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">col</span> <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="n">col</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">common_columns</span>
+        <span class="p">]</span>
+
+        <span class="n">transformed_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+            <span class="n">transformed_row</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;year&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">format_date</span><span class="p">(</span><span class="n">row</span><span class="p">)}</span>
+
+            <span class="c1"># Process each of the middle columns and use their actual names</span>
+            <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">middle_columns</span><span class="p">:</span>
+                <span class="n">value</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">col</span><span class="p">]</span>
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">transformed_row</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">notna</span><span class="p">(</span>
+                        <span class="n">value</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span>
+                <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                    <span class="n">transformed_row</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+            <span class="n">transformed_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">transformed_row</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">transformed_data</span></div>
+
+
+<div class="viewcode-block" id="BaseTransformer.format_date">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.format_date">[docs]</a>
+    <span class="k">def</span> <span class="nf">format_date</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Format the date from the DataFrame row.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            row (pd.Series): A row from the DataFrame containing the data.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            str: The formatted date string.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">date_str</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;DATE&quot;</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">date_str</span><span class="p">,</span> <span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="BaseTransformer.transform_all">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.BaseTransformer.transform_all">[docs]</a>
+    <span class="nd">@abstractmethod</span>
+    <span class="k">def</span> <span class="nf">transform_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Union</span><span class="p">[</span><span class="n">Dict</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform the data based on the specific transformer&#39;s logic.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Union[Dict, pd.DataFrame]: Transformed data in a format suitable for the specific chart types.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="AssetsLiabilitiesTransformer">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.AssetsLiabilitiesTransformer">[docs]</a>
+<span class="k">class</span> <span class="nc">AssetsLiabilitiesTransformer</span><span class="p">(</span><span class="n">BaseTransformer</span><span class="p">):</span>
+
+<div class="viewcode-block" id="AssetsLiabilitiesTransformer.transform_all">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.AssetsLiabilitiesTransformer.transform_all">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_all</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform data for Assets &amp; Liabilities category.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, List[Dict[str, Union[str, float]]]]: Transformed data for line, bar and datagrid charts</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;line_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_line_chart</span><span class="p">(</span>
+                <span class="n">ASSETS_LIABILITIES_LINE_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;bar_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_bar_chart</span><span class="p">(</span><span class="n">ASSETS_LIABILITIES_BAR_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;data_grid&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_data_for_datagrid</span><span class="p">(),</span>
+        <span class="p">}</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="CashFlowTransformer">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.CashFlowTransformer">[docs]</a>
+<span class="k">class</span> <span class="nc">CashFlowTransformer</span><span class="p">(</span><span class="n">BaseTransformer</span><span class="p">):</span>
+
+<div class="viewcode-block" id="CashFlowTransformer.transform_all">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.CashFlowTransformer.transform_all">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform data for Cash Flow category.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, List[Dict[str, Union[str, float]]]]: Transformed data for line, bar and datagrid charts.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;line_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_line_chart</span><span class="p">(</span><span class="n">CASH_FLOW_CHARTS_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;bar_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_bar_chart</span><span class="p">(</span><span class="n">CASH_FLOW_CHARTS_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;data_grid&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_data_for_datagrid</span><span class="p">(),</span>
+        <span class="p">}</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="LiquidityTransformer">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.LiquidityTransformer">[docs]</a>
+<span class="k">class</span> <span class="nc">LiquidityTransformer</span><span class="p">(</span><span class="n">BaseTransformer</span><span class="p">):</span>
+
+<div class="viewcode-block" id="LiquidityTransformer.transform_all">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.LiquidityTransformer.transform_all">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_all</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform data for Liquidity category.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, List[Dict[str, Union[str, float]]]]: Transformed data for line, bar and datagrid charts.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;line_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_line_chart</span><span class="p">(</span><span class="n">LIQUIDITY_LINE_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;bar_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_bar_chart</span><span class="p">(</span><span class="n">LIQUIDITY_BAR_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;data_grid&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_data_for_datagrid</span><span class="p">(),</span>
+        <span class="p">}</span></div>
+</div>
+
+
+
+<div class="viewcode-block" id="ProfitabilityTransformer">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.ProfitabilityTransformer">[docs]</a>
+<span class="k">class</span> <span class="nc">ProfitabilityTransformer</span><span class="p">(</span><span class="n">BaseTransformer</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ProfitabilityTransformer.transform_all">
+<a class="viewcode-back" href="../../../../../services.functions.transformers.html#app.services.functions.transformers.transformers_base.ProfitabilityTransformer.transform_all">[docs]</a>
+    <span class="k">def</span> <span class="nf">transform_all</span><span class="p">(</span>
+        <span class="bp">self</span>
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]],</span> <span class="n">List</span><span class="p">[</span><span class="n">Dict</span><span class="p">[</span>
+            <span class="nb">str</span><span class="p">,</span> <span class="n">Union</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="kc">None</span><span class="p">]]]]]:</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Transform data for Profitability category.</span>
+
+<span class="sd">        Returns:</span>
+<span class="sd">            Dict[str, Union[List[Dict[str, Union[str, float]]], List[Dict[str, Union[str, float, None]]]]]:</span>
+<span class="sd">                Transformed data for line charts, complex charts, bar charts, datagrid, and divergence bar chart.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s2">&quot;line_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_line_chart</span><span class="p">(</span><span class="n">PROFITABILITY_LINE_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;divergence_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_complex_chart</span><span class="p">(</span>
+                <span class="n">PROFITABILITY_MARGIN_LINE_METRIC</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;bar_chart&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_for_bar_chart</span><span class="p">(</span><span class="n">PROFITABILITY_LINE_METRICS</span><span class="o">.</span><span class="n">value</span><span class="p">),</span>
+            <span class="s2">&quot;data_grid&quot;</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">transform_data_for_datagrid</span><span class="p">(),</span>
+        <span class="p">}</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mehrdad Touraji
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrdad Touraji.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

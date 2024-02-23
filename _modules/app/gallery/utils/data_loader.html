@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>app.gallery.utils.data_loader &#8212; stockscouterai 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="../../../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/styles/sphinx-book-theme.css?v=384b581d" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="../../../../_static/documentation_options.js?v=e645c8fa"></script>
+    <script src="../../../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/app/gallery/utils/data_loader';</script>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../../../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">stockscouterai 0.0.1 documentation</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Get Started:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/back_base_tables.html">Base Production Line</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/back_dev_tables.html">Development Tiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/back_preprocessing.html">Financial Data (Pre)Processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/back_processing.html">Preprocessing and Processing Stages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/back_transformers.html">Data Transformation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/front_second_tier_dashboard.html">Front-End Modules 2/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/front_setup_dashboards.html">Front-End Dashboard Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/front_third_tier_dashboard.html">Front-End Modules 3/3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../get_started/chat.html">Chatbot</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Modules:</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../../modules.html">app</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../../app.html">The App Module</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../gallery.html">app.gallery package</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gallery.apps.html">app.gallery.apps package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gallery.components.html">app.gallery.components package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../gallery.utils.html">app.gallery.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../../services.html">app.services package</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../../services.functions.html">app.services.functions package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../services.queries.html">app.services.queries package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../services.utils.html">app.services.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../../services.types.html">app.services.types package</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <h1>Source code for app.gallery.utils.data_loader</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+<span class="kn">import</span> <span class="nn">markdown</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">streamlit</span> <span class="k">as</span> <span class="nn">st</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">from</span> <span class="nn">llama_index</span> <span class="kn">import</span> <span class="n">ServiceContext</span><span class="p">,</span> <span class="n">SimpleDirectoryReader</span><span class="p">,</span> <span class="n">VectorStoreIndex</span>
+<span class="kn">from</span> <span class="nn">llama_index.llms</span> <span class="kn">import</span> <span class="n">OpenAI</span>
+
+
+<div class="viewcode-block" id="DataLoader">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader">[docs]</a>
+<span class="k">class</span> <span class="nc">DataLoader</span><span class="p">:</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">base_dir</span><span class="o">=</span><span class="s1">&#39;data&#39;</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span> <span class="o">=</span> <span class="n">base_dir</span>
+
+<div class="viewcode-block" id="DataLoader.get_available_cik_numbers">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.get_available_cik_numbers">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_available_cik_numbers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of available CIK numbers based on the directory structure.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">cik_numbers</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">dir_name</span> <span class="k">for</span> <span class="n">dir_name</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">,</span> <span class="n">dir_name</span><span class="p">))</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">cik_numbers</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.get_entity_name">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.get_entity_name">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_entity_name</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns the entity name for a given CIK number by examining the data.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Example: Using the &#39;Assets_Liabilities&#39; dataset to get the entity name.</span>
+        <span class="c1"># Adjust the logic if you&#39;re using a different dataset or structure.</span>
+        <span class="n">file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construct_csv_file_path</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="s1">&#39;Assets_Liabilities&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">file_path</span><span class="p">:</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">df</span><span class="o">.</span><span class="n">empty</span> <span class="ow">and</span> <span class="s1">&#39;ENTITY&#39;</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;ENTITY&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="s2">&quot;Unknown Entity&quot;</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.get_available_query_types">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.get_available_query_types">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_available_query_types</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a list of available query types for a given CIK number.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">index_file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="s1">&#39;processed_data&#39;</span><span class="p">,</span>
+                                       <span class="s1">&#39;index.md&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">index_file_path</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">index_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+                <span class="n">md_content</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+                <span class="n">md</span> <span class="o">=</span> <span class="n">markdown</span><span class="o">.</span><span class="n">Markdown</span><span class="p">()</span>
+                <span class="n">html_content</span> <span class="o">=</span> <span class="n">md</span><span class="o">.</span><span class="n">convert</span><span class="p">(</span><span class="n">md_content</span><span class="p">)</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_extract_query_types_from_markdown</span><span class="p">(</span><span class="n">html_content</span><span class="p">)</span>
+        <span class="k">return</span> <span class="p">[]</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_extract_query_types_from_markdown</span><span class="p">(</span><span class="n">html_content</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Extracts query types from the HTML content of the markdown file using BeautifulSoup.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_content</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+        <span class="n">query_types</span> <span class="o">=</span> <span class="p">[</span><span class="n">h3</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span> <span class="k">for</span> <span class="n">h3</span> <span class="ow">in</span> <span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;h3&#39;</span><span class="p">)]</span>
+        <span class="k">return</span> <span class="n">query_types</span>
+
+<div class="viewcode-block" id="DataLoader.construct_directory_path">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.construct_directory_path">[docs]</a>
+    <span class="k">def</span> <span class="nf">construct_directory_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">):</span>
+        <span class="n">directory_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cik</span><span class="p">),</span>
+                                      <span class="s1">&#39;processed_data&#39;</span><span class="p">,</span> <span class="n">query_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">directory_path</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">directory_path</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Directory not found: </span><span class="si">{</span><span class="n">directory_path</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.construct_json_file_path">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.construct_json_file_path">[docs]</a>
+    <span class="k">def</span> <span class="nf">construct_json_file_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Construct path to the JSON file for a specific chart type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">folder_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cik</span><span class="p">),</span> <span class="s1">&#39;processed_json&#39;</span><span class="p">,</span>
+                                   <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
+            <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">files</span><span class="p">:</span>
+                <span class="n">latest_file</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">files</span><span class="p">,</span>
+                                  <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getctime</span><span class="p">(</span>
+                                      <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+                <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">latest_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_json_data_for_chart">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.load_json_data_for_chart">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_json_data_for_chart</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">):</span>
+        <span class="n">json_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construct_json_file_path</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span>
+                                                       <span class="n">chart_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">json_file_path</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">):</span>
+            <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">json_file_path</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">json_file</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">json_file</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.construct_csv_file_path">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.construct_csv_file_path">[docs]</a>
+    <span class="k">def</span> <span class="nf">construct_csv_file_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Construct path to the latest CSV file for a specific query type.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">folder_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">base_dir</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">cik</span><span class="p">),</span> <span class="s1">&#39;processed_data&#39;</span><span class="p">,</span>
+                                   <span class="n">query_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
+            <span class="n">csv_files</span> <span class="o">=</span> <span class="p">[</span>
+                <span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">folder_path</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;.csv&#39;</span><span class="p">)</span>
+            <span class="p">]</span>
+            <span class="k">if</span> <span class="n">csv_files</span><span class="p">:</span>
+                <span class="c1"># Assuming you want the latest CSV file based on creation time</span>
+                <span class="n">latest_file</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">csv_files</span><span class="p">,</span>
+                                  <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">getctime</span><span class="p">(</span>
+                                      <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">x</span><span class="p">)))</span>
+                <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">folder_path</span><span class="p">,</span> <span class="n">latest_file</span><span class="p">)</span>
+        <span class="k">return</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_csv_data">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.load_csv_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_csv_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Load CSV data for a specific query type and CIK.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">csv_file_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construct_csv_file_path</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">csv_file_path</span> <span class="ow">and</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">csv_file_path</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">csv_file_path</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">st</span><span class="o">.</span><span class="n">error</span><span class="p">(</span>
+                <span class="sa">f</span><span class="s2">&quot;No CSV data found for CIK </span><span class="si">{</span><span class="n">cik</span><span class="si">}</span><span class="s2"> and query type </span><span class="si">{</span><span class="n">query_type</span><span class="si">}</span><span class="s2">.&quot;</span>
+            <span class="p">)</span>
+            <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>  <span class="c1"># Return an empty DataFrame as a fallback</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.push_query_engine">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.push_query_engine">[docs]</a>
+    <span class="k">def</span> <span class="nf">push_query_engine</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">):</span>
+        <span class="n">directory_path</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">construct_directory_path</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_data</span><span class="p">(</span><span class="n">directory_path</span><span class="p">)</span> <span class="k">if</span> <span class="n">directory_path</span> <span class="k">else</span> <span class="kc">None</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_data">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.load_data">[docs]</a>
+    <span class="nd">@st</span><span class="o">.</span><span class="n">cache_resource</span><span class="p">(</span><span class="n">show_spinner</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">load_data</span><span class="p">(</span><span class="n">_self</span><span class="p">,</span> <span class="n">directory_path</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;&#39;_self&#39; is used to unhash the argument&quot;&quot;&quot;</span>
+        <span class="k">with</span> <span class="n">st</span><span class="o">.</span><span class="n">spinner</span><span class="p">(</span>
+                <span class="n">text</span><span class="o">=</span>
+                <span class="s2">&quot;Loading and indexing the docs – hang tight! This should take 1-2 minutes.&quot;</span>
+        <span class="p">):</span>
+            <span class="n">reader</span> <span class="o">=</span> <span class="n">SimpleDirectoryReader</span><span class="p">(</span><span class="n">input_dir</span><span class="o">=</span><span class="n">directory_path</span><span class="p">,</span>
+                                           <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="n">docs</span> <span class="o">=</span> <span class="n">reader</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
+            <span class="n">service_context</span> <span class="o">=</span> <span class="n">ServiceContext</span><span class="o">.</span><span class="n">from_defaults</span><span class="p">(</span><span class="n">llm</span><span class="o">=</span><span class="n">OpenAI</span><span class="p">(</span>
+                <span class="n">model</span><span class="o">=</span><span class="s2">&quot;gpt-3.5-turbo&quot;</span><span class="p">,</span>
+                <span class="n">temperature</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+                <span class="n">system_prompt</span><span class="o">=</span>
+                <span class="s2">&quot;You&#39;re a finance expert given a set of queries. Analyse the data and answer to the user&#39;s questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table.&quot;</span>
+            <span class="p">))</span>
+            <span class="n">index</span> <span class="o">=</span> <span class="n">VectorStoreIndex</span><span class="o">.</span><span class="n">from_documents</span><span class="p">(</span>
+                <span class="n">docs</span><span class="p">,</span> <span class="n">service_context</span><span class="o">=</span><span class="n">service_context</span><span class="p">)</span>
+            <span class="n">query_engine</span> <span class="o">=</span> <span class="n">index</span><span class="o">.</span><span class="n">as_query_engine</span><span class="p">()</span>
+            <span class="k">return</span> <span class="n">query_engine</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.load_and_filter_data">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.load_and_filter_data">[docs]</a>
+    <span class="k">def</span> <span class="nf">load_and_filter_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span>
+                             <span class="n">end_date</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads JSON data for a chart and filters it by the given date range.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_json_data_for_chart</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">None</span>
+
+        <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">chart_type</span> <span class="o">==</span> <span class="s2">&quot;line_chart&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter_line_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">chart_type</span> <span class="o">==</span> <span class="s2">&quot;divergence_chart&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter_line_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">chart_type</span> <span class="o">==</span> <span class="s2">&quot;data_grid&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter_grid_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">chart_type</span> <span class="o">==</span> <span class="s2">&quot;bar_chart&quot;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">filter_bar_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Unknown chart type: </span><span class="si">{</span><span class="n">chart_type</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.filter_line_by_date">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.filter_line_by_date">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">filter_line_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters the data by a date range.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">series</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">filtered_series</span> <span class="o">=</span> <span class="p">{</span>
+                <span class="s2">&quot;id&quot;</span><span class="p">:</span>
+                <span class="n">series</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">],</span>
+                <span class="c1">#&quot;color&quot;: series[&quot;color&quot;],</span>
+                <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+                    <span class="n">point</span> <span class="k">for</span> <span class="n">point</span> <span class="ow">in</span> <span class="n">series</span><span class="p">[</span><span class="s2">&quot;data&quot;</span><span class="p">]</span>
+                    <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">point</span><span class="p">[</span><span class="s2">&quot;x&quot;</span><span class="p">])</span>
+                    <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
+                <span class="p">]</span>
+            <span class="p">}</span>
+            <span class="n">filtered_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_series</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filtered_data</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.filter_bar_by_date">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.filter_bar_by_date">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">filter_bar_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters the bar chart dataset by a date range.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span>
+            <span class="k">if</span> <span class="n">start_date</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;Date&quot;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">end_date</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">filtered_data</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.filter_grid_by_date">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.filter_grid_by_date">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">filter_grid_by_date</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters the data grid dataset by a date range.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">start_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">start_date</span><span class="p">)</span>
+        <span class="n">end_date</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">end_date</span><span class="p">)</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="n">item</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span>
+            <span class="k">if</span> <span class="n">start_date</span> <span class="o">&lt;=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="s2">&quot;year&quot;</span><span class="p">])</span> <span class="o">&lt;=</span> <span class="n">end_date</span>
+        <span class="p">]</span>
+        <span class="k">return</span> <span class="n">filtered_data</span></div>
+
+
+<div class="viewcode-block" id="DataLoader.get_metric_by_selection">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.get_metric_by_selection">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_metric_by_selection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">,</span>
+                                <span class="n">selected_metrics</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters chart data based on user-selected metrics. Acts as a manager for filtering functionalities.</span>
+<span class="sd">        For now, it&#39;s tailored for line charts, but it can be extended for other chart types.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">load_json_data_for_chart</span><span class="p">(</span><span class="n">cik</span><span class="p">,</span> <span class="n">query_type</span><span class="p">,</span> <span class="n">chart_type</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">chart_type</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;line_chart&#39;</span><span class="p">,</span> <span class="s1">&#39;divergence_chart&#39;</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_line_by_selection</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selected_metrics</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">chart_type</span> <span class="o">==</span> <span class="s1">&#39;bar_chart&#39;</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_filter_bar_by_selection</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selected_metrics</span><span class="p">)</span>
+            <span class="c1"># Add similar elif for &#39;datagrid&#39; if needed</span>
+        <span class="k">return</span> <span class="p">[]</span></div>
+
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_filter_line_by_selection</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selected_metrics</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">[</span><span class="n">metric</span> <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">data</span> <span class="k">if</span> <span class="n">metric</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="ow">in</span> <span class="n">selected_metrics</span><span class="p">]</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_filter_bar_by_selection</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">selected_metrics</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Filters bar chart data based on selected metrics.</span>
+<span class="sd">        Assumes metric names are embedded in keys like &#39;METRIC_NAMEValue&#39; and &#39;METRIC_NAMEColor&#39;.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">filtered_data</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">filtered_item</span> <span class="o">=</span> <span class="p">{}</span>
+            <span class="k">for</span> <span class="n">metric</span> <span class="ow">in</span> <span class="n">selected_metrics</span><span class="p">:</span>
+                <span class="n">value_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">Value&quot;</span>
+                <span class="n">color_key</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">metric</span><span class="si">}</span><span class="s2">Color&quot;</span>
+                <span class="k">if</span> <span class="n">value_key</span> <span class="ow">in</span> <span class="n">item</span> <span class="ow">and</span> <span class="n">color_key</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+                    <span class="n">filtered_item</span><span class="p">[</span><span class="n">value_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="n">value_key</span><span class="p">]</span>
+                    <span class="n">filtered_item</span><span class="p">[</span><span class="n">color_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="n">color_key</span><span class="p">]</span>
+            <span class="k">if</span> <span class="s1">&#39;Date&#39;</span> <span class="ow">in</span> <span class="n">item</span><span class="p">:</span>
+                <span class="n">filtered_item</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">item</span><span class="p">[</span><span class="s1">&#39;Date&#39;</span><span class="p">]</span>
+            <span class="k">if</span> <span class="n">filtered_item</span><span class="p">:</span>
+                <span class="n">filtered_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filtered_item</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">filtered_data</span>
+
+<div class="viewcode-block" id="DataLoader.extract_unique_metrics_from_bar_data">
+<a class="viewcode-back" href="../../../../gallery.utils.html#app.gallery.utils.data_loader.DataLoader.extract_unique_metrics_from_bar_data">[docs]</a>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">extract_unique_metrics_from_bar_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+        <span class="n">metric_names</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>  <span class="c1"># Use a set to avoid duplicates</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">item</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s2">&quot;Value&quot;</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>  <span class="c1"># Assuming all metrics end with &quot;Value&quot; or &quot;Color&quot;</span>
+                    <span class="n">metric_name</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Value&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                    <span class="n">metric_names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">metric_name</span><span class="p">)</span>
+                <span class="k">elif</span> <span class="s2">&quot;Color&quot;</span> <span class="ow">in</span> <span class="n">key</span><span class="p">:</span>  <span class="c1"># This line could be omitted if &quot;Color&quot; keys are consistent with &quot;Value&quot; keys</span>
+                    <span class="n">metric_name</span> <span class="o">=</span> <span class="n">key</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Color&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+                    <span class="n">metric_names</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">metric_name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">metric_names</span><span class="p">)</span></div>
+</div>
+
+</pre></div>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mehrdad Touraji
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Mehrdad Touraji.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
