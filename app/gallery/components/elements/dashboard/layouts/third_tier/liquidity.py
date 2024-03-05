@@ -15,8 +15,8 @@ class LiquidityDashboard(DashboardBase):
         cik (str): The Central Index Key (CIK) number identifying the company of interest.
 
     Attributes:
-        bar_selected_metrics (List[str]): Metrics selected for the bar chart visualization.
-        bar_filtered_data (json): Filtered data for bar chart visualization.
+        line_selected_metrics (List[str]): Metrics selected for the line chart visualization.
+        line_filtered_data (json): Filtered data for line chart visualization.
     """
 
     def __init__(self, cik: str):
@@ -28,18 +28,17 @@ class LiquidityDashboard(DashboardBase):
 
     def setup_content(self) -> None:
         # Data processing
-        bar_metrics = (self.get_unique_metrics("bar_chart"))
+        line_metrics = (self.get_unique_metrics("line_chart"))
 
-        self.bar_selected_metrics = self.ui.select_metrics(bar_metrics,
-                                                           key='bar',
-                                                           name='Bar Chart')
-
-        self.bar_filtered_data = self.filter_chart_data(
-            "bar_chart", self.bar_selected_metrics)
+        self.line_selected_metrics = self.ui.select_metrics(line_metrics,
+                                                            key='line',
+                                                            name='Line Chart')
+        self.line_filtered_data = self.filter_chart_data(
+            "line_chart", self.line_selected_metrics)
 
         # Setup dashboard button
         self.setup_dashboard_button("Liquidity")
 
         # Initialize dashboard with data if button clicked
         self.initialize_dashboard_with_data(LiquidityDashboardSetup,
-                                            self.bar_filtered_data)
+                                            self.line_filtered_data)
