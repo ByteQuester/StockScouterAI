@@ -1,2 +1,2 @@
-from .third_tier import CashFlowDashboardSetup
+from .third_tier import LiquidityDashboardSetup
 

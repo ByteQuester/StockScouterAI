@@ -1,1 +1,2 @@
-from .cash_flow import CashFlowDashboard
+from .liquidity import LiquidityDashboard
+
