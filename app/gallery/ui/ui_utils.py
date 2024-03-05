@@ -12,18 +12,19 @@ class UIHelpers:
     @staticmethod
     def select_date_range(default_start="1Y"):
         """Allows selection of a date range without creating a button."""
-        today = pd.to_datetime("today")
-        date_ranges = {
-            "1Y": today - pd.DateOffset(years=1),
-            "5Y": today - pd.DateOffset(years=5),
-            "10Y": today - pd.DateOffset(years=10),
-        }
-        selected_range_key = st.radio("Select Date Range",
-                                      list(date_ranges.keys()),
-                                      horizontal=True)
-        start_date = date_ranges[selected_range_key]
-        end_date = today  # Assuming end date is always today for simplicity
-        return start_date, end_date
+        with st.expander("Select Date Range"):
+            today = pd.to_datetime("today")
+            date_ranges = {
+                "1Y": today - pd.DateOffset(years=1),
+                "5Y": today - pd.DateOffset(years=5),
+                "10Y": today - pd.DateOffset(years=10),
+            }
+            selected_range_key = st.radio("Select Date",
+                                          list(date_ranges.keys()),
+                                          horizontal=True)
+            start_date = date_ranges[selected_range_key]
+            end_date = today
+            return start_date, end_date
 
     @staticmethod
     def select_date_slider(min_date, max_date, default_range=None):
@@ -56,7 +57,8 @@ class UIHelpers:
     @staticmethod
     def select_metrics(unique_metrics, key=None, name=None):
         """Creates a multi-select widget for selecting metrics."""
-        return st.multiselect(f'Select {name} metrics to display',
-                              unique_metrics,
-                              default=unique_metrics,
-                              key=key)
+        with st.expander(f'Select {name}'):
+            return st.multiselect(f'Select {name} metrics to display',
+                                  unique_metrics,
+                                  default=unique_metrics,
+                                  key=unique_metrics)
