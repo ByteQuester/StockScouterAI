@@ -63,7 +63,7 @@ class DashboardBase(ABC):
     def filter_data(self) -> None:
         """Filters data based on the selected date range and query type."""
         chart_types = [
-            "line_chart"
+            "bar_chart"
         ]
         self.initial_filter_data = {
             chart_type:
@@ -91,9 +91,10 @@ class DashboardBase(ABC):
             query_type=self.query_type,
             chart_type=chart_type,
             selected_metrics=selected_metrics)
-        if chart_type == "line_chart" or chart_type == "divergence_chart":
-            return self.data_loader.filter_line_by_date(
-                filtered_data, self.start_date_str, self.end_date_str)
+        if chart_type == "bar_chart":
+            return self.data_loader.filter_bar_by_date(filtered_data,
+                                                       self.start_date_str,
+                                                       self.end_date_str)
 
     @abstractmethod
     def setup_content(self) -> None:
@@ -105,8 +106,7 @@ class DashboardBase(ABC):
         if 'dashboard_setup' in st.session_state:
             setup = st.session_state.dashboard_setup
             setup.w.editor()
-            setup.w.line(setup.w.editor.get_content("Line chart"),
-                         config_type="base_config")
+            setup.w.bar_chart(setup.w.editor.get_content("Bar chart"))
 
     def render_dashboard(self) -> None:
         """Renders the dashboard with widgets and content."""
