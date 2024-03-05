@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 from types import SimpleNamespace
 
-from app.gallery.components.elements.charts import (Dashboard, DataGrid, Editor)
-from app.gallery.components.elements.dashboard.types import *
+from app.gallery.components.elements.charts import (Dashboard, Line, Editor)
 
 
 class DashboardSetup(ABC):
@@ -35,6 +34,7 @@ class DashboardSetup(ABC):
         self.w = SimpleNamespace(
             dashboard=self.board,
             editor=Editor(self.board, 0, 2, 6, 4, minW=3, minH=5),
+            line=Line(self.board, 0, 6, 6, 4, minW=2, minH=4),
         )
 
     @abstractmethod
@@ -45,22 +45,16 @@ class DashboardSetup(ABC):
 class ProfitabilityDashboardSetup(DashboardSetup):
 
     def __init__(self,
-                 grid_data=None):
-        self.grid_data = grid_data
+                 divergence_line_data=None):
+        self.divergence_line_data = divergence_line_data
         super().__init__()
         self.initialize()
 
     def setup_widgets(self):
         super().setup_widgets()
-        self.w.grid_chart = DataGrid(self.board,
-                                     0,
-                                     10,
-                                     12,
-                                     4,
-                                     minH=4,
-                                     columns=PROFITABILITY_DEFAULT_COLUMNS)
+        self.w.divergence_line = Line(self.board, 6, 2, 6, 4, minH=5)
 
     def setup_content(self):
         # Update content based on some conditions like button press
-        self.w.editor.add_tab("Data grid", self.grid_data, "json")
-
+        self.w.editor.add_tab("Divergence chart", self.divergence_line_data,
+                              "json")

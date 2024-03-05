@@ -63,7 +63,7 @@ class DashboardBase(ABC):
     def filter_data(self) -> None:
         """Filters data based on the selected date range and query type."""
         chart_types = [
-            "data_grid"
+            "divergence_chart"
         ]
         self.initial_filter_data = {
             chart_type:
@@ -74,13 +74,14 @@ class DashboardBase(ABC):
             for chart_type in chart_types
         }
 
-    def load_and_filter_grid_data(self) -> Dict[str, Any]:
-        """Loads and filters grid chart data based on the selected date range."""
-        grid_data = self.data_loader.load_json_data_for_chart(
-            self.cik, self.query_type, "data_grid")
-        return self.data_loader.filter_grid_by_date(grid_data,
-                                                    self.start_date_str,
-                                                    self.end_date_str)
+    def get_unique_metrics(self, chart_type: str) -> List[str]:
+        """Retrieves unique metrics available for a specific chart type."""
+        if chart_type == "bar_chart":
+            return self.data_loader.extract_unique_metrics_from_bar_data(
+                self.initial_filter_data[chart_type])
+        else:
+            return [d["id"] for d in self.initial_filter_data[chart_type]
+                    ] if self.initial_filter_data[chart_type] else []
 
     def filter_chart_data(self, chart_type: str,
                           selected_metrics: List[str]) -> Any:
@@ -90,8 +91,8 @@ class DashboardBase(ABC):
             query_type=self.query_type,
             chart_type=chart_type,
             selected_metrics=selected_metrics)
-        if chart_type == "data_grid":
-            return self.data_loader.filter_grid_by_date(
+        if chart_type == "line_chart" or chart_type == "divergence_chart":
+            return self.data_loader.filter_line_by_date(
                 filtered_data, self.start_date_str, self.end_date_str)
 
     @abstractmethod
@@ -104,7 +105,6 @@ class DashboardBase(ABC):
         if 'dashboard_setup' in st.session_state:
             setup = st.session_state.dashboard_setup
             setup.w.editor()
-            setup.w.grid_chart(setup.w.editor.get_content("Data grid"))
 
     def render_dashboard(self) -> None:
         """Renders the dashboard with widgets and content."""
