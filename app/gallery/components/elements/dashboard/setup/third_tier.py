@@ -45,8 +45,8 @@ class DashboardSetup(ABC):
 class ProfitabilityDashboardSetup(DashboardSetup):
 
     def __init__(self,
-                 divergence_line_data=None):
-        self.divergence_line_data = divergence_line_data
+                 line_data=None):
+        self.line_data = line_data
         super().__init__()
         self.initialize()
 
@@ -56,5 +56,4 @@ class ProfitabilityDashboardSetup(DashboardSetup):
 
     def setup_content(self):
         # Update content based on some conditions like button press
-        self.w.editor.add_tab("Divergence chart", self.divergence_line_data,
-                              "json")
+        self.w.editor.add_tab("Line chart", self.line_data, "json")
