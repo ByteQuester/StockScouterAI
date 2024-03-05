@@ -42,7 +42,7 @@ class DashboardSetup(ABC):
         pass
 
 
-class LiquidityDashboardSetup(DashboardSetup):
+class CashFlowDashboardSetup(DashboardSetup):
 
     def __init__(self, line_data):
         self.line_data = line_data

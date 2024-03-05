@@ -1,6 +1,6 @@
 import streamlit as st
 
-from app.gallery.components.elements.dashboard.layouts.third_tier import LiquidityDashboard
+from app.gallery.components.elements.dashboard.layouts.third_tier import CashFlowDashboard
 from app.gallery.ui import UIHelpers
 from app.gallery.utils import DataLoader
 
@@ -14,11 +14,11 @@ def third_tier_main():
     cik = '0000012927'
 
     if cik:
-        query_type = 'Liquidity'
+        query_type = 'Cash Flow'
 
         if query_type:
             dashboard_map = {
-                "Liquidity": LiquidityDashboard
+                "Cash Flow": CashFlowDashboard
             }
             dashboard_class = dashboard_map.get(query_type)
             if dashboard_class:
