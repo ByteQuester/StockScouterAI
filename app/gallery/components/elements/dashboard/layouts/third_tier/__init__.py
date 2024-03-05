@@ -1,2 +1,2 @@
-from .profitability import ProfitabilityDashboard
+from .liquidity import LiquidityDashboard
 

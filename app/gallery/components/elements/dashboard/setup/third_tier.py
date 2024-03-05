@@ -42,27 +42,23 @@ class DashboardSetup(ABC):
         pass
 
 
-class ProfitabilityDashboardSetup(DashboardSetup):
+class LiquidityDashboardSetup(DashboardSetup):
 
-    def __init__(self,
-                 bar_data=None):
+    def __init__(self, bar_data):
         self.bar_data = bar_data
         super().__init__()
         self.initialize()
 
     def setup_widgets(self):
         super().setup_widgets()
-        self.w.bar_chart = Bar(self.board,
-                               6,
-                               6,
-                               6,
-                               4,
-                               minH=5,
-                               keys=[
-                                   "NET_INCOME_LOSSValue", "REVENUESValue",
-                                   "OPS_INCOME_LOSSValue"
-                               ])
+        self.w.bar_chart = Bar(
+            self.board,
+            6,
+            6,
+            6,
+            4,
+            minH=5,
+            keys=["CURRENT_ASSETSValue", "CURRENT_LIABILITIESValue"])
 
     def setup_content(self):
-        # Update content based on some conditions like button press
         self.w.editor.add_tab("Bar chart", self.bar_data, "json")

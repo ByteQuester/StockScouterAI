@@ -1,14 +1,14 @@
 from app.gallery.components.elements.dashboard.setup import \
-    ProfitabilityDashboardSetup
+    LiquidityDashboardSetup
 
 from .base import DashboardBase
 
 
-class ProfitabilityDashboard(DashboardBase):
+class LiquidityDashboard(DashboardBase):
     """
-    A dashboard class specialized in visualizing profitability data, extending the generic DashboardBase.
+    A dashboard class specialized in visualizing liquidity data, extending the generic DashboardBase.
 
-    This class handles the setup of widgets specific to profitability data visualization and processes
+    This class handles the setup of widgets specific to liquidity data visualization and processes
     data to be displayed based on user-selected metrics.
 
     Args:
@@ -20,7 +20,7 @@ class ProfitabilityDashboard(DashboardBase):
     """
 
     def __init__(self, cik: str):
-        super().__init__(cik, "Profitability")
+        super().__init__(cik, "Liquidity")
 
     def setup_widgets(self) -> None:
         # Setup widgets specific to Profitability dashboard
@@ -38,8 +38,8 @@ class ProfitabilityDashboard(DashboardBase):
             "bar_chart", self.bar_selected_metrics)
 
         # Setup dashboard button
-        self.setup_dashboard_button("Profitability")
+        self.setup_dashboard_button("Liquidity")
 
         # Initialize dashboard with data if button clicked
-        self.initialize_dashboard_with_data(ProfitabilityDashboardSetup,
+        self.initialize_dashboard_with_data(LiquidityDashboardSetup,
                                             self.bar_filtered_data)

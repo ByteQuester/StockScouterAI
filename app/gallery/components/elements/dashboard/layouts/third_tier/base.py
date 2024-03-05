@@ -63,7 +63,7 @@ class DashboardBase(ABC):
     def filter_data(self) -> None:
         """Filters data based on the selected date range and query type."""
         chart_types = [
-            "line_chart", "divergence_chart", "bar_chart", "data_grid"
+            "bar_chart"
         ]
         self.initial_filter_data = {
             chart_type:
