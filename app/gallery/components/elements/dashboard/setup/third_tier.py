@@ -42,7 +42,7 @@ class DashboardSetup(ABC):
         pass
 
 
-class AssetsLiabilitiesDashboardSetup(DashboardSetup):
+class CashFlowDashboardSetup(DashboardSetup):
 
     def __init__(self, grid_data):
         self.grid_data = grid_data
@@ -51,14 +51,13 @@ class AssetsLiabilitiesDashboardSetup(DashboardSetup):
 
     def setup_widgets(self):
         super().setup_widgets()
-        self.w.grid_chart = DataGrid(
-            self.board,
-            0,
-            10,
-            12,
-            4,
-            minH=4,
-            columns=ASSETS_LIABILITIES_DEFAULT_COLUMNS)
+        self.w.grid_chart = DataGrid(self.board,
+                                     0,
+                                     10,
+                                     12,
+                                     4,
+                                     minH=4,
+                                     columns=CASH_FLOW_DEFAULT_COLUMNS)
 
     def setup_content(self):
         self.w.editor.add_tab("Data grid", self.grid_data, "json")

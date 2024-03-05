@@ -1,2 +1,2 @@
-from .third_tier import AssetsLiabilitiesDashboardSetup
+from .third_tier import CashFlowDashboardSetup
 
