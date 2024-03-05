@@ -5,7 +5,7 @@ from typing import Any, Dict, List
 import streamlit as st
 from streamlit_elements import elements, event, sync
 
-from app.gallery.ui import UIHelpers, update_sidebar
+from app.gallery.ui import UIHelpers
 from app.gallery.utils import DataLoader
 
 
@@ -27,13 +27,6 @@ class DashboardBase(ABC):
         self.query_type: str = query_type
         self.dashboard_initialized: bool = False
         self.initialize()
-
-    def initialize_sidebar(self):
-        """
-        Updates the sidebar with options relevant to the current dashboard.
-        This method can be overridden in subclasses if they require a different sidebar setup.
-        """
-        update_sidebar()
 
     def setup_dashboard_button(self, dashboard_label: str) -> None:
         """Creates a button to load data for the dashboard."""
@@ -58,7 +51,6 @@ class DashboardBase(ABC):
         self.filter_data()
         self.setup_content()
         self.setup_widgets()
-        self.initialize_sidebar()
 
     def select_date_range(self):
         """Allows users to select a date range for data filtering."""

@@ -1,6 +1,6 @@
 import streamlit as st
 
-from app.gallery import apps, components
+from app.gallery import components
 from app.gallery.utils.page import page_group
 
 
@@ -9,14 +9,15 @@ def main():
     with st.sidebar:
         st.title("Stock Scouter AI")
 
-        with st.expander("✨ APPS", True):
-            page.item("Gallery", apps.gallery, default=True)
-            page.item("Chatbot", apps.chat)
+
+        #with st.expander("✨ APPS", True):
+            #page.item("Gallery", apps.gallery, default=True)
+            #page.item("Chatbot", apps.chat)
 
         with st.expander("🧩 Analytics & Dashboards", True):
-            page.item("General View⭐", components.elements.general_view)
-            page.item("Second Tier View", components.elements.second_tier_view)
-            page.item("Third Tier View", components.elements.third_tier_view)
+            #page.item("General View⭐", components.elements.general_view)
+            #page.item("Second Tier View", components.elements.second_tier_view)
+            page.item("Third Tier View", components.elements.third_tier_view, default=True)
 
         #with st.expander("🧩 How-Tos", True):
             #page.item("Demo", components.react_player)

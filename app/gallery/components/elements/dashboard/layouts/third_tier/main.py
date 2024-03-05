@@ -11,27 +11,8 @@ ui_helpers = UIHelpers()
 
 
 def third_tier_main():
-    # ========================= Sidebar =========================
-    st.sidebar.header("About the Dashboard")
-    st.sidebar.markdown("""
-        Explore financial data of publicly traded companies in the US. 
-        Analyze assets, liabilities, cash flow, and more through interactive visualizations.
-    """)
-
-    st.sidebar.header("Resources ✨")
-    st.sidebar.info(
-        """The raw data is taken from [SEC](https://www.sec.gov/)""")
-
     # ========================= Main Content =========================
-    # Quick guide
-    with st.expander("Quick Info"):
-        st.write(
-            "1. **Select a Company**: Use the drop-down to choose a company by its CIK number.\n"
-            "2. **Explore Tabs**: Navigate through different financial aspects in the tabs.\n"
-            "3. **Dynamic Insights**: Uncover tailored insights and observations about financial trends."
-        )
-
-    # Dynamic CIK input
+    # Static CIK input
     available_cik = data_loader.get_available_cik_numbers()
     cik = st.selectbox("Enter CIK Number", available_cik)
     entity_name = data_loader.get_entity_name(cik)
