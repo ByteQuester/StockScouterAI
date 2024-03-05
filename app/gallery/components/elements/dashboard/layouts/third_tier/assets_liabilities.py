@@ -12,7 +12,8 @@ class AssetsLiabilitiesDashboard(DashboardBase):
         cik (str): Central Index Key (CIK) number for the company to display data.
 
     Attributes:
-        bar_selected_metrics (List[str]): Selected metrics for the bar chart.
+        line_selected_metrics (List[str]): Selected metrics for the line chart.
+        line_filtered_data (Any): Filtered data for the line chart based on selected metrics.
     """
 
     def __init__(self, cik: str):
@@ -27,17 +28,18 @@ class AssetsLiabilitiesDashboard(DashboardBase):
         Processes data for the dashboard and sets up content based on user-selected metrics
         and filtered data.
         """
-        bar_metrics = (self.get_unique_metrics("bar_chart"))
+        line_metrics = (self.get_unique_metrics("line_chart"))
 
-        self.bar_selected_metrics = self.ui.select_metrics(bar_metrics,
-                                                           key='bar',
-                                                           name='Bar Chart')
-        self.bar_filtered_data = self.filter_chart_data(
-            "bar_chart", self.bar_selected_metrics)
+        self.line_selected_metrics = self.ui.select_metrics(line_metrics,
+                                                            key='line',
+                                                            name='Line Chart')
+
+        self.line_filtered_data = self.filter_chart_data(
+            "line_chart", self.line_selected_metrics)
 
         # Setup dashboard button
         self.setup_dashboard_button("Assets & Liabilities")
 
         # Initialize dashboard with data if button clicked
         self.initialize_dashboard_with_data(AssetsLiabilitiesDashboardSetup,
-                                            self.bar_filtered_data)
+                                            self.line_filtered_data)

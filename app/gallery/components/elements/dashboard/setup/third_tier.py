@@ -1,8 +1,7 @@
 from abc import ABC, abstractmethod
 from types import SimpleNamespace
 
-from app.gallery.components.elements.charts import (Bar, Dashboard, Editor)
-from app.gallery.components.elements.dashboard.types import *
+from app.gallery.components.elements.charts import (Line, Dashboard, Editor)
 
 
 class DashboardSetup(ABC):
@@ -35,6 +34,7 @@ class DashboardSetup(ABC):
         self.w = SimpleNamespace(
             dashboard=self.board,
             editor=Editor(self.board, 0, 2, 6, 4, minW=3, minH=5),
+            line=Line(self.board, 0, 6, 6, 4, minW=2, minH=4),
         )
 
     @abstractmethod
@@ -44,25 +44,13 @@ class DashboardSetup(ABC):
 
 class AssetsLiabilitiesDashboardSetup(DashboardSetup):
 
-    def __init__(self, bar_data):
-        self.card_content = ASSETS_LIABILITIES_CARD_CONTENT
-        self.bar_data = bar_data
+    def __init__(self, line_data):
+        self.line_data = line_data
         super().__init__()
         self.initialize()
 
     def setup_widgets(self):
         super().setup_widgets()
-        self.w.bar_chart = Bar(self.board,
-                               6,
-                               6,
-                               6,
-                               4,
-                               minH=5,
-                               keys=[
-                                   "ASSETS_CURRENTValue",
-                                   "LIABILITIES_CURRENTValue",
-                                   "STOCKHOLDERS_EQUITYValue"
-                               ])
 
     def setup_content(self):
-        self.w.editor.add_tab("Bar chart", self.bar_data, "json")
+        self.w.editor.add_tab("Line chart", self.line_data, "json")
