@@ -1,29 +1,27 @@
+import streamlit as st
+
 from app.gallery.components.elements.dashboard.setup import \
-    LiquidityDashboardSetup
+    ProfitabilityDashboardSetup
 
 from .base import DashboardBase
 
 
-class LiquidityDashboard(DashboardBase):
+class ProfitabilityDashboard(DashboardBase):
     """
-    A dashboard class specialized in visualizing liquidity data, extending the generic DashboardBase.
+    A dashboard class specialized in visualizing profitability data, extending the generic DashboardBase.
 
-    This class handles the setup of widgets specific to liquidity data visualization and processes
+    This class handles the setup of widgets specific to profitability data visualization and processes
     data to be displayed based on user-selected metrics.
 
     Args:
         cik (str): The Central Index Key (CIK) number identifying the company of interest.
 
     Attributes:
-        line_selected_metrics (List[str]): Metrics selected for the line chart visualization.
-        bar_selected_metrics (List[str]): Metrics selected for the bar chart visualization.
-        line_filtered_data (json): Filtered data for line chart visualization.
-        bar_filtered_data (json): Filtered data for bar chart visualization.
         grid_filtered_data (json): Data prepared for display in a grid format.
     """
 
     def __init__(self, cik: str):
-        super().__init__(cik, "Liquidity")
+        super().__init__(cik, "Profitability")
 
     def setup_widgets(self) -> None:
         # Setup widgets specific to Profitability dashboard
@@ -33,8 +31,8 @@ class LiquidityDashboard(DashboardBase):
         self.grid_filtered_data = self.load_and_filter_grid_data()
 
         # Setup dashboard button
-        self.setup_dashboard_button("Liquidity")
+        self.setup_dashboard_button("Profitability")
 
         # Initialize dashboard with data if button clicked
-        self.initialize_dashboard_with_data(LiquidityDashboardSetup,
+        self.initialize_dashboard_with_data(ProfitabilityDashboardSetup,
                                             self.grid_filtered_data)

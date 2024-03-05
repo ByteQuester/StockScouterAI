@@ -42,9 +42,10 @@ class DashboardSetup(ABC):
         pass
 
 
-class LiquidityDashboardSetup(DashboardSetup):
+class ProfitabilityDashboardSetup(DashboardSetup):
 
-    def __init__(self, grid_data):
+    def __init__(self,
+                 grid_data=None):
         self.grid_data = grid_data
         super().__init__()
         self.initialize()
@@ -57,7 +58,9 @@ class LiquidityDashboardSetup(DashboardSetup):
                                      12,
                                      4,
                                      minH=4,
-                                     columns=LIQUIDITY_DEFAULT_COLUMNS)
+                                     columns=PROFITABILITY_DEFAULT_COLUMNS)
 
     def setup_content(self):
+        # Update content based on some conditions like button press
         self.w.editor.add_tab("Data grid", self.grid_data, "json")
+
