@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "year": "2018-01",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -131.892,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 2,
+        "year": "2019-01",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -312.467,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 3,
+        "year": "2019-07",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -445.984,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 4,
+        "year": "2019-10",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -489.438,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 5,
+        "year": "2020-01",
+        "ASSETS_CURRENT": 665.194,
+        "LIABILITIES_CURRENT": 416.455,
+        "STOCKHOLDERS_EQUITY": -544.757,
+        "ASSET_TO_LIABILITY_RATIO": 1.6,
+        "DEBT_TO_EQUITY_RATIO": -0.8
+    },
+    {
+        "id": 6,
+        "year": "2020-04",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -604.046,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 7,
+        "year": "2020-07",
+        "ASSETS_CURRENT": null,
+        "LIABILITIES_CURRENT": null,
+        "STOCKHOLDERS_EQUITY": -651.399,
+        "ASSET_TO_LIABILITY_RATIO": null,
+        "DEBT_TO_EQUITY_RATIO": null
+    },
+    {
+        "id": 8,
+        "year": "2020-10",
+        "ASSETS_CURRENT": 4986.771,
+        "LIABILITIES_CURRENT": 547.659,
+        "STOCKHOLDERS_EQUITY": 4967.815,
+        "ASSET_TO_LIABILITY_RATIO": 9.1,
+        "DEBT_TO_EQUITY_RATIO": 0.1
+    },
+    {
+        "id": 9,
+        "year": "2021-01",
+        "ASSETS_CURRENT": 4300.652,
+        "LIABILITIES_CURRENT": 789.264,
+        "STOCKHOLDERS_EQUITY": 4936.471,
+        "ASSET_TO_LIABILITY_RATIO": 5.4,
+        "DEBT_TO_EQUITY_RATIO": 0.2
+    },
+    {
+        "id": 10,
+        "year": "2021-04",
+        "ASSETS_CURRENT": 4221.336,
+        "LIABILITIES_CURRENT": 776.998,
+        "STOCKHOLDERS_EQUITY": 4958.321,
+        "ASSET_TO_LIABILITY_RATIO": 5.4,
+        "DEBT_TO_EQUITY_RATIO": 0.2
+    },
+    {
+        "id": 11,
+        "year": "2021-07",
+        "ASSETS_CURRENT": 4508.102,
+        "LIABILITIES_CURRENT": 875.738,
+        "STOCKHOLDERS_EQUITY": 4964.965,
+        "ASSET_TO_LIABILITY_RATIO": 5.1,
+        "DEBT_TO_EQUITY_RATIO": 0.2
+    },
+    {
+        "id": 12,
+        "year": "2021-10",
+        "ASSETS_CURRENT": 4308.257,
+        "LIABILITIES_CURRENT": 958.735,
+        "STOCKHOLDERS_EQUITY": 5006.682,
+        "ASSET_TO_LIABILITY_RATIO": 4.5,
+        "DEBT_TO_EQUITY_RATIO": 0.2
+    },
+    {
+        "id": 13,
+        "year": "2022-01",
+        "ASSETS_CURRENT": 4598.643,
+        "LIABILITIES_CURRENT": 1397.093,
+        "STOCKHOLDERS_EQUITY": 5049.045,
+        "ASSET_TO_LIABILITY_RATIO": 3.3,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 14,
+        "year": "2022-04",
+        "ASSETS_CURRENT": 4341.733,
+        "LIABILITIES_CURRENT": 1363.718,
+        "STOCKHOLDERS_EQUITY": 5457.994,
+        "ASSET_TO_LIABILITY_RATIO": 3.2,
+        "DEBT_TO_EQUITY_RATIO": 0.2
+    },
+    {
+        "id": 15,
+        "year": "2022-07",
+        "ASSETS_CURRENT": 4503.697,
+        "LIABILITIES_CURRENT": 1401.436,
+        "STOCKHOLDERS_EQUITY": 5426.323,
+        "ASSET_TO_LIABILITY_RATIO": 3.2,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 16,
+        "year": "2022-10",
+        "ASSETS_CURRENT": 4558.904,
+        "LIABILITIES_CURRENT": 1479.042,
+        "STOCKHOLDERS_EQUITY": 5410.777,
+        "ASSET_TO_LIABILITY_RATIO": 3.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 17,
+        "year": "2023-01",
+        "ASSETS_CURRENT": 4984.69,
+        "LIABILITIES_CURRENT": 1993.517,
+        "STOCKHOLDERS_EQUITY": 5456.436,
+        "ASSET_TO_LIABILITY_RATIO": 2.5,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 18,
+        "year": "2023-04",
+        "ASSETS_CURRENT": 4569.547,
+        "LIABILITIES_CURRENT": 1887.541,
+        "STOCKHOLDERS_EQUITY": 5286.243,
+        "ASSET_TO_LIABILITY_RATIO": 2.4,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 19,
+        "year": "2023-07",
+        "ASSETS_CURRENT": 4404.951,
+        "LIABILITIES_CURRENT": 1913.312,
+        "STOCKHOLDERS_EQUITY": 5286.938,
+        "ASSET_TO_LIABILITY_RATIO": 2.3,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 20,
+        "year": "2023-10",
+        "ASSETS_CURRENT": 4312.283,
+        "LIABILITIES_CURRENT": 2032.672,
+        "STOCKHOLDERS_EQUITY": 4929.921,
+        "ASSET_TO_LIABILITY_RATIO": 2.1,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    }
+]

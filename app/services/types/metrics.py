@@ -17,7 +17,8 @@ class QuarterlyMetrics(Enum):
     ASSETS_CURRENT = "AssetsCurrent"
     LIABILITIES_CURRENT = "LiabilitiesCurrent"
     OPERATING_INCOME_LOSS = "OperatingIncomeLoss"
-    REVENUES = "Revenues"
+    #DEV
+    REVENUES = "RevenueFromContractWithCustomerExcludingAssessedTax"
     NET_INCOME_LOSS = "NetIncomeLoss"
 
 

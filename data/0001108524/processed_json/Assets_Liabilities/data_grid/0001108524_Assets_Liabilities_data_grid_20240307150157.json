@@ -1,0 +1,371 @@
+[
+    {
+        "id": 1,
+        "year": "2014-01",
+        "ASSETS_CURRENT": 2680.252,
+        "LIABILITIES_CURRENT": 3980.188,
+        "STOCKHOLDERS_EQUITY": 3038.51,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 1.3
+    },
+    {
+        "id": 2,
+        "year": "2014-04",
+        "ASSETS_CURRENT": 2039.381,
+        "LIABILITIES_CURRENT": 3359.954,
+        "STOCKHOLDERS_EQUITY": 3131.914,
+        "ASSET_TO_LIABILITY_RATIO": 0.6,
+        "DEBT_TO_EQUITY_RATIO": 1.1
+    },
+    {
+        "id": 3,
+        "year": "2014-07",
+        "ASSETS_CURRENT": 2304.687,
+        "LIABILITIES_CURRENT": 3502.738,
+        "STOCKHOLDERS_EQUITY": 3300.568,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 1.1
+    },
+    {
+        "id": 4,
+        "year": "2014-10",
+        "ASSETS_CURRENT": 2439.155,
+        "LIABILITIES_CURRENT": 3308.352,
+        "STOCKHOLDERS_EQUITY": 3790.614,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 5,
+        "year": "2015-01",
+        "ASSETS_CURRENT": 3514.544,
+        "LIABILITIES_CURRENT": 4390.103,
+        "STOCKHOLDERS_EQUITY": 3975.183,
+        "ASSET_TO_LIABILITY_RATIO": 0.8,
+        "DEBT_TO_EQUITY_RATIO": 1.1
+    },
+    {
+        "id": 6,
+        "year": "2015-04",
+        "ASSETS_CURRENT": 2604.825,
+        "LIABILITIES_CURRENT": 3960.876,
+        "STOCKHOLDERS_EQUITY": 4235.203,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 7,
+        "year": "2015-07",
+        "ASSETS_CURRENT": 2916.787,
+        "LIABILITIES_CURRENT": 4112.994,
+        "STOCKHOLDERS_EQUITY": 4535.803,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 8,
+        "year": "2015-10",
+        "ASSETS_CURRENT": 2938.773,
+        "LIABILITIES_CURRENT": 3976.978,
+        "STOCKHOLDERS_EQUITY": 4749.954,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 0.8
+    },
+    {
+        "id": 9,
+        "year": "2016-01",
+        "ASSETS_CURRENT": 5731.323,
+        "LIABILITIES_CURRENT": 5617.005,
+        "STOCKHOLDERS_EQUITY": 5003.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 1.1
+    },
+    {
+        "id": 10,
+        "year": "2016-04",
+        "ASSETS_CURRENT": 3774.672,
+        "LIABILITIES_CURRENT": 5085.103,
+        "STOCKHOLDERS_EQUITY": 5584.264,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 11,
+        "year": "2016-07",
+        "ASSETS_CURRENT": 3277.999,
+        "LIABILITIES_CURRENT": 5376.096,
+        "STOCKHOLDERS_EQUITY": 6132.576,
+        "ASSET_TO_LIABILITY_RATIO": 0.6,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 12,
+        "year": "2016-10",
+        "ASSETS_CURRENT": 3001.554,
+        "LIABILITIES_CURRENT": 4975.534,
+        "STOCKHOLDERS_EQUITY": 6806.037,
+        "ASSET_TO_LIABILITY_RATIO": 0.6,
+        "DEBT_TO_EQUITY_RATIO": 0.7
+    },
+    {
+        "id": 13,
+        "year": "2017-01",
+        "ASSETS_CURRENT": 5996.827,
+        "LIABILITIES_CURRENT": 7295.466,
+        "STOCKHOLDERS_EQUITY": 8230.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.8,
+        "DEBT_TO_EQUITY_RATIO": 0.9
+    },
+    {
+        "id": 14,
+        "year": "2017-04",
+        "ASSETS_CURRENT": 5404.491,
+        "LIABILITIES_CURRENT": 7625.863,
+        "STOCKHOLDERS_EQUITY": 7934.488,
+        "ASSET_TO_LIABILITY_RATIO": 0.7,
+        "DEBT_TO_EQUITY_RATIO": 1.0
+    },
+    {
+        "id": 15,
+        "year": "2017-07",
+        "ASSETS_CURRENT": 5811.341,
+        "LIABILITIES_CURRENT": 7526.185,
+        "STOCKHOLDERS_EQUITY": 9219.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.8,
+        "DEBT_TO_EQUITY_RATIO": 0.8
+    },
+    {
+        "id": 16,
+        "year": "2017-10",
+        "ASSETS_CURRENT": 5946.17,
+        "LIABILITIES_CURRENT": 7216.444,
+        "STOCKHOLDERS_EQUITY": 9662.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.8,
+        "DEBT_TO_EQUITY_RATIO": 0.7
+    },
+    {
+        "id": 17,
+        "year": "2018-01",
+        "ASSETS_CURRENT": 9584.0,
+        "LIABILITIES_CURRENT": 10067.0,
+        "STOCKHOLDERS_EQUITY": 10376.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 1.0
+    },
+    {
+        "id": 18,
+        "year": "2018-04",
+        "ASSETS_CURRENT": 10151.0,
+        "LIABILITIES_CURRENT": 7895.0,
+        "STOCKHOLDERS_EQUITY": 11060.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.3,
+        "DEBT_TO_EQUITY_RATIO": 0.7
+    },
+    {
+        "id": 19,
+        "year": "2018-07",
+        "ASSETS_CURRENT": 6802.0,
+        "LIABILITIES_CURRENT": 8469.0,
+        "STOCKHOLDERS_EQUITY": 13527.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.8,
+        "DEBT_TO_EQUITY_RATIO": 0.6
+    },
+    {
+        "id": 20,
+        "year": "2018-10",
+        "ASSETS_CURRENT": 6870.0,
+        "LIABILITIES_CURRENT": 8022.0,
+        "STOCKHOLDERS_EQUITY": 14693.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.9,
+        "DEBT_TO_EQUITY_RATIO": 0.5
+    },
+    {
+        "id": 21,
+        "year": "2019-01",
+        "ASSETS_CURRENT": 10683.0,
+        "LIABILITIES_CURRENT": 11255.0,
+        "STOCKHOLDERS_EQUITY": 15605.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.9,
+        "DEBT_TO_EQUITY_RATIO": 0.7
+    },
+    {
+        "id": 22,
+        "year": "2019-04",
+        "ASSETS_CURRENT": 10035.0,
+        "LIABILITIES_CURRENT": 10488.0,
+        "STOCKHOLDERS_EQUITY": 16446.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.6
+    },
+    {
+        "id": 23,
+        "year": "2019-07",
+        "ASSETS_CURRENT": 9903.0,
+        "LIABILITIES_CURRENT": 10195.0,
+        "STOCKHOLDERS_EQUITY": 17166.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.6
+    },
+    {
+        "id": 24,
+        "year": "2019-10",
+        "ASSETS_CURRENT": 11026.0,
+        "LIABILITIES_CURRENT": 10474.0,
+        "STOCKHOLDERS_EQUITY": 33279.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 25,
+        "year": "2020-01",
+        "ASSETS_CURRENT": 15963.0,
+        "LIABILITIES_CURRENT": 14845.0,
+        "STOCKHOLDERS_EQUITY": 33885.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 26,
+        "year": "2020-04",
+        "ASSETS_CURRENT": 14713.0,
+        "LIABILITIES_CURRENT": 12843.0,
+        "STOCKHOLDERS_EQUITY": 34565.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 27,
+        "year": "2020-07",
+        "ASSETS_CURRENT": 14846.0,
+        "LIABILITIES_CURRENT": 12963.0,
+        "STOCKHOLDERS_EQUITY": 38440.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 28,
+        "year": "2020-10",
+        "ASSETS_CURRENT": 14946.0,
+        "LIABILITIES_CURRENT": 12234.0,
+        "STOCKHOLDERS_EQUITY": 40310.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.2,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 29,
+        "year": "2021-01",
+        "ASSETS_CURRENT": 21889.0,
+        "LIABILITIES_CURRENT": 17728.0,
+        "STOCKHOLDERS_EQUITY": 41493.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.2,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 30,
+        "year": "2021-04",
+        "ASSETS_CURRENT": 20444.0,
+        "LIABILITIES_CURRENT": 15323.0,
+        "STOCKHOLDERS_EQUITY": 42567.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.3,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 31,
+        "year": "2021-07",
+        "ASSETS_CURRENT": 16256.0,
+        "LIABILITIES_CURRENT": 17393.0,
+        "STOCKHOLDERS_EQUITY": 55520.0,
+        "ASSET_TO_LIABILITY_RATIO": 0.9,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 32,
+        "year": "2021-10",
+        "ASSETS_CURRENT": 15957.0,
+        "LIABILITIES_CURRENT": 15035.0,
+        "STOCKHOLDERS_EQUITY": 57054.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 33,
+        "year": "2022-01",
+        "ASSETS_CURRENT": 22850.0,
+        "LIABILITIES_CURRENT": 21788.0,
+        "STOCKHOLDERS_EQUITY": 58131.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 34,
+        "year": "2022-04",
+        "ASSETS_CURRENT": 20411.0,
+        "LIABILITIES_CURRENT": 19899.0,
+        "STOCKHOLDERS_EQUITY": 58876.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 35,
+        "year": "2022-07",
+        "ASSETS_CURRENT": 21246.0,
+        "LIABILITIES_CURRENT": 20080.0,
+        "STOCKHOLDERS_EQUITY": 60098.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 36,
+        "year": "2022-10",
+        "ASSETS_CURRENT": 19209.0,
+        "LIABILITIES_CURRENT": 18227.0,
+        "STOCKHOLDERS_EQUITY": 59351.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 37,
+        "year": "2023-01",
+        "ASSETS_CURRENT": 26395.0,
+        "LIABILITIES_CURRENT": 25891.0,
+        "STOCKHOLDERS_EQUITY": 58359.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 38,
+        "year": "2023-04",
+        "ASSETS_CURRENT": 21981.0,
+        "LIABILITIES_CURRENT": 21626.0,
+        "STOCKHOLDERS_EQUITY": 57412.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 39,
+        "year": "2023-07",
+        "ASSETS_CURRENT": 21138.0,
+        "LIABILITIES_CURRENT": 20805.0,
+        "STOCKHOLDERS_EQUITY": 58082.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    },
+    {
+        "id": 40,
+        "year": "2023-10",
+        "ASSETS_CURRENT": 20202.0,
+        "LIABILITIES_CURRENT": 19394.0,
+        "STOCKHOLDERS_EQUITY": 58090.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.0,
+        "DEBT_TO_EQUITY_RATIO": 0.3
+    },
+    {
+        "id": 41,
+        "year": "2024-01",
+        "ASSETS_CURRENT": 29074.0,
+        "LIABILITIES_CURRENT": 26631.0,
+        "STOCKHOLDERS_EQUITY": 59646.0,
+        "ASSET_TO_LIABILITY_RATIO": 1.1,
+        "DEBT_TO_EQUITY_RATIO": 0.4
+    }
+]

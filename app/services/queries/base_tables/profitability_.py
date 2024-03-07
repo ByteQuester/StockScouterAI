@@ -8,18 +8,18 @@ class ProfitabilityQuery(FinancialQueryBase):
     def __init__(self):
         # Initialize with a list of metrics essential for profitability calculations
         super().__init__(
-            metrics=['NetIncomeLoss', 'OperatingIncomeLoss', 'Revenues'])
+            metrics=['NetIncomeLoss', 'OperatingIncomeLoss', 'RevenueFromContractWithCustomerExcludingAssessedTax'])
 
     def add_calculations(self, df):
         """
         Add profitability-specific calculations to the DataFrame.
         """
-        # Calculate Profit Margin Percent if 'NetIncomeLoss' and 'Revenues' are present and not NaN
-        if 'NetIncomeLoss' in df.columns and 'Revenues' in df.columns:
+        # Calculate Profit Margin Percent if 'NetIncomeLoss' and 'RevenueFromContractWithCustomerExcludingAssessedTax' are present and not NaN
+        if 'NetIncomeLoss' in df.columns and 'RevenueFromContractWithCustomerExcludingAssessedTax' in df.columns:
             df['ProfitMarginPercent'] = np.where(
-                (df['NetIncomeLoss'].notna()) & (df['Revenues'].notna()) &
-                (df['Revenues'] != 0),
-                round((df['NetIncomeLoss'] / df['Revenues']) * 100, 2),
+                (df['NetIncomeLoss'].notna()) & (df['RevenueFromContractWithCustomerExcludingAssessedTax'].notna()) &
+                (df['RevenueFromContractWithCustomerExcludingAssessedTax'] != 0),
+                round((df['NetIncomeLoss'] / df['RevenueFromContractWithCustomerExcludingAssessedTax']) * 100, 2),
                 np.nan  # Set to NaN if conditions are not met
             )
 
@@ -56,7 +56,8 @@ class ProfitabilityQuery(FinancialQueryBase):
                 'quarter': 'Quarter',
                 'NetIncomeLoss': 'NET_INCOME_LOSS',
                 'OperatingIncomeLoss': 'OPS_INCOME_LOSS',
-                'Revenues': 'REVENUES',
+                #DEV
+                'RevenueFromContractWithCustomerExcludingAssessedTax': 'REVENUES',
                 'ProfitMarginPercent': 'PROFIT_MARGIN'
             }
 

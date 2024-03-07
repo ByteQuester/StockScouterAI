@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "year": "2019-10",
+        "NET_INCOME_LOSS": -88.057,
+        "OPS_INCOME_LOSS": -90.132,
+        "REVENUES": 73.012,
+        "PROFIT_MARGIN": -120.61
+    },
+    {
+        "id": 2,
+        "year": "2020-04",
+        "NET_INCOME_LOSS": -93.644,
+        "OPS_INCOME_LOSS": -96.403,
+        "REVENUES": 108.815,
+        "PROFIT_MARGIN": -86.06
+    },
+    {
+        "id": 3,
+        "year": "2020-07",
+        "NET_INCOME_LOSS": -77.634,
+        "OPS_INCOME_LOSS": -77.683,
+        "REVENUES": 133.145,
+        "PROFIT_MARGIN": -58.31
+    },
+    {
+        "id": 4,
+        "year": "2020-10",
+        "NET_INCOME_LOSS": -168.889,
+        "OPS_INCOME_LOSS": -169.454,
+        "REVENUES": 159.624,
+        "PROFIT_MARGIN": -105.8
+    },
+    {
+        "id": 5,
+        "year": "2021-04",
+        "NET_INCOME_LOSS": -203.22,
+        "OPS_INCOME_LOSS": -205.595,
+        "REVENUES": 228.914,
+        "PROFIT_MARGIN": -88.78
+    },
+    {
+        "id": 6,
+        "year": "2021-07",
+        "NET_INCOME_LOSS": -189.719,
+        "OPS_INCOME_LOSS": -200.141,
+        "REVENUES": 272.198,
+        "PROFIT_MARGIN": -69.7
+    },
+    {
+        "id": 7,
+        "year": "2021-10",
+        "NET_INCOME_LOSS": -154.856,
+        "OPS_INCOME_LOSS": -157.271,
+        "REVENUES": 334.441,
+        "PROFIT_MARGIN": -46.3
+    },
+    {
+        "id": 8,
+        "year": "2022-04",
+        "NET_INCOME_LOSS": -165.794,
+        "OPS_INCOME_LOSS": -188.766,
+        "REVENUES": 422.371,
+        "PROFIT_MARGIN": -39.25
+    },
+    {
+        "id": 9,
+        "year": "2022-07",
+        "NET_INCOME_LOSS": -222.806,
+        "OPS_INCOME_LOSS": -207.732,
+        "REVENUES": 497.248,
+        "PROFIT_MARGIN": -44.81
+    },
+    {
+        "id": 10,
+        "year": "2022-10",
+        "NET_INCOME_LOSS": -200.936,
+        "OPS_INCOME_LOSS": -206.019,
+        "REVENUES": 557.028,
+        "PROFIT_MARGIN": -36.07
+    },
+    {
+        "id": 11,
+        "year": "2023-04",
+        "NET_INCOME_LOSS": -225.627,
+        "OPS_INCOME_LOSS": -273.238,
+        "REVENUES": 623.599,
+        "PROFIT_MARGIN": -36.18
+    },
+    {
+        "id": 12,
+        "year": "2023-07",
+        "NET_INCOME_LOSS": -226.867,
+        "OPS_INCOME_LOSS": -285.407,
+        "REVENUES": 674.018,
+        "PROFIT_MARGIN": -33.66
+    },
+    {
+        "id": 13,
+        "year": "2023-10",
+        "NET_INCOME_LOSS": -214.251,
+        "OPS_INCOME_LOSS": -260.623,
+        "REVENUES": 734.173,
+        "PROFIT_MARGIN": -29.18
+    }
+]

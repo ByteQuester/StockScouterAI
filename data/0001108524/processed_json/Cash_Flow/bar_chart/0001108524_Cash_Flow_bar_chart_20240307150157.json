@@ -1,0 +1,92 @@
+[
+    {
+        "Date": "2015-01",
+        "CASH_FLOW_FINANCINGValue": -318.211,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -698.36,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 1181.444,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2016-01",
+        "CASH_FLOW_FINANCINGValue": 73.152,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -1487.878,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 1672.081,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2017-01",
+        "CASH_FLOW_FINANCINGValue": 998.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -2684.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 2162.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2018-01",
+        "CASH_FLOW_FINANCINGValue": 221.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -2011.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 2738.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2019-01",
+        "CASH_FLOW_FINANCINGValue": 2010.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -5308.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 3398.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2020-01",
+        "CASH_FLOW_FINANCINGValue": 164.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -2980.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 4331.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2021-01",
+        "CASH_FLOW_FINANCINGValue": 1194.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -3971.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 4801.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2022-01",
+        "CASH_FLOW_FINANCINGValue": 7838.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -14536.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 6000.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2023-01",
+        "CASH_FLOW_FINANCINGValue": -3562.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -1989.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 7111.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    },
+    {
+        "Date": "2024-01",
+        "CASH_FLOW_FINANCINGValue": -7477.0,
+        "CASH_FLOW_FINANCINGColor": "hsl(256, 70%, 50%)",
+        "CASH_FLOW_INVESTINGValue": -1327.0,
+        "CASH_FLOW_INVESTINGColor": "hsl(178, 70%, 50%)",
+        "CASH_FLOW_OPERATINGValue": 10234.0,
+        "CASH_FLOW_OPERATINGColor": "hsl(204, 70%, 50%)"
+    }
+]

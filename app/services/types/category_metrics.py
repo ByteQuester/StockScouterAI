@@ -15,7 +15,8 @@ class CategoryMetrics(Enum):
         'NetCashProvidedByUsedInFinancingActivities'
     ]
     LIQUIDITY = ['AssetsCurrent', 'LiabilitiesCurrent']
-    PROFITABILITY = ['OperatingIncomeLoss', 'Revenues', 'NetIncomeLoss']
+    #DEV
+    PROFITABILITY = ['OperatingIncomeLoss', 'RevenueFromContractWithCustomerExcludingAssessedTax', 'NetIncomeLoss']
 
     @classmethod
     def get_metrics(cls, category):

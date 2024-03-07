@@ -1,0 +1,100 @@
+[
+    {
+        "id": 1,
+        "year": "2020-01",
+        "CURRENT_ASSETS": 665.194,
+        "CURRENT_LIABILITIES": 416.455,
+        "CURRENT_RATIO": 1.6
+    },
+    {
+        "id": 2,
+        "year": "2020-10",
+        "CURRENT_ASSETS": 4986.771,
+        "CURRENT_LIABILITIES": 547.659,
+        "CURRENT_RATIO": 9.11
+    },
+    {
+        "id": 3,
+        "year": "2021-01",
+        "CURRENT_ASSETS": 4300.652,
+        "CURRENT_LIABILITIES": 789.264,
+        "CURRENT_RATIO": 5.45
+    },
+    {
+        "id": 4,
+        "year": "2021-04",
+        "CURRENT_ASSETS": 4221.336,
+        "CURRENT_LIABILITIES": 776.998,
+        "CURRENT_RATIO": 5.43
+    },
+    {
+        "id": 5,
+        "year": "2021-07",
+        "CURRENT_ASSETS": 4508.102,
+        "CURRENT_LIABILITIES": 875.738,
+        "CURRENT_RATIO": 5.15
+    },
+    {
+        "id": 6,
+        "year": "2021-10",
+        "CURRENT_ASSETS": 4308.257,
+        "CURRENT_LIABILITIES": 958.735,
+        "CURRENT_RATIO": 4.49
+    },
+    {
+        "id": 7,
+        "year": "2022-01",
+        "CURRENT_ASSETS": 4598.643,
+        "CURRENT_LIABILITIES": 1397.093,
+        "CURRENT_RATIO": 3.29
+    },
+    {
+        "id": 8,
+        "year": "2022-04",
+        "CURRENT_ASSETS": 4341.733,
+        "CURRENT_LIABILITIES": 1363.718,
+        "CURRENT_RATIO": 3.18
+    },
+    {
+        "id": 9,
+        "year": "2022-07",
+        "CURRENT_ASSETS": 4503.697,
+        "CURRENT_LIABILITIES": 1401.436,
+        "CURRENT_RATIO": 3.21
+    },
+    {
+        "id": 10,
+        "year": "2022-10",
+        "CURRENT_ASSETS": 4558.904,
+        "CURRENT_LIABILITIES": 1479.042,
+        "CURRENT_RATIO": 3.08
+    },
+    {
+        "id": 11,
+        "year": "2023-01",
+        "CURRENT_ASSETS": 4984.69,
+        "CURRENT_LIABILITIES": 1993.517,
+        "CURRENT_RATIO": 2.5
+    },
+    {
+        "id": 12,
+        "year": "2023-04",
+        "CURRENT_ASSETS": 4569.547,
+        "CURRENT_LIABILITIES": 1887.541,
+        "CURRENT_RATIO": 2.42
+    },
+    {
+        "id": 13,
+        "year": "2023-07",
+        "CURRENT_ASSETS": 4404.951,
+        "CURRENT_LIABILITIES": 1913.312,
+        "CURRENT_RATIO": 2.3
+    },
+    {
+        "id": 14,
+        "year": "2023-10",
+        "CURRENT_ASSETS": 4312.283,
+        "CURRENT_LIABILITIES": 2032.672,
+        "CURRENT_RATIO": 2.12
+    }
+]
