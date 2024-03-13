@@ -1,6 +1,6 @@
 import streamlit as st
 
-from app.gallery.components.elements.dashboard.layouts.third_tier import ProfitabilityDashboard
+from app.gallery.components.elements.dashboard.layouts.third_tier import ProfitabilityLineDashboard
 
 
 def tera_third_tier_main():
@@ -13,7 +13,7 @@ def tera_third_tier_main():
 
         if query_type:
             dashboard_map = {
-                "Profitability": ProfitabilityDashboard
+                "Profitability": ProfitabilityLineDashboard
             }
             dashboard_class = dashboard_map.get(query_type)
             if dashboard_class:

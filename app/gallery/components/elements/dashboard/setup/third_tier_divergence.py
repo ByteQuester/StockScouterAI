@@ -34,9 +34,8 @@ class DivergenceDashboardSetup(ABC):
         # This method sets up widgets and can be overridden by subclasses for custom setups
         self.w = SimpleNamespace(
             dashboard=self.board,
-            line=Line(self.board, 0, 0, 6, 11, minW=3, minH=3),
             editor=Editor(self.board, 6, 6, 6, 11, minW=3, minH=5),
-
+            #divergence_line=Line(self.board, 6, 6, 6, 11, minW=3, minH=5)
         )
 
     @abstractmethod

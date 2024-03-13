@@ -1,10 +1,12 @@
+import streamlit as st
+
 from app.gallery.components.elements.dashboard.setup import \
     ProfitabilityDashboardSetup
 
 from .base import DashboardBase
 
 
-class ProfitabilityDashboard(DashboardBase):
+class ProfitabilityLineDashboard(DashboardBase):
     """
     A dashboard class specialized in visualizing profitability data, extending the generic DashboardBase.
 

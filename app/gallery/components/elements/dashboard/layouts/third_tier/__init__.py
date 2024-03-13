@@ -1,2 +1,2 @@
-from .profitability import ProfitabilityDashboard
-
+from .profitability_line import ProfitabilityLineDashboard
+from .profitability_divergence import ProfitabilityDivergenceDashboard

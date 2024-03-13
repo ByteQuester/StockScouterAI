@@ -1,1 +1,1 @@
-from .elements import third_tier_view
+from .elements import comparative_third_tier_view
