@@ -4,7 +4,7 @@ from types import SimpleNamespace
 from app.gallery.components.elements.charts import (Dashboard, Line, Editor)
 
 
-class DashboardSetup(ABC):
+class LineDashboardSetup(ABC):
     """
     Abstract base class to set up a dashboard layout with widgets. This class initializes a dashboard and allows
     for the setup of various widgets like editors, line charts, cards, etc., which can be extended by subclasses to
@@ -33,8 +33,8 @@ class DashboardSetup(ABC):
         # This method sets up widgets and can be overridden by subclasses for custom setups
         self.w = SimpleNamespace(
             dashboard=self.board,
-            editor=Editor(self.board, 0, 2, 6, 4, minW=3, minH=5),
-            line=Line(self.board, 0, 6, 6, 4, minW=2, minH=4),
+            line=Line(self.board, 0, 0, 6, 11, minW=3, minH=3),
+            editor=Editor(self.board, 6, 6, 6, 11, minW=3, minH=5),
         )
 
     @abstractmethod
@@ -42,7 +42,7 @@ class DashboardSetup(ABC):
         pass
 
 
-class ProfitabilityDashboardSetup(DashboardSetup):
+class ProfitabilityLineDashboardSetup(LineDashboardSetup):
 
     def __init__(self,
                  line_data=None):

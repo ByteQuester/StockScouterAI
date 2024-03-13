@@ -1,17 +1,12 @@
 import streamlit as st
 
 from app.gallery.components.elements.dashboard.layouts.third_tier import ProfitabilityDashboard
-from app.gallery.ui import UIHelpers
-from app.gallery.utils import DataLoader
-
-data_loader = DataLoader()
-ui_helpers = UIHelpers()
 
 
-def third_tier_main():
+def crm_third_tier_main():
     # ========================= Main Content =========================
     # Static CIK input
-    cik = '0000012927'
+    cik = 'crm'
 
     if cik:
         query_type = 'Profitability'
@@ -33,4 +28,4 @@ def third_tier_main():
 
 if __name__ == "__main__":
     st.set_page_config(layout="wide")
-    third_tier_main()
+    crm_third_tier_main()
