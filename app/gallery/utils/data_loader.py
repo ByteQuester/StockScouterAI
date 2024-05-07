@@ -131,7 +131,7 @@ class DataLoader:
 
     @st.cache_resource(show_spinner=False)
     def load_data(_self, directory_path):
-        """'_self' is used to unhash the argument"""
+        """'_self' is used to un-hash the argument"""
         with st.spinner(
                 text=
                 "Loading and indexing the docs – hang tight! This should take 1-2 minutes."
@@ -143,7 +143,7 @@ class DataLoader:
                 model="gpt-3.5-turbo",
                 temperature=0.5,
                 system_prompt=
-                "You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table."
+                "You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table and do not hallucinate."
             ))
             index = VectorStoreIndex.from_documents(
                 docs, service_context=service_context)

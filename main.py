@@ -10,10 +10,10 @@ def main():
         st.title("Stock Scouter AI")
 
         with st.expander("✨ APPS", True):
-            page.item("Gallery", apps.gallery, default=True)
+            page.item("Home", apps.gallery, default=True)
             page.item("Chatbot", apps.chat)
 
-        with st.expander("🧩 Analytics & Dashboards", True):
+        with st.expander("🧩 Analytics & Dashboards"):
             page.item("General View⭐", components.elements.general_view)
             page.item("Second Tier View", components.elements.second_tier_view)
             page.item("Third Tier View", components.elements.third_tier_view)

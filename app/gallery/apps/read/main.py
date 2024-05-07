@@ -8,6 +8,5 @@ def main():
     st.sidebar.markdown("**Made by** [Mehrdad Touraji](https://www.linkedin.com/in/mehrdad-touraji/)")
 
 
-
 if __name__ == "__main__":
     main()

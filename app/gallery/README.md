@@ -1,15 +1,19 @@
-# Welcome to StockScouter AI! 🚀
+# Welcome to StockScouterAI
 
-👋 Hey there! You've just landed on **StockScouter AI** -Whether you're a finance guru or just starting to dip your toes into the world of stocks and investments, you're in the right place.
+## Introduction
+StockScouterAI is a powerful tool for analysing stocks and financial data.
 
-### What Can You Do Here?
-- **🔍 Explore Financial Data:** Get up close and personal with the financials of publicly traded companies in the US. All you need is a CIK number to start.
-- **📈 Dive Into Dashboards:** Our interactive dashboards are like a playground for data enthusiasts. Play around with them and uncover insights about liquidity, cash flow, and profitability.
-- **💡 Ask Away:** Got questions? AI chatbot has answers 24/7.
-- **🎨 Visualize Data:** See data in a new light with dynamic visualizations.
+## Components
+- [Chatbot](https://www.capitabyte.com/stockscouters/docs/km-chatbot): Interact with our chatbot to get real-time insights and analysis.
+- [Dashboards](https://www.capitabyte.com/stockscouters/docs/km-dashboards): Explore visualisations and additional insights based on collected data.
+- [LLM Component](https://www.capitabyte.com/stockscouters/docs/km-llm-component): Learn about the language model component responsible for improving chatbot performance.
 
-### Ready to Get Started?
-Just enter a CIK number in the search bar and let the magic happen. Or, if you're not sure where to begin, check out our [demo](https://youtu.be/269CuTdmLu4) for a quick tour of what StockScouter AI can do.
 
-### Join the Community
-If you love what you see, why not dive deeper? Contribute, give feedback, or just share your discoveries with others.
+## Documentation
+- [API and CIK (Central Index Key) Configuration](https://www.capitabyte.com/stockscouters/docs/km-obtain-cik): Obtain API keys and Central Index Key (CIK) numbers.
+- [Session Initialisation](https://www.capitabyte.com/stockscouters/docs/km-session-init): Learn how to initialise a dashboard session.
+- [User Queries Handling](https://www.capitabyte.com/stockscouters/docs/km-user-queries): Explore the process of handling user queries.
+
+---
+
+**Made by [Mehrdad Touraji](https://www.linkedin.com/in/mehrdad-touraji/)**
