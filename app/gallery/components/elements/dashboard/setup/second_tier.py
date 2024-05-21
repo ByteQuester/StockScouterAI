@@ -4,7 +4,7 @@ import streamlit as st
 
 class FinancialChart:
 
-    def __init__(self, chart_type, data, title, x_axis, y_axis, **kwargs):
+    def __init__(self, chart_type, data, title, x_axis, y_axis, color=None, **kwargs):
         """
         Initializes the FinancialChart class with the chart configuration.
 
@@ -20,6 +20,7 @@ class FinancialChart:
         self.title = title
         self.x_axis = x_axis
         self.y_axis = y_axis
+        self.color = color
         self.kwargs = kwargs
 
     def render(self, use_container_width=False):
@@ -28,6 +29,7 @@ class FinancialChart:
                          x=self.x_axis,
                          y=self.y_axis,
                          title=self.title,
+                         color= self.color, #'CIK',
                          **self.kwargs)
         # Check if text/annotations should be added
         if 'text' in self.kwargs:

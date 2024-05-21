@@ -9,8 +9,8 @@ from app.gallery.utils import DataLoader
 
 class SecondTierViewBase:
 
-    def __init__(self, cik, query_type):
-        self.cik = cik
+    def __init__(self, ciks, query_type):
+        self.ciks = ciks
         self.query_type = query_type
         self.ui: UIHelpers = UIHelpers()
         self.data_loader: DataLoader = DataLoader()
@@ -30,7 +30,7 @@ class SecondTierViewBase:
 
     def load_data(self):
         """Load and preprocess data."""
-        self.data = self.data_loader.load_csv_data(self.cik,
+        self.data = self.data_loader.load_data_for_ciks(self.ciks,
                                                    query_type=self.query_type)
         self.data['DATE'] = pd.to_datetime(self.data['DATE'])
 
