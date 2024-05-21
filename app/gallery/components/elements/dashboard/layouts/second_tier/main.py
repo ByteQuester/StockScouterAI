@@ -47,7 +47,7 @@ def second_tier_main():
 
     with c2:
         st.title(f'{entity_name} Overview Dashboard')
-        st.markdown("*Visualizing General Levels*")
+        st.markdown("*Visualising 2nd Level Views*")
     st.divider()
 
     if cik:

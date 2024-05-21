@@ -126,7 +126,7 @@ def general_main():
 
     with c2:
         st.title(f'{entity_name} Overview Dashboard')
-        st.markdown("*Visualizing General Levels*")
+        st.markdown("*Visualising General Overview*")
 
     st.divider()
     st.header('Key Financial Insights')

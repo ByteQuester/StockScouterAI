@@ -33,7 +33,7 @@ def third_tier_main():
 
     # Dynamic CIK input
     available_cik = data_loader.get_available_cik_numbers()
-    cik = st.selectbox("Enter CIK Number", available_cik)
+    cik = st.selectbox("Select CIK", available_cik)
     entity_name = data_loader.get_entity_name(cik)
 
     c1, c2 = st.columns([0.2, 3.5], gap="large")
@@ -45,7 +45,7 @@ def third_tier_main():
 
     with c2:
         st.title(f'{entity_name} Overview Dashboard')
-        st.markdown("*Visualizing General Levels*")
+        st.markdown("*Visualising Detailed View*")
 
     st.divider()
 

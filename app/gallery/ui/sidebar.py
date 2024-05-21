@@ -6,8 +6,6 @@ from app.services import generate_data_for_cik
 
 def update_sidebar():
     with st.sidebar:
-        st.title("Stock Scouter AI")
-
         new_cik = st.text_input("Enter new CIK Number")
         if st.button("Generate Data for CIK"):
             generate_data_for_cik(new_cik)
@@ -16,8 +14,6 @@ def update_sidebar():
 
 def update_sidebar_chat():
     data_loader = DataLoader()
-
-    st.sidebar.title("Stock Scouter AI")
 
     # Handling new CIK input and data generation
     new_cik = st.sidebar.text_input("Enter new CIK Number", key="user_handle")

@@ -1,3 +1,18 @@
+import os
+
+os.environ["HF_HOME"] = "/teamspace/studios/this_studio/weights"
+os.environ["TORCH_HOME"] = "/teamspace/studios/this_studio/weights"
+# adding above 
+
+# and a bunch of these 
+import gc
+import re
+import uuid
+import textwrap
+import subprocess
+import nest_asyncio
+from dotenv import load_dotenv
+
 import json
 import os
 
@@ -5,9 +20,30 @@ import markdown
 import pandas as pd
 import streamlit as st
 from bs4 import BeautifulSoup
-from llama_index import ServiceContext, SimpleDirectoryReader, VectorStoreIndex
-from llama_index.llms import OpenAI
+# the cahgnes i make from from llama_index import ServiceContext, SimpleDirectoryReader, VectorStoreIndex to
+from llama_index.core import Settings
+from llama_index.llms.ollama import Ollama
+from llama_index.core import PromptTemplate
+from llama_index.core import SimpleDirectoryReader
+from llama_index.core import VectorStoreIndex
+from llama_index.core.storage.storage_context import StorageContext
 
+# from llama_index.llms import OpenAI im revoing this we dont need this
+from langchain.embeddings import HuggingFaceEmbeddings
+from llama_index.embeddings.langchain import LangchainEmbedding
+
+# adding 
+from rag_101.retriever import (
+    load_embedding_model,
+    load_reranker_model
+)
+
+# setting up the llm
+llm=Ollama(model="mistral", request_timeout=60.0)
+
+# setting up the embedding model
+lc_embedding_model = load_embedding_model()
+embed_model = LangchainEmbedding(lc_embedding_model)
 
 class DataLoader:
 
@@ -136,19 +172,48 @@ class DataLoader:
                 text=
                 "Loading and indexing the docs – hang tight! This should take 1-2 minutes."
         ):
-            reader = SimpleDirectoryReader(input_dir=directory_path,
+            reader = SimpleDirectoryReader(input_dir=f"/teamspace/studios/this_studio/{directory_path}",
                                            recursive=True)
             docs = reader.load_data()
-            service_context = ServiceContext.from_defaults(llm=OpenAI(
-                model="gpt-3.5-turbo",
-                temperature=0.5,
-                system_prompt=
-                "You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table and do not hallucinate."
-            ))
-            index = VectorStoreIndex.from_documents(
-                docs, service_context=service_context)
-            query_engine = index.as_query_engine()
+            # removing this # service_context = ServiceContext.from_defaults(llm=OpenAI(
+                #model="gpt-3.5-turbo",
+                #temperature=0.5,
+                #system_prompt=
+                #"You're a finance expert given a set of queries. Analyse the data and answer to the user's questions without hallucinating. Please provide a data table in markdown format from the provided financial data for the questions you are asked. Include an explanation of the answer along with the data table and do not hallucinate."
+            #))
+
+            # ====== Create vector store and upload data ======
+            Settings.embed_model = embed_model
+            index = VectorStoreIndex.from_documents(docs) # removing the service context
+        
+
+            # ====== Setup a query engine ======
+            Settings.llm = llm
+            query_engine = index.as_query_engine(streaming=True, similarity_top_k=4)
+            # ====== Customise prompt template ======
+            qa_prompt_tmpl_str = (
+            "Context information is below.\n"
+            "---------------------\n"
+            "{context_str}\n"
+            "---------------------\n"
+            "You are a bot in a financial app where you don't need to mention any path, but based on the context provided, please formulate your response carefully. If the answer isn't immediately clear, it's okay to respond with 'I don't know!'. Always reference specific data from the loaded documents to support your answer. Make sure you ask follow up questions and only answer with the information you have been provided with, no more and no less.\n"               "Query: {query_str}\n"
+            "Answer: "
+            )
+            qa_prompt_tmpl = PromptTemplate(qa_prompt_tmpl_str)
+
+            query_engine.update_prompts(
+                {"response_synthesizer:text_qa_template": qa_prompt_tmpl}
+            )
+            message_container = st.empty()
+            if docs:
+                message_container.success("Data loaded successfully!!")
+            else:
+                message_container.write(
+                    "No data found, check if the repository is not empty!"
+                )
+            st.session_state.query_engine = query_engine
             return query_engine
+
 
     def load_and_filter_data(self, cik, query_type, chart_type, start_date,
                              end_date):
