@@ -9,8 +9,8 @@ from app.gallery.utils import DataLoader
 
 class SecondTierViewBase:
 
-    def __init__(self, cik, query_type):
-        self.cik = cik
+    def __init__(self, ciks, query_type):
+        self.ciks = ciks
         self.query_type = query_type
         self.ui: UIHelpers = UIHelpers()
         self.data_loader: DataLoader = DataLoader()
@@ -19,19 +19,19 @@ class SecondTierViewBase:
         self.insights_data = {}
         self.insights_config = []
         self.data_insights = []
-        self.initialize_sidebar()
+        #self.initialize_sidebar()
 
-    def initialize_sidebar(self):
-        """
-        Updates the sidebar with options relevant to the current dashboard.
-        This method can be overridden in subclasses if they require a different sidebar setup.
-        """
-        update_sidebar()
+    #def initialize_sidebar(self):
+    #"""
+    #Updates the sidebar with options relevant to the current dashboard.
+    #This method can be overridden in subclasses if they require a different sidebar setup.
+    #"""
+    #update_sidebar()
 
     def load_data(self):
         """Load and preprocess data."""
-        self.data = self.data_loader.load_csv_data(self.cik,
-                                                   query_type=self.query_type)
+        self.data = self.data_loader.load_data_for_ciks(
+            self.ciks, query_type=self.query_type)
         self.data['DATE'] = pd.to_datetime(self.data['DATE'])
 
     def define_range(self):

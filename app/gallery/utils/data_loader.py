@@ -8,11 +8,15 @@ from bs4 import BeautifulSoup
 from llama_index import ServiceContext, SimpleDirectoryReader, VectorStoreIndex
 from llama_index.llms import OpenAI
 
+# ====== DataLoader Class ======
+
 
 class DataLoader:
 
     def __init__(self, base_dir='data'):
         self.base_dir = base_dir
+
+    # ====== CIK Number Methods ======
 
     def get_available_cik_numbers(self):
         """
@@ -37,6 +41,14 @@ class DataLoader:
                 return df['ENTITY'].iloc[0]
         return "Unknown Entity"
 
+    def get_available_entities(self):
+        """
+        Returns a list of tuples containing entity names and their corresponding CIKs.
+        """
+        available_ciks = self.get_available_cik_numbers()
+        entities = [(self.get_entity_name(cik), cik) for cik in available_ciks]
+        return entities
+
     def get_available_query_types(self, cik):
         """
         Returns a list of available query types for a given CIK number.
@@ -59,6 +71,8 @@ class DataLoader:
         soup = BeautifulSoup(html_content, 'html.parser')
         query_types = [h3.get_text() for h3 in soup.find_all('h3')]
         return query_types
+
+    # ====== Path Construction Methods ======
 
     def construct_directory_path(self, cik, query_type):
         directory_path = os.path.join(self.base_dir, str(cik),
@@ -84,15 +98,6 @@ class DataLoader:
                 return os.path.join(folder_path, latest_file)
         return None
 
-    def load_json_data_for_chart(self, cik, query_type, chart_type):
-        json_file_path = self.construct_json_file_path(cik, query_type,
-                                                       chart_type)
-        if json_file_path and os.path.exists(json_file_path):
-            with open(json_file_path, 'r') as json_file:
-                return json.load(json_file)
-        else:
-            return None
-
     def construct_csv_file_path(self, cik, query_type):
         """
         Construct path to the latest CSV file for a specific query type.
@@ -112,6 +117,17 @@ class DataLoader:
                 return os.path.join(folder_path, latest_file)
         return None
 
+    # ====== Data Loading Methods ======
+
+    def load_json_data_for_chart(self, cik, query_type, chart_type):
+        json_file_path = self.construct_json_file_path(cik, query_type,
+                                                       chart_type)
+        if json_file_path and os.path.exists(json_file_path):
+            with open(json_file_path, 'r') as json_file:
+                return json.load(json_file)
+        else:
+            return None
+
     def load_csv_data(self, cik, query_type):
         """
         Load CSV data for a specific query type and CIK.
@@ -125,9 +141,15 @@ class DataLoader:
             )
             return pd.DataFrame()  # Return an empty DataFrame as a fallback
 
-    def push_query_engine(self, cik, query_type):
-        directory_path = self.construct_directory_path(cik, query_type)
-        return self.load_data(directory_path) if directory_path else None
+    def load_data_for_ciks(self, ciks, query_type):
+        combined_data = pd.DataFrame()
+        for cik in ciks:
+            data = self.load_csv_data(cik, query_type)
+            entity_name = self.get_entity_name(cik)
+            data['CIK'] = cik
+            data['ENTITY'] = entity_name
+            combined_data = pd.concat([combined_data, data], ignore_index=True)
+        return combined_data
 
     @st.cache_resource(show_spinner=False)
     def load_data(_self, directory_path):
@@ -149,6 +171,12 @@ class DataLoader:
                 docs, service_context=service_context)
             query_engine = index.as_query_engine()
             return query_engine
+
+    def push_query_engine(self, cik, query_type):
+        directory_path = self.construct_directory_path(cik, query_type)
+        return self.load_data(directory_path) if directory_path else None
+
+    # ====== Data Filtering Methods ======
 
     def load_and_filter_data(self, cik, query_type, chart_type, start_date,
                              end_date):

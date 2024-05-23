@@ -23,11 +23,10 @@ def general_main():
         Analyze assets, liabilities, cash flow, and more through interactive visualizations.
     """)
     st.sidebar.header("Resources ✨")
-    st.sidebar.info(
-        """The raw data is taken from [SEC](https://sec.gov).""")
+    st.sidebar.info("""The raw data is taken from [SEC](https://sec.gov).""")
     # Initialize and update sidebar
     update_sidebar()
-  
+
     # ========================= Load Content =========================
     # Quick guide
     with st.expander("Quick Info"):

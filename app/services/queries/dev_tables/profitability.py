@@ -1,3 +1,6 @@
+import pandas as pd
+
+
 class ProfitabilityFinancialAnalysis:
 
     def __init__(self, df):
@@ -27,15 +30,17 @@ class ProfitabilityFinancialAnalysis:
         return None
 
     def revenue_distribution_by_quarter(self):
-        """Sums up revenues by quarter."""
-        if 'REVENUES' in self.df.columns:
-            return self.df.groupby('Quarter')['REVENUES'].sum()
-        return None
+        """Sums up revenues by quarter and retains the ENTITY for coloring."""
+        if 'REVENUES' in self.df.columns and 'ENTITY' in self.df.columns:
+            return self.df.groupby(['Quarter',
+                                    'ENTITY'])['REVENUES'].sum().reset_index()
+        return pd.DataFrame()
 
     def margin_analysis_by_quarter(self):
-        """Analyzes profit margins by quarter."""
-        if 'PROFIT_MARGIN' in self.df.columns:
-            return self.df.groupby('Quarter')['PROFIT_MARGIN'].mean()
+        """Analyzes profit margins by quarter, including ENTITY for coloring."""
+        if 'PROFIT_MARGIN' in self.df.columns and 'ENTITY' in self.df.columns:
+            return self.df.groupby(['Quarter', 'ENTITY'
+                                    ])['PROFIT_MARGIN'].mean().reset_index()
         return None
 
     def calculate_yoy_growth(self, column_name):

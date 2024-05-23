@@ -2,8 +2,9 @@ from typing import Dict, Union
 
 import pandas as pd
 
-from .transformers_base import (AssetsLiabilitiesTransformer, CashFlowTransformer,
-                           LiquidityTransformer, ProfitabilityTransformer)
+from .transformers_base import (AssetsLiabilitiesTransformer,
+                                CashFlowTransformer, LiquidityTransformer,
+                                ProfitabilityTransformer)
 
 
 class TransformerManager:

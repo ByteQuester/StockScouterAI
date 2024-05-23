@@ -7,8 +7,10 @@ class ProfitabilityQuery(FinancialQueryBase):
 
     def __init__(self):
         # Initialize with a list of metrics essential for profitability calculations
-        super().__init__(
-            metrics=['NetIncomeLoss', 'OperatingIncomeLoss', 'RevenueFromContractWithCustomerExcludingAssessedTax'])
+        super().__init__(metrics=[
+            'NetIncomeLoss', 'OperatingIncomeLoss',
+            'RevenueFromContractWithCustomerExcludingAssessedTax'
+        ])
 
     def add_calculations(self, df):
         """
@@ -17,9 +19,15 @@ class ProfitabilityQuery(FinancialQueryBase):
         # Calculate Profit Margin Percent if 'NetIncomeLoss' and 'RevenueFromContractWithCustomerExcludingAssessedTax' are present and not NaN
         if 'NetIncomeLoss' in df.columns and 'RevenueFromContractWithCustomerExcludingAssessedTax' in df.columns:
             df['ProfitMarginPercent'] = np.where(
-                (df['NetIncomeLoss'].notna()) & (df['RevenueFromContractWithCustomerExcludingAssessedTax'].notna()) &
-                (df['RevenueFromContractWithCustomerExcludingAssessedTax'] != 0),
-                round((df['NetIncomeLoss'] / df['RevenueFromContractWithCustomerExcludingAssessedTax']) * 100, 2),
+                (df['NetIncomeLoss'].notna()) &
+                (df['RevenueFromContractWithCustomerExcludingAssessedTax'].
+                 notna()) &
+                (df['RevenueFromContractWithCustomerExcludingAssessedTax']
+                 != 0),
+                round(
+                    (df['NetIncomeLoss'] /
+                     df['RevenueFromContractWithCustomerExcludingAssessedTax'])
+                    * 100, 2),
                 np.nan  # Set to NaN if conditions are not met
             )
 
@@ -57,7 +65,8 @@ class ProfitabilityQuery(FinancialQueryBase):
                 'NetIncomeLoss': 'NET_INCOME_LOSS',
                 'OperatingIncomeLoss': 'OPS_INCOME_LOSS',
                 #DEV
-                'RevenueFromContractWithCustomerExcludingAssessedTax': 'REVENUES',
+                'RevenueFromContractWithCustomerExcludingAssessedTax':
+                'REVENUES',
                 'ProfitMarginPercent': 'PROFIT_MARGIN'
             }
 
