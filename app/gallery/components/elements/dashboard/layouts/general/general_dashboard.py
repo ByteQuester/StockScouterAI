@@ -5,8 +5,8 @@ import streamlit as st
 
 from app.gallery.ui import DynamicInsights, KeyInsights, UIHelpers
 from app.gallery.utils.data_loader import DataLoader
+from app.gallery.components.elements.dashboard.setup import render_chart
 
-from .chart_register import render_chart
 from .graph_renderers import *
 
 

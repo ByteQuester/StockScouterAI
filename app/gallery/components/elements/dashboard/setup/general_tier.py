@@ -2,7 +2,7 @@ import plotly.express as px
 import streamlit as st
 
 
-class FinancialChart:
+class GeneralTierChart:
 
     def __init__(self,
                  chart_type,

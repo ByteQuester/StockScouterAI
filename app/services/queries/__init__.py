@@ -1,1 +1,1 @@
-from .query_manager import QueryExecutor
+from .query_managers import QueryExecutor

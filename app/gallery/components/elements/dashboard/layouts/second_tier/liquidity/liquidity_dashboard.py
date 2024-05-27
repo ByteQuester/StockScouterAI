@@ -2,9 +2,9 @@ import streamlit as st
 
 from app.gallery.ui import UIHelpers
 from app.services.queries.dev_tables import LiquidityAnalysis
+from app.gallery.components.elements.dashboard.setup import render_chart
 
 from ..base import SecondTierViewBase
-from ..chart_registry import render_chart
 from .garph_renderers import *
 
 

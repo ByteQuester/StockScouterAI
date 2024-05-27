@@ -128,12 +128,15 @@ class DashboardBase(ABC):
         if 'dashboard_setup' in st.session_state:
             setup = st.session_state.dashboard_setup
             setup.w.editor()
-            setup.w.card(setup.w.editor.get_content("Card content"))
-            setup.w.bar_chart(setup.w.editor.get_content("Bar chart"))
-            setup.w.grid_chart(setup.w.editor.get_content("Data grid"))
-            setup.w.card(setup.w.editor.get_content("Card content"))
-            setup.w.line(setup.w.editor.get_content("Line chart"),
-                         config_type="base_config")
+            if 'Card content' in setup.w.editor._tabs:
+                setup.w.card(setup.w.editor.get_content("Card content"))
+            if 'Bar chart' in setup.w.editor._tabs:
+                setup.w.card(setup.w.editor.get_content("Bar chart"))
+            if 'Data grid' in setup.w.editor._tabs:
+                setup.w.card(setup.w.editor.get_content("Data grid"))
+            if 'Line chart' in setup.w.editor._tabs:
+                setup.w.card(setup.w.editor.get_content("Line chart")) #, config_type="base_config")
+
 
     def render_dashboard(self) -> None:
         """Renders the dashboard with widgets and content."""

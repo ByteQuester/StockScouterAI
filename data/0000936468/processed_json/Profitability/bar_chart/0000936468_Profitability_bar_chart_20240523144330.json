@@ -1,0 +1,344 @@
+[
+    {
+        "Date": "2014-03",
+        "NET_INCOME_LOSSValue": 933.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1432.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2014-06",
+        "NET_INCOME_LOSSValue": 889.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1426.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2014-09",
+        "NET_INCOME_LOSSValue": 888.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1392.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2014-12",
+        "NET_INCOME_LOSSValue": 904.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1342.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2015-03",
+        "NET_INCOME_LOSSValue": 878.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1147.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2015-06",
+        "NET_INCOME_LOSSValue": 929.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1273.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2015-09",
+        "NET_INCOME_LOSSValue": 865.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1192.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2015-12",
+        "NET_INCOME_LOSSValue": 933.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1100.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2016-03",
+        "NET_INCOME_LOSSValue": 898.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1158.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2016-06",
+        "NET_INCOME_LOSSValue": 1021.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1375.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2016-09",
+        "NET_INCOME_LOSSValue": 2395.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1588.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2016-12",
+        "NET_INCOME_LOSSValue": 988.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1428.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2017-03",
+        "NET_INCOME_LOSSValue": 789.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1402.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2017-06",
+        "NET_INCOME_LOSSValue": 955.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": 12563.0,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1716.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2017-09",
+        "NET_INCOME_LOSSValue": 963.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1677.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2017-12",
+        "NET_INCOME_LOSSValue": -744.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1949.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2018-03",
+        "NET_INCOME_LOSSValue": 1157.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1725.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2018-06",
+        "NET_INCOME_LOSSValue": 1163.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": 13398.0,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1795.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2018-09",
+        "NET_INCOME_LOSSValue": 1473.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1963.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2018-12",
+        "NET_INCOME_LOSSValue": 1253.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1851.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2019-03",
+        "NET_INCOME_LOSSValue": 1704.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2283.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2019-06",
+        "NET_INCOME_LOSSValue": 1420.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2008.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2019-09",
+        "NET_INCOME_LOSSValue": 1608.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2105.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2019-12",
+        "NET_INCOME_LOSSValue": 1498.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2149.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2020-03",
+        "NET_INCOME_LOSSValue": 1717.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2122.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2020-06",
+        "NET_INCOME_LOSSValue": 1626.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2086.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2020-09",
+        "NET_INCOME_LOSSValue": 1698.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2147.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2020-12",
+        "NET_INCOME_LOSSValue": 1792.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2289.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2021-03",
+        "NET_INCOME_LOSSValue": 1837.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2182.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2021-06",
+        "NET_INCOME_LOSSValue": 1815.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2192.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2021-09",
+        "NET_INCOME_LOSSValue": 614.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2294.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2022-03",
+        "NET_INCOME_LOSSValue": 1733.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1933.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2022-06",
+        "NET_INCOME_LOSSValue": 309.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 1963.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2022-09",
+        "NET_INCOME_LOSSValue": 1778.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2159.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2023-03",
+        "NET_INCOME_LOSSValue": 1689.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2037.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2023-06",
+        "NET_INCOME_LOSSValue": 1681.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2135.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2023-09",
+        "NET_INCOME_LOSSValue": 1684.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2042.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    },
+    {
+        "Date": "2024-03",
+        "NET_INCOME_LOSSValue": 1545.0,
+        "NET_INCOME_LOSSColor": "hsl(359, 70%, 50%)",
+        "REVENUESValue": null,
+        "REVENUESColor": "hsl(232, 70%, 50%)",
+        "OPS_INCOME_LOSSValue": 2029.0,
+        "OPS_INCOME_LOSSColor": "hsl(40, 70%, 50%)"
+    }
+]

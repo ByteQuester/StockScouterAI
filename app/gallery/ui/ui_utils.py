@@ -12,6 +12,14 @@ class UIHelpers:
         return st.button(label)
 
     @staticmethod
+    def select_metrics(unique_metrics, key=None, name=None):
+        """Creates a multi-select widget for selecting metrics."""
+        return st.multiselect(f'Select {name} metrics to display',
+                              unique_metrics,
+                              default=unique_metrics,
+                              key=key)
+
+    @staticmethod
     def select_date_range(default_start="1Y", in_sidebar=False):
         """Allows selection of a date range without creating a button."""
         today = pd.to_datetime("today")
@@ -27,6 +35,11 @@ class UIHelpers:
         start_date = date_ranges[selected_range_key]
         end_date = today  # Assuming end date is always today for simplicity
         return start_date, end_date
+
+    @staticmethod
+    def format_date(date):
+        """Formats a datetime object to a string."""
+        return date.strftime("%Y-%m")
 
     @staticmethod
     def select_date_slider(min_date,

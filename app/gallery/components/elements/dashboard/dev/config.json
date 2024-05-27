@@ -1,0 +1,58 @@
+{
+  "Profitability": [
+    {
+      "type": "Line",
+      "position": [0, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Line chart"
+    },
+    {
+      "type": "Bar",
+      "position": [6, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Bar chart",
+      "keys": ["NET_INCOME_LOSSValue", "REVENUESValue", "OPS_INCOME_LOSSValue"]
+    },
+    {
+      "type": "DataGrid",
+      "position": [0, 4, 12, 8],
+      "minSize": [6, 4],
+      "contentKey": "Data grid",
+      "columns": [
+        {
+          "field": "year",
+          "headerName": "Year",
+          "width": 90
+        },
+        {
+          "field": "REVENUES",
+          "headerName": "Revenue",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "NET_INCOME_LOSS",
+          "headerName": "Net Income",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "OPS_INCOME_LOSS",
+          "headerName": "Operating Income",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "PROFIT_MARGIN",
+          "headerName": "Profit Margin%",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        }
+      ]
+    }
+  ]
+}

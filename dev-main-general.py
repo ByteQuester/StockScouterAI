@@ -19,11 +19,14 @@ def general_main():
                                                format_func=lambda x: x[0])
     selected_ciks = [entity[1] for entity in selected_entities]
 
+    view_type = st.sidebar.selectbox("Select View Type",
+                                     ["Grouped", "Stacked", "Subplots"])
+
     if selected_ciks:
         dashboard = GeneralDashboardBase(selected_ciks, 'general')
         dashboard.initialize_analysis()
         chart_selection = dashboard.render_sidebar()
-        dashboard.render_tabs(chart_selection)
+        dashboard.render_tabs(chart_selection, view_type)
 
     st.sidebar.header("About the Dashboard")
     st.sidebar.markdown("""

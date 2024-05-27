@@ -1,5 +1,6 @@
 from functools import partial
 
+import streamlit as st
 from streamlit_elements import editor, lazy, mui, sync
 
 from .dashboard import Dashboard
@@ -31,7 +32,11 @@ class Editor(Dashboard.Item):
         self._tabs[label] = {"content": default_content, "language": language}
 
     def get_content(self, label):
-        return self._tabs[label]["content"]
+        if label in self._tabs:
+            return self._tabs[label]["content"]
+        else:
+            st.error(f"No content found for tab labeled '{label}'.")
+            return None  # or some default content, depending on your use case
 
     def __call__(self):
         with mui.Paper(key=self._key,
