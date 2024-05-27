@@ -26,7 +26,7 @@ pivoted_data AS (
         end_date,
         year,
         quarter,
-        MAX(CASE WHEN Metric = 'AssetsCurrent' THEN value ELSE NULL END) AS Assets,
+        MAX(CASE WHEN Metric = 'AssetsCurrent' THEN value ELSE NULL END) AS AssetsCurrent,
         MAX(CASE WHEN Metric = 'Liabilities' THEN value ELSE NULL END) AS Liabilities,
         MAX(CASE WHEN Metric = 'StockholdersEquity' THEN value ELSE NULL END) AS StockholdersEquity
     FROM preprocessed_data
@@ -38,17 +38,21 @@ SELECT
     EntityName,
     CIK,
     end_date,
-    Assets / 1000000 AS Assets_Million,
+    AssetsCurrent / 1000000 AS AssetsCurrent_Million,
     Liabilities / 1000000 AS Liabilities_Million,
     StockholdersEquity / 1000000 AS StockholdersEquity_Million,
     CASE
-        WHEN Assets IS NOT NULL AND Liabilities IS NOT NULL AND Liabilities != 0 THEN Assets / Liabilities
+        WHEN AssetsCurrent IS NOT NULL AND Liabilities IS NOT NULL AND Liabilities != 0 THEN AssetsCurrent / Liabilities
         ELSE NULL
     END AS AssetToLiabilityRatio,
     CASE
         WHEN Liabilities IS NOT NULL AND StockholdersEquity IS NOT NULL AND StockholdersEquity != 0 THEN Liabilities / StockholdersEquity
         ELSE NULL
     END AS DebtToEquityRatio,
+    CASE
+        WHEN AssetsCurrent IS NOT NULL AND Liabilities IS NOT NULL THEN AssetsCurrent - Liabilities
+        ELSE NULL
+    END AS WorkingCapital,
     year,
     quarter
 FROM pivoted_data;
