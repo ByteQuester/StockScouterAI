@@ -1,8 +1,8 @@
 import streamlit as st
 
+from app.gallery.components.elements.dashboard.setup import render_chart
 from app.gallery.ui import UIHelpers
 from app.services.queries.dev_tables import ProfitabilityFinancialAnalysis
-from app.gallery.components.elements.dashboard.setup import render_chart
 
 from ..base import SecondTierViewBase
 from .graph_renderers import *

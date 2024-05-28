@@ -87,12 +87,15 @@ class DataLoader:
         """
         Construct path to the JSON file for a specific chart type.
         """
-        folder_path = os.path.join(self.base_dir, str(cik), 'processed_json', query_type, chart_type)
+        folder_path = os.path.join(self.base_dir, str(cik), 'processed_json',
+                                   query_type, chart_type)
         print(f"Constructing path for JSON file: {folder_path}")
         if os.path.isdir(folder_path):
             files = os.listdir(folder_path)
             if files:
-                latest_file = max(files, key=lambda x: os.path.getctime(os.path.join(folder_path, x)))
+                latest_file = max(files,
+                                  key=lambda x: os.path.getctime(
+                                      os.path.join(folder_path, x)))
                 file_path = os.path.join(folder_path, latest_file)
                 print(f"Found JSON file: {file_path}")
                 return file_path
@@ -121,11 +124,14 @@ class DataLoader:
     # ====== Data Loading Methods ======
 
     def load_json_data_for_chart(self, cik, query_type, chart_type):
-        json_file_path = self.construct_json_file_path(cik, query_type, chart_type)
+        json_file_path = self.construct_json_file_path(cik, query_type,
+                                                       chart_type)
         if json_file_path and os.path.exists(json_file_path):
             with open(json_file_path, 'r') as json_file:
                 data = json.load(json_file)
-                print(f"Loaded data from JSON file: {json_file_path}, Data: {data}")
+                print(
+                    f"Loaded data from JSON file: {json_file_path}, Data: {data}"
+                )
                 return data
         else:
             print(f"JSON file does not exist: {json_file_path}")

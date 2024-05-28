@@ -135,8 +135,8 @@ class DashboardBase(ABC):
             if 'Data grid' in setup.w.editor._tabs:
                 setup.w.card(setup.w.editor.get_content("Data grid"))
             if 'Line chart' in setup.w.editor._tabs:
-                setup.w.card(setup.w.editor.get_content("Line chart")) #, config_type="base_config")
-
+                setup.w.card(setup.w.editor.get_content(
+                    "Line chart"))  #, config_type="base_config")
 
     def render_dashboard(self) -> None:
         """Renders the dashboard with widgets and content."""

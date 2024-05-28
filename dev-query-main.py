@@ -11,10 +11,12 @@ from app.gallery.components.elements.charts import (Bar, Card, Dashboard,
 from app.gallery.components.elements.dashboard.dev.widget_manager import \
     WidgetManager
 from app.services.functions.data.post_processing.custom_transfomer import \
-    CustomTransformer
+    CustomTransformer  # Import CustomTransformer
+from app.services.functions.transformers import TransformerManager
 from app.services.queries.query_managers.data_loader import DataLoader
-from app.services.queries.query_managers.sql_executor_dev import SQLExecutor
-from app.services.queries.sql_views import SQL_QUERY_FILES
+from app.services.queries.query_managers.query_manager import QueryManager
+from app.services.queries.query_managers.sql_executor import \
+    SQLExecutor  # Import the new SQLExecutor
 from app.services.types import (ASSETS_LIABILITIES_BAR_METRICS,
                                 ASSETS_LIABILITIES_LINE_METRICS,
                                 CASH_FLOW_CHARTS_METRICS,
@@ -38,9 +40,11 @@ def get_metrics(query_type):
     return metrics_map.get(query_type, [])
 
 
-def initialize_dashboard(config, board, editor, sql_executor, query_type, cik,
+def initialize_dashboard(config, board, editor, view_manager, cik, query_type,
                          start_date, end_date):
     widget_manager = WidgetManager(board, editor)
+    sql_executor = SQLExecutor(
+        view_manager.db_path)  # Use the same database path
 
     for widget_config in config:
         widget_type = widget_config["type"]
@@ -48,12 +52,69 @@ def initialize_dashboard(config, board, editor, sql_executor, query_type, cik,
         min_size = widget_config["minSize"]
         content_key = widget_config["contentKey"]
 
-        query_files = SQL_QUERY_FILES.get(query_type, {})
-        for query_name, query_file in query_files.items():
-            sql_executor.execute_sql_file(query_file)
+        query_file = f'app/services/queries/sql_views/{query_type.lower()}_views.sql'
+        params = (cik, start_date, end_date)
+        print(f"Executing query from file: {query_file} with params: {params}")
+
+        # Execute each view creation separately
+        qoq_growth_sql = """
+        CREATE VIEW IF NOT EXISTS profitability_qoq_growth AS
+        WITH preprocessed_data AS (
+            SELECT *,
+                   LAG(REVENUES, 1) OVER (PARTITION BY Entity ORDER BY DATE) AS Prev_Revenues,
+                   LAG(OPS_INCOME_LOSS, 1) OVER (PARTITION BY Entity ORDER BY DATE) AS Prev_OperatingIncomeLoss
+            FROM raw_profitability
+        )
+        SELECT
+            Entity,
+            CIK,
+            DATE,
+            Year,
+            Quarter,
+            NET_INCOME_LOSS,
+            REVENUES,
+            OPS_INCOME_LOSS,
+            PROFIT_MARGIN,
+            CASE WHEN Prev_Revenues IS NOT NULL AND Prev_Revenues != 0 THEN
+                ROUND ((REVENUES - Prev_Revenues) / Prev_Revenues * 100, 2)
+                ELSE NULL END AS Revenues_QoQ_Growth,
+            CASE WHEN Prev_OperatingIncomeLoss IS NOT NULL AND Prev_OperatingIncomeLoss != 0 THEN
+                ROUND ((OPS_INCOME_LOSS - Prev_OperatingIncomeLoss) / Prev_OperatingIncomeLoss * 100, 2)
+                ELSE NULL END AS OperatingIncome_QoQ_Growth
+        FROM preprocessed_data;
+        """
+        sql_executor.execute_sql(qoq_growth_sql)
+
+        expense_ratio_sql = """
+        CREATE VIEW IF NOT EXISTS profitability_expense_ratio AS
+        SELECT *,
+               ROUND ((REVENUES - OPS_INCOME_LOSS) / REVENUES * 100, 2) AS Expense_Ratio
+        FROM raw_profitability;
+        """
+        sql_executor.execute_sql(expense_ratio_sql)
+
+        analysis_sql = """
+        CREATE VIEW IF NOT EXISTS profitability_analysis AS
+        SELECT a.Entity,
+               a.CIK,
+               a.DATE,
+               a.Year,
+               a.Quarter,
+               a.NET_INCOME_LOSS,
+               a.REVENUES,
+               a.OPS_INCOME_LOSS,
+               a.PROFIT_MARGIN,
+               b.Revenues_QoQ_Growth,
+               b.OperatingIncome_QoQ_Growth,
+               c.Expense_Ratio,
+               a.REVENUES - a.OPS_INCOME_LOSS AS Operational_Expenses
+        FROM raw_profitability a
+        LEFT JOIN profitability_qoq_growth b ON a.CIK = b.CIK AND a.DATE = b.DATE
+        LEFT JOIN profitability_expense_ratio c ON a.CIK = c.CIK AND a.DATE = c.DATE;
+        """
+        sql_executor.execute_sql(analysis_sql)
 
         query_sql = "SELECT * FROM profitability_analysis WHERE CIK = ? AND DATE BETWEEN ? AND ?"
-        params = (cik, start_date, end_date)
         query_result = sql_executor.query_sql(query_sql, params)
         print("Query result list of dicts:\n", query_result)
 
@@ -126,6 +187,7 @@ def main():
     dashboard_config = config.get("Profitability", [])
 
     data_loader = DataLoader()
+    query_manager = QueryManager()
     data_loader.load_data_to_db()
 
     if "w" not in state:
@@ -133,10 +195,9 @@ def main():
         editor = Editor(board, 0, 0, 6, 11, minW=3, minH=3)
         w = SimpleNamespace(dashboard=board, editor=editor)
         state.w = w
-        sql_executor = SQLExecutor('data.db')
         widget_manager = initialize_dashboard(dashboard_config, board, editor,
-                                              sql_executor, "Profitability",
-                                              "0000816761", "2020-01-01",
+                                              query_manager, "0000816761",
+                                              "Profitability", "2020-01-01",
                                               "2023-01-01")
         state.widget_manager = widget_manager
     else:

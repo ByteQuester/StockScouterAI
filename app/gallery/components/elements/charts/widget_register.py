@@ -18,6 +18,7 @@ WIDGET_REGISTRY = {
     'Media Player': Player,
 }
 
+
 def create_widget(widget_name, *args, **kwargs):
     widget_class = WIDGET_REGISTRY.get(widget_name)
     if widget_class:

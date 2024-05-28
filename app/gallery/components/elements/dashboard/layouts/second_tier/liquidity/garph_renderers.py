@@ -1,5 +1,5 @@
-from app.gallery.components.elements.dashboard.setup import \
-    SecondTierCharts, register_chart
+from app.gallery.components.elements.dashboard.setup import (SecondTierCharts,
+                                                             register_chart)
 
 
 def render_qoq_growth_liquidity_chart(df_qoq_growth):

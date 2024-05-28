@@ -1,7 +1,9 @@
 # main.py
 import streamlit as st
-from .ui.main_ui import render_ui
+
 from app.gallery.utils import DataLoader
+
+from .ui.main_ui import render_ui
 
 data_loader = DataLoader()
 

@@ -1,6 +1,9 @@
-from typing import List, Dict, Union
+from typing import Dict, List, Union
+
 import pandas as pd
-from app.services.functions.transformers.transformers_base import BaseTransformer
+
+from app.services.functions.transformers.transformers_base import \
+    BaseTransformer
 from app.services.types import (ASSETS_LIABILITIES_BAR_METRICS,
                                 ASSETS_LIABILITIES_LINE_METRICS,
                                 CASH_FLOW_CHARTS_METRICS,
@@ -19,7 +22,10 @@ class CustomTransformer(BaseTransformer):
             raise ValueError("metrics must be a list of strings")
         self.metrics = metrics
 
-    def transform_all(self) -> Dict[str, Union[List[Dict[str, Union[str, float]]], List[Dict[str, Union[str, float, None]]]]]:
+    def transform_all(
+        self
+    ) -> Dict[str, Union[List[Dict[str, Union[str, float]]], List[Dict[
+            str, Union[str, float, None]]]]]:
         """
         Transform data using the provided metrics.
 

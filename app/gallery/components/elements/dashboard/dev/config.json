@@ -54,5 +54,164 @@
         }
       ]
     }
+  ],
+  "Assets Liabilities": [
+    {"type": "Line",
+      "position": [0, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Line chart"
+    },
+    {
+      "type": "Bar",
+      "position": [6, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Bar chart",
+      "keys": ["ASSETS_CURRENTValue", "LIABILITIES_CURRENTValue", "STOCKHOLDERS_EQUITYValue"]
+    },
+    {
+      "type": "DataGrid",
+      "position": [0, 4, 12, 8],
+      "minSize": [6, 4],
+      "contentKey": "Data grid",
+      "columns": [
+        {
+          "field": "year",
+          "headerName": "Year",
+          "width": 90
+        },
+        {
+          "field": "ASSETS_CURRENT",
+          "headerName": "Current Assets",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "LIABILITIES_CURRENT",
+          "headerName": "Current Liabilities",
+          "width": 180,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "STOCKHOLDERS_EQUITY",
+          "headerName": "Stockholders Equity",
+          "width": 180,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "ASSET_TO_LIABILITY_RATIO",
+          "headerName": "Asset to Liability Ratio",
+          "width": 220,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "DEBT_TO_EQUITY_RATIO",
+          "headerName": "Debt to Equity Ratio",
+          "width": 180,
+          "editable": true,
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "Cash Flow": [
+    {"type": "Line",
+      "position": [0, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Line chart"
+    },
+    {
+      "type": "Bar",
+      "position": [6, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Bar chart",
+      "keys": ["CASH_FLOW_FINANCINGValue", "CASH_FLOW_INVESTINGValue", "CASH_FLOW_OPERATINGValue"]
+    },
+    {
+      "type": "DataGrid",
+      "position": [0, 4, 12, 8],
+      "minSize": [6, 4],
+      "contentKey": "Data grid",
+      "columns": [
+        {
+          "field": "year",
+          "headerName": "Year",
+          "width": 90
+        },
+        {
+          "field": "CASH_FLOW_OPERATING",
+          "headerName": "Operating Cash Flow",
+          "width": 200,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "CASH_FLOW_INVESTING",
+          "headerName": "Investing Cash Flow",
+          "width": 200,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "CASH_FLOW_FINANCING",
+          "headerName": "Financing Cash Flow",
+          "width": 200,
+          "editable": true,
+          "type": "number"
+        }
+      ]
+    }
+  ],
+  "Liquidity": [
+    {"type": "Line",
+      "position": [0, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Line chart"
+    },
+    {
+      "type": "Bar",
+      "position": [6, 0, 6, 4],
+      "minSize": [3, 3],
+      "contentKey": "Bar chart",
+      "keys": ["CURRENT_ASSETSValue", "CURRENT_LIABILITIESValue"]
+    },
+    {
+      "type": "DataGrid",
+      "position": [0, 4, 12, 8],
+      "minSize": [6, 4],
+      "contentKey": "Data grid",
+      "columns": [
+        {
+          "field": "year",
+          "headerName": "Year",
+          "width": 90
+        },
+        {
+          "field": "CURRENT_ASSETS",
+          "headerName": "Current Assets",
+          "width": 150,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "CURRENT_LIABILITIES",
+          "headerName": "Current Liabilities",
+          "width": 180,
+          "editable": true,
+          "type": "number"
+        },
+        {
+          "field": "CURRENT_RATIO",
+          "headerName": "Current Ratio",
+          "width": 130,
+          "editable": true,
+          "type": "number"
+        }
+      ]
+    }
   ]
 }
+

@@ -1,10 +1,13 @@
 # data_loader.py
 
-import sqlite3
-import pandas as pd
 import os
+import sqlite3
+
+import pandas as pd
+
 
 class DataLoader:
+
     def __init__(self, base_dir='data', db_path='data.db'):
         self.base_dir = base_dir
         self.db_path = db_path
@@ -15,7 +18,8 @@ class DataLoader:
 
         # Define the tables and their schemas
         tables = {
-            "raw_profitability": '''
+            "raw_profitability":
+            '''
                 CREATE TABLE IF NOT EXISTS raw_profitability (
                     ENTITY TEXT,
                     CIK TEXT,
@@ -29,7 +33,8 @@ class DataLoader:
                     PRIMARY KEY (CIK, DATE)
                 )
             ''',
-            "raw_cash_flow": '''
+            "raw_cash_flow":
+            '''
                 CREATE TABLE IF NOT EXISTS raw_cash_flow (
                     ENTITY TEXT,
                     CIK TEXT,
@@ -42,7 +47,8 @@ class DataLoader:
                     PRIMARY KEY (CIK, DATE)
                 )
             ''',
-            "raw_liquidity": '''
+            "raw_liquidity":
+            '''
                 CREATE TABLE IF NOT EXISTS raw_liquidity (
                     ENTITY TEXT,
                     CIK TEXT,
@@ -55,7 +61,8 @@ class DataLoader:
                     PRIMARY KEY (CIK, DATE)
                 )
             ''',
-            "raw_assets_liabilities": '''
+            "raw_assets_liabilities":
+            '''
                 CREATE TABLE IF NOT EXISTS raw_assets_liabilities (
                     ENTITY TEXT,
                     CIK TEXT,
@@ -78,8 +85,12 @@ class DataLoader:
 
         # Load CSV files into corresponding tables
         for cik in os.listdir(self.base_dir):
-            for category in ["Profitability", "Cash_Flow", "Liquidity", "Assets_Liabilities"]:
-                folder_path = os.path.join(self.base_dir, cik, 'processed_data', category)
+            for category in [
+                    "Profitability", "Cash_Flow", "Liquidity",
+                    "Assets_Liabilities"
+            ]:
+                folder_path = os.path.join(self.base_dir, cik,
+                                           'processed_data', category)
                 if os.path.isdir(folder_path):
                     table_name = f'raw_{category.lower()}'
                     for file in os.listdir(folder_path):
@@ -89,13 +100,20 @@ class DataLoader:
                             df['CIK'] = cik
 
                             # Remove duplicates
-                            existing_dates = pd.read_sql_query(f"SELECT DATE FROM {table_name} WHERE CIK='{cik}'", conn)
+                            existing_dates = pd.read_sql_query(
+                                f"SELECT DATE FROM {table_name} WHERE CIK='{cik}'",
+                                conn)
                             existing_dates = existing_dates['DATE'].tolist()
                             df = df[~df['DATE'].isin(existing_dates)]
 
                             if not df.empty:
-                                df.to_sql(table_name, conn, if_exists='append', index=False)
-                                print(f"Loaded data from {file_path} into {table_name}")
+                                df.to_sql(table_name,
+                                          conn,
+                                          if_exists='append',
+                                          index=False)
+                                print(
+                                    f"Loaded data from {file_path} into {table_name}"
+                                )
                             else:
                                 print(f"No new data to load from {file_path}")
 

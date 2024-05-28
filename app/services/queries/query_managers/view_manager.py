@@ -1,6 +1,8 @@
 import sqlite3
 
+
 class ViewManager:
+
     def __init__(self, db_path='data.db'):
         self.db_path = db_path
 

@@ -1,5 +1,5 @@
-from app.gallery.components.elements.dashboard.setup import \
-    SecondTierCharts, register_chart
+from app.gallery.components.elements.dashboard.setup import (SecondTierCharts,
+                                                             register_chart)
 
 
 def render_yoy_growth_cash_flow_chart(df_yoy_growth, column):
@@ -9,8 +9,8 @@ def render_yoy_growth_cash_flow_chart(df_yoy_growth, column):
                      x_axis="DATE",
                      y_axis=column,
                      labels={
-                       column: 'Growth (%)'
-                   }).render()
+                         column: 'Growth (%)'
+                     }).render()
 
 
 def render_net_cash_flow_chart(df_net_flow):
@@ -19,8 +19,8 @@ def render_net_cash_flow_chart(df_net_flow):
                      title="Net Cash Flow Over Time",
                      color='ENTITY',
                      labels={
-                       'Net_Cash_Flow': 'Net Cash Flow'
-                   },
+                         'Net_Cash_Flow': 'Net Cash Flow'
+                     },
                      x_axis="DATE",
                      y_axis='Net_Cash_Flow').render()
 
@@ -33,9 +33,9 @@ def render_comparative_analysis_cash_flow_chart(filtered_data,
                      x_axis="DATE",
                      y_axis=selected_metrics,
                      labels={
-                       metric: metric.replace('_', ' ').title()
-                       for metric in selected_metrics
-                   }).render(use_container_width=True)
+                         metric: metric.replace('_', ' ').title()
+                         for metric in selected_metrics
+                     }).render(use_container_width=True)
 
 
 register_chart('Comparative Analysis Over Time',
