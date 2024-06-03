@@ -13,8 +13,27 @@ from app.services.types import (ASSETS_LIABILITIES_BAR_METRICS,
 
 
 class CustomTransformer(BaseTransformer):
+    """
+    A custom transformer for transforming data for different types of charts.
+
+    This class extends the BaseTransformer and utilizes its methods to
+    transform data for line charts, bar charts, and data grids.
+
+    Attributes:
+        metrics: A list of metric names to transform.
+    """
 
     def __init__(self, df: pd.DataFrame, metrics: List[str]) -> None:
+        """
+        Initializes the CustomTransformer with a DataFrame and metrics.
+
+        Args:
+            df: A pandas DataFrame containing the data to transform.
+            metrics: A list of metric names to transform.
+
+        Raises:
+            ValueError: If the df is not a pandas DataFrame or metrics is not a list.
+        """
         if not isinstance(df, pd.DataFrame):
             raise ValueError("df must be a pandas DataFrame")
         super().__init__(df)
@@ -27,7 +46,7 @@ class CustomTransformer(BaseTransformer):
     ) -> Dict[str, Union[List[Dict[str, Union[str, float]]], List[Dict[
             str, Union[str, float, None]]]]]:
         """
-        Transform data using the provided metrics.
+        Transforms data using the provided metrics for different chart types.
 
         Returns:
             Dict[str, Union[List[Dict[str, Union[str, float]]], List[Dict[str, Union[str, float, None]]]]]:

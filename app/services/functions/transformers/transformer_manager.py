@@ -9,7 +9,6 @@ from .transformers_base import (AssetsLiabilitiesTransformer,
 
 class TransformerManager:
 
-    # revision for code below: turnover to enum list in types.py
     def __init__(self) -> None:
         self.transformer_classes: Dict[str, type] = {
             "Profitability": ProfitabilityTransformer,
